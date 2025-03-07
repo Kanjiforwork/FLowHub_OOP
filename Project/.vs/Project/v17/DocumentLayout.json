@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dovie\\OneDrive\\Desktop\\Vi\u1EC7t anh\\OOP\\FLowHub_OOP\\Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{444F15C1-ECC9-43D1-93D6-AF443A7B9F86}|Project\\Project.csproj|c:\\users\\dovie\\onedrive\\desktop\\vi\u1EC7t anh\\oop\\flowhub_oop\\project\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{444F15C1-ECC9-43D1-93D6-AF443A7B9F86}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dovie\\OneDrive\\Desktop\\Vi\u1EC7t anh\\OOP\\FLowHub_OOP\\Project\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "C:\\Users\\dovie\\OneDrive\\Desktop\\Vi\u1EC7t anh\\OOP\\FLowHub_OOP\\Project\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T07:42:02.203Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

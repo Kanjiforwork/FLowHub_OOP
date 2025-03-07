@@ -1,0 +1,7 @@
+D:\baitap\OOP du an\OOP du an\bin\Debug\OOP du an.exe.config
+D:\baitap\OOP du an\OOP du an\bin\Debug\OOP du an.exe
+D:\baitap\OOP du an\OOP du an\bin\Debug\OOP du an.pdb
+D:\baitap\OOP du an\OOP du an\obj\Debug\OOP du an.csproj.AssemblyReference.cache
+D:\baitap\OOP du an\OOP du an\obj\Debug\OOP du an.csproj.CoreCompileInputs.cache
+D:\baitap\OOP du an\OOP du an\obj\Debug\OOP du an.exe
+D:\baitap\OOP du an\OOP du an\obj\Debug\OOP du an.pdb

@@ -1,22 +1,27 @@
 ﻿using System;
+using System.Net.Mail;
 
-public class Comment
+namespace OOP.Models
 {
-    /*public int CommentID { get; set; }
-    public string Content { get; set; }
-    public User Author { get; set; }
-    public DateTime CreatedAt { get; private set; }
-
-    public Comment(int commentID, string content, User author)
+    public class Comment
     {
-        CommentID = commentID;
-        Content = content;
-        Author = author;
-        CreatedAt = DateTime.Now;
+        public int CommentID { get; set; }
+        public string Content { get; set; }
+        public User Author { get; set; }
+        public DateTime CreatedAt { get; private set; }
+
+        public Comment(int commentID, string content, User author)
+        {
+            CommentID = commentID;
+            Content = content;
+            Author = author;
+            CreatedAt = DateTime.Now;
+        }
+
+        public void EditComment(string newContent)
+        {
+            Content = newContent;
+        }
     }
 
-    public void EditComment(string newContent)
-    {
-        Content = newContent;
-    }*/
 }

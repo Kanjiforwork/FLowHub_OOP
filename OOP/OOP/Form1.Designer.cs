@@ -35,26 +35,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new ReaLTaiizor.Controls.Panel();
-            this.button1 = new ReaLTaiizor.Controls.Button();
             this.panel4 = new ReaLTaiizor.Controls.Panel();
             this.button3 = new ReaLTaiizor.Controls.Button();
             this.panel3 = new ReaLTaiizor.Controls.Panel();
             this.button2 = new ReaLTaiizor.Controls.Button();
             this.panel5 = new ReaLTaiizor.Controls.Panel();
             this.button4 = new ReaLTaiizor.Controls.Button();
+            this.panel2 = new ReaLTaiizor.Controls.Panel();
+            this.button1 = new ReaLTaiizor.Controls.Button();
             this.panel6 = new ReaLTaiizor.Controls.Panel();
             this.button5 = new ReaLTaiizor.Controls.Button();
             this.panel7 = new ReaLTaiizor.Controls.Panel();
             this.button6 = new ReaLTaiizor.Controls.Button();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.menuContainer.SuspendLayout();
@@ -89,7 +90,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(943, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(928, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -133,44 +134,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 546);
             this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.EdgeColor = System.Drawing.Color.Transparent;
-            this.panel2.ForeColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
-            this.panel2.Size = new System.Drawing.Size(292, 85);
-            this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel2.TabIndex = 3;
-            this.panel2.Text = "Dashboard";
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button1.BorderColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button1.EnteredColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.InactiveColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(20, 5);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.button1.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.button1.Size = new System.Drawing.Size(267, 75);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "             Menu";
-            this.button1.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -281,13 +244,51 @@
             this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.EdgeColor = System.Drawing.Color.Transparent;
+            this.panel2.ForeColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(292, 85);
+            this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel2.TabIndex = 3;
+            this.panel2.Text = "Dashboard";
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button1.BorderColor = System.Drawing.Color.Black;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.button1.EnteredColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.InactiveColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(20, 5);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
+            this.button1.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.button1.Size = new System.Drawing.Size(267, 75);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "             Menu";
+            this.button1.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Controls.Add(this.button5);
             this.panel6.EdgeColor = System.Drawing.Color.Black;
             this.panel6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel6.Location = new System.Drawing.Point(3, 94);
+            this.panel6.Location = new System.Drawing.Point(468, 444);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
             this.panel6.Size = new System.Drawing.Size(292, 85);
@@ -323,7 +324,7 @@
             this.panel7.Controls.Add(this.button6);
             this.panel7.EdgeColor = System.Drawing.Color.Transparent;
             this.panel7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel7.Location = new System.Drawing.Point(3, 185);
+            this.panel7.Location = new System.Drawing.Point(3, 94);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(20, 5, 5, 5);
             this.panel7.Size = new System.Drawing.Size(290, 85);
@@ -357,12 +358,20 @@
             // 
             this.menuContainer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menuContainer.Controls.Add(this.panel2);
-            this.menuContainer.Controls.Add(this.panel6);
             this.menuContainer.Controls.Add(this.panel7);
             this.menuContainer.Location = new System.Drawing.Point(415, 79);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(292, 290);
             this.menuContainer.TabIndex = 6;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(844, 178);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(145, 89);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -371,7 +380,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1067, 611);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuContainer);
             this.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -383,10 +394,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.menuContainer.ResumeLayout(false);
@@ -415,6 +426,7 @@
         private ReaLTaiizor.Controls.Panel panel7;
         private ReaLTaiizor.Controls.Button button6;
         private System.Windows.Forms.FlowLayoutPanel menuContainer;
+        private System.Windows.Forms.Button button7;
     }
 }
 

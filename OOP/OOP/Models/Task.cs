@@ -8,30 +8,21 @@ namespace OOP.Models
 {
     public class Task
     {
-        private int taskID { get; set; }
-        private string taskName { get; set; }
-        private string status { get; set; }
-        //private User assighedTo { get; set; }
+        public int ID { get; set; }
+        public string Content { get; set; }
+        public string Title { get; set; }
+        public DateTime Deadline { get; set; }
+        public Project Project { get; set; }
+        public User AssignedTo { get; set; }
 
-        private DateTime dealine { get; set; }
-
-        public Task(int taskID, string taskName, string status, DateTime dealine)
+        public Task(int id, string content, DateTime deadline, Project project, User assignedTo)
         {
-            this.taskID = taskID;
-            this.taskName = taskName;
-            this.status = status;
-            this.dealine = dealine;
+            ID = id;
+            Content = content;
+            Deadline = deadline;
+            Project = project;
+            AssignedTo = assignedTo;
         }
-
-        public void UpdateStatus(string newStatus)
-        {
-
-        }
-
-        //public void AssignTo(User user)
-        //{
-
-        //}
     }
 
 }

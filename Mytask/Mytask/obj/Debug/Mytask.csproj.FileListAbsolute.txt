@@ -1,0 +1,11 @@
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.csproj.AssemblyReference.cache
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.Form1.resources
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.Properties.Resources.resources
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.csproj.GenerateResource.cache
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.csproj.CoreCompileInputs.cache
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\bin\Debug\Mytask.exe.config
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\bin\Debug\Mytask.exe
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\bin\Debug\Mytask.pdb
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.exe
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.pdb
+C:\Users\dovie\OneDrive\Desktop\Việt anh\OOP\FLowHub_OOP\Mytask\Mytask\obj\Debug\Mytask.Addtask.resources

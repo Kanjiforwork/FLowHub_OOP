@@ -97,8 +97,7 @@
             this.cbbStatus.FormattingEnabled = true;
             this.cbbStatus.Items.AddRange(new object[] {
             "Chưa hoàn thành",
-            "Hoàn thành",
-            "Đang làm"});
+            "Hoàn thành"});
             this.cbbStatus.Location = new System.Drawing.Point(289, 214);
             this.cbbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbbStatus.Name = "cbbStatus";

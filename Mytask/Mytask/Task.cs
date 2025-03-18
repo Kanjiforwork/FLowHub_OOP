@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mytask
 {
-    public class Task
+    public class Task : IComparable<Task>
     {
         public string taskID { get; set; }
         public string taskName { get; set; }
@@ -24,7 +24,12 @@ namespace Mytask
             this.dealine = dealine;
             this.projectID = projectID;
         }
-
+        public int CompareTo(Task other)
+        {
+            if (this.dealine <  other.dealine) return -1;
+            if (this.dealine > other.dealine) { return 1; }
+            return 0;
+        }
         public void UpdateStatus(string newStatus)
         {
 

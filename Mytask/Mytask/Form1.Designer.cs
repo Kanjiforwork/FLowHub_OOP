@@ -144,7 +144,7 @@
             this.panel2.Controls.Add(this.lblHeader);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1149, 47);
             this.panel2.TabIndex = 6;
@@ -217,7 +217,7 @@
             this.pnRecentAssigned.Controls.Add(this.tblTask);
             this.pnRecentAssigned.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnRecentAssigned.Location = new System.Drawing.Point(0, 0);
-            this.pnRecentAssigned.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnRecentAssigned.Margin = new System.Windows.Forms.Padding(4);
             this.pnRecentAssigned.Name = "pnRecentAssigned";
             this.pnRecentAssigned.Size = new System.Drawing.Size(1149, 112);
             this.pnRecentAssigned.TabIndex = 10;
@@ -229,7 +229,7 @@
             this.panel4.Controls.Add(this.txtbRecentlyAssigned);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1149, 43);
             this.panel4.TabIndex = 9;
@@ -242,7 +242,7 @@
             this.btnExpand.ImageIndex = 0;
             this.btnExpand.ImageList = this.imageList1;
             this.btnExpand.Location = new System.Drawing.Point(19, 4);
-            this.btnExpand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpand.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.Size = new System.Drawing.Size(39, 34);
             this.btnExpand.TabIndex = 2;
@@ -252,7 +252,7 @@
             // txtbRecentlyAssigned
             // 
             this.txtbRecentlyAssigned.Location = new System.Drawing.Point(65, 10);
-            this.txtbRecentlyAssigned.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbRecentlyAssigned.Margin = new System.Windows.Forms.Padding(4);
             this.txtbRecentlyAssigned.Name = "txtbRecentlyAssigned";
             this.txtbRecentlyAssigned.Size = new System.Drawing.Size(136, 22);
             this.txtbRecentlyAssigned.TabIndex = 3;
@@ -267,7 +267,7 @@
             this.tblTask.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.30159F));
             this.tblTask.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.tblTask.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tblTask.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tblTask.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
             this.tblTask.Controls.Add(this.label2, 4, 1);
             this.tblTask.Controls.Add(this.checkBox1, 0, 0);
             this.tblTask.Controls.Add(this.checkBox2, 0, 1);
@@ -280,7 +280,7 @@
             this.tblTask.Controls.Add(this.label1, 4, 0);
             this.tblTask.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tblTask.Location = new System.Drawing.Point(0, 43);
-            this.tblTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tblTask.Margin = new System.Windows.Forms.Padding(4);
             this.tblTask.Name = "tblTask";
             this.tblTask.RowCount = 2;
             this.tblTask.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -298,10 +298,10 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.ImageIndex = 1;
             this.label2.ImageList = this.imageList1;
-            this.label2.Location = new System.Drawing.Point(916, 36);
+            this.label2.Location = new System.Drawing.Point(912, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 30);
+            this.label2.Size = new System.Drawing.Size(230, 30);
             this.label2.TabIndex = 9;
             this.label2.Text = "My Workspace";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -311,9 +311,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox1.Location = new System.Drawing.Point(7, 7);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(344, 22);
+            this.checkBox1.Size = new System.Drawing.Size(341, 22);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Schedule kickoff meeting";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -323,9 +323,9 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox2.Location = new System.Drawing.Point(7, 40);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(344, 22);
+            this.checkBox2.Size = new System.Drawing.Size(341, 22);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Draft project brief";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -335,10 +335,10 @@
             this.dateTimePicker1.CustomFormat = "dddd dd - MM";
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(362, 7);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(359, 7);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(201, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // dateTimePicker2
@@ -346,17 +346,17 @@
             this.dateTimePicker2.CustomFormat = "dddd dd - MM";
             this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(362, 40);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(359, 40);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(201, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 3;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(574, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(570, 7);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 22);
             this.textBox1.TabIndex = 4;
@@ -364,8 +364,8 @@
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(574, 40);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(570, 40);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(167, 22);
             this.textBox2.TabIndex = 5;
@@ -373,8 +373,8 @@
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(752, 7);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Location = new System.Drawing.Point(748, 7);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(153, 22);
             this.textBox3.TabIndex = 6;
@@ -382,8 +382,8 @@
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(752, 40);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Location = new System.Drawing.Point(748, 40);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(153, 22);
             this.textBox4.TabIndex = 7;
@@ -395,10 +395,10 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.ImageIndex = 1;
             this.label1.ImageList = this.imageList1;
-            this.label1.Location = new System.Drawing.Point(916, 3);
+            this.label1.Location = new System.Drawing.Point(912, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 30);
+            this.label1.Size = new System.Drawing.Size(230, 30);
             this.label1.TabIndex = 8;
             this.label1.Text = "My Workspace";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -410,7 +410,7 @@
             this.pnDoToday.Controls.Add(this.tlpDoToday);
             this.pnDoToday.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnDoToday.Location = new System.Drawing.Point(0, 112);
-            this.pnDoToday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnDoToday.Margin = new System.Windows.Forms.Padding(4);
             this.pnDoToday.Name = "pnDoToday";
             this.pnDoToday.Size = new System.Drawing.Size(1149, 117);
             this.pnDoToday.TabIndex = 11;
@@ -421,7 +421,7 @@
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1149, 43);
             this.panel5.TabIndex = 9;
@@ -433,7 +433,7 @@
             this.btnExpandDoToday.ImageIndex = 0;
             this.btnExpandDoToday.ImageList = this.imageList1;
             this.btnExpandDoToday.Location = new System.Drawing.Point(19, 4);
-            this.btnExpandDoToday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExpandDoToday.Margin = new System.Windows.Forms.Padding(4);
             this.btnExpandDoToday.Name = "btnExpandDoToday";
             this.btnExpandDoToday.Size = new System.Drawing.Size(39, 34);
             this.btnExpandDoToday.TabIndex = 2;
@@ -443,7 +443,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(65, 10);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(136, 22);
             this.textBox5.TabIndex = 3;
@@ -457,7 +457,7 @@
             this.tlpDoToday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.30159F));
             this.tlpDoToday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.tlpDoToday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
-            this.tlpDoToday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tlpDoToday.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
             this.tlpDoToday.Controls.Add(this.label3, 4, 1);
             this.tlpDoToday.Controls.Add(this.checkBox3, 0, 0);
             this.tlpDoToday.Controls.Add(this.checkBox4, 0, 1);
@@ -470,7 +470,7 @@
             this.tlpDoToday.Controls.Add(this.label4, 4, 0);
             this.tlpDoToday.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tlpDoToday.Location = new System.Drawing.Point(0, 43);
-            this.tlpDoToday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlpDoToday.Margin = new System.Windows.Forms.Padding(4);
             this.tlpDoToday.Name = "tlpDoToday";
             this.tlpDoToday.RowCount = 2;
             this.tlpDoToday.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -488,10 +488,10 @@
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.ImageIndex = 1;
             this.label3.ImageList = this.imageList1;
-            this.label3.Location = new System.Drawing.Point(916, 38);
+            this.label3.Location = new System.Drawing.Point(912, 38);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 33);
+            this.label3.Size = new System.Drawing.Size(230, 33);
             this.label3.TabIndex = 9;
             this.label3.Text = "My Workspace";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -501,9 +501,9 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox3.Location = new System.Drawing.Point(7, 7);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(344, 24);
+            this.checkBox3.Size = new System.Drawing.Size(341, 24);
             this.checkBox3.TabIndex = 0;
             this.checkBox3.Text = "Schedule kickoff meeting";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -513,9 +513,9 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox4.Location = new System.Drawing.Point(7, 42);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(344, 25);
+            this.checkBox4.Size = new System.Drawing.Size(341, 25);
             this.checkBox4.TabIndex = 1;
             this.checkBox4.Text = "Draft project brief";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -525,10 +525,10 @@
             this.dateTimePicker3.CustomFormat = "dddd dd - MM";
             this.dateTimePicker3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(362, 7);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker3.Location = new System.Drawing.Point(359, 7);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(201, 22);
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker3.TabIndex = 2;
             // 
             // dateTimePicker4
@@ -536,17 +536,17 @@
             this.dateTimePicker4.CustomFormat = "dddd dd - MM";
             this.dateTimePicker4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(362, 42);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker4.Location = new System.Drawing.Point(359, 42);
+            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(201, 22);
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker4.TabIndex = 3;
             // 
             // textBox6
             // 
             this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(574, 7);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Location = new System.Drawing.Point(570, 7);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(167, 22);
             this.textBox6.TabIndex = 4;
@@ -554,8 +554,8 @@
             // textBox7
             // 
             this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(574, 42);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Location = new System.Drawing.Point(570, 42);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(167, 22);
             this.textBox7.TabIndex = 5;
@@ -563,8 +563,8 @@
             // textBox8
             // 
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(752, 7);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Location = new System.Drawing.Point(748, 7);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(153, 22);
             this.textBox8.TabIndex = 6;
@@ -572,8 +572,8 @@
             // textBox9
             // 
             this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(752, 42);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Location = new System.Drawing.Point(748, 42);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(153, 22);
             this.textBox9.TabIndex = 7;
@@ -585,10 +585,10 @@
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.ImageIndex = 1;
             this.label4.ImageList = this.imageList1;
-            this.label4.Location = new System.Drawing.Point(916, 3);
+            this.label4.Location = new System.Drawing.Point(912, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 32);
+            this.label4.Size = new System.Drawing.Size(230, 32);
             this.label4.TabIndex = 8;
             this.label4.Text = "My Workspace";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -602,7 +602,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1149, 586);
             this.panel1.TabIndex = 0;
@@ -615,7 +615,7 @@
             this.panelTaskContainer.Controls.Add(this.pnRecentAssigned);
             this.panelTaskContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTaskContainer.Location = new System.Drawing.Point(0, 123);
-            this.panelTaskContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTaskContainer.Margin = new System.Windows.Forms.Padding(4);
             this.panelTaskContainer.Name = "panelTaskContainer";
             this.panelTaskContainer.Size = new System.Drawing.Size(1149, 229);
             this.panelTaskContainer.TabIndex = 13;
@@ -626,7 +626,7 @@
             this.panelAddTask.Controls.Add(this.button2);
             this.panelAddTask.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAddTask.Location = new System.Drawing.Point(0, 75);
-            this.panelAddTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAddTask.Margin = new System.Windows.Forms.Padding(4);
             this.panelAddTask.Name = "panelAddTask";
             this.panelAddTask.Size = new System.Drawing.Size(1149, 48);
             this.panelAddTask.TabIndex = 12;
@@ -638,7 +638,7 @@
             this.btnMore.ImageIndex = 0;
             this.btnMore.ImageList = this.imageList1;
             this.btnMore.Location = new System.Drawing.Point(129, 7);
-            this.btnMore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMore.Margin = new System.Windows.Forms.Padding(4);
             this.btnMore.Name = "btnMore";
             this.btnMore.Size = new System.Drawing.Size(39, 34);
             this.btnMore.TabIndex = 1;
@@ -649,7 +649,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Location = new System.Drawing.Point(19, 7);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 34);
             this.button2.TabIndex = 0;
@@ -664,7 +664,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1149, 586);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";

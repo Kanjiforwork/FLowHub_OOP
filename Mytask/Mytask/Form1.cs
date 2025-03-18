@@ -58,21 +58,28 @@ namespace Mytask
           //Console.WriteLine(mnuList.Checked);
         }
         public List<Task> tasks = new List<Task>();
+        public List<Project> projects = new List<Project>();
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            tasks.Add(new Task("1", "hoàn thành báo cáo", "đang làm", new DateTime(2025, 3, 20)));
-            tasks.Add(new Task("2", "họp nhóm", "chưa bắt đầu", new DateTime(2025, 3, 21)));
-            tasks.Add(new Task("3", "kiểm tra code", "hoàn thành", new DateTime(2025, 3, 18)));
-            tasks.Add(new Task("4", "gửi email khách hàng", "chưa bắt đầu", new DateTime(2025, 3, 22)));
-            tasks.Add(new Task("5", "viết tài liệu", "đang làm", new DateTime(2025, 3, 25)));
-            tasks.Add(new Task("6", "cập nhật database", "chưa bắt đầu", new DateTime(2025, 3, 23)));
-            tasks.Add(new Task("7", "fix bug giao diện", "đang làm", new DateTime(2025, 3, 19)));
-            tasks.Add(new Task("8", "test hệ thống", "hoàn thành", new DateTime(2025, 3, 17)));
-            tasks.Add(new Task("9", "đánh giá tiến độ", "chưa bắt đầu", new DateTime(2025, 3, 24)));
-            tasks.Add(new Task("10", "báo cáo tổng kết", "đang làm", new DateTime(2025, 3, 26)));
+
+            tasks.Add(new Task("1", "hoàn thành báo cáo", "đang làm", new DateTime(2025, 3, 20), "P001"));
+            tasks.Add(new Task("2", "họp nhóm", "chưa bắt đầu", new DateTime(2025, 3, 21), "P001"));
+            tasks.Add(new Task("3", "kiểm tra code", "hoàn thành", new DateTime(2025, 3, 18), "P002"));
+            tasks.Add(new Task("4", "gửi email khách hàng", "chưa bắt đầu", new DateTime(2025, 3, 22), "P002"));
+            tasks.Add(new Task("5", "viết tài liệu", "đang làm", new DateTime(2025, 3, 25), "P003"));
+            tasks.Add(new Task("6", "cập nhật database", "chưa bắt đầu", new DateTime(2025, 3, 23), "P003"));
+            tasks.Add(new Task("7", "fix bug giao diện", "đang làm", new DateTime(2025, 3, 19), "P004"));
+            tasks.Add(new Task("8", "test hệ thống", "hoàn thành", new DateTime(2025, 3, 17), "P004"));
+            tasks.Add(new Task("9", "đánh giá tiến độ", "chưa bắt đầu", new DateTime(2025, 3, 24), "P005"));
+            tasks.Add(new Task("10", "báo cáo tổng kết", "đang làm", new DateTime(2025, 3, 26), "P005"));
 
             RenderTasks(tasks);
+
+
+            projects.Add(new Project("P001", "Online Learning Platform"));
+            projects.Add(new Project("P002", "Smart Home System"));
+            projects.Add(new Project("P003", "Blockchain Payment Gateway"));
+            
         }
 
         private void RenderTasks(List<Task> tasks)
@@ -111,9 +118,10 @@ namespace Mytask
 
                 DateTimePicker dtpDeadline = new DateTimePicker { Value = task.dealine, Format = DateTimePickerFormat.Short, Width = 120, Dock = DockStyle.Fill };
                 TextBox txtBox1 = new TextBox { Width = 100, Dock = DockStyle.Fill };
-                TextBox txtBox2 = new TextBox { Width = 100, Dock = DockStyle.Fill };
+                TextBox txtBox2 = new TextBox { Width = 100, Dock = DockStyle.Fill, Text = task.projectID };
                 Label lblWorkspace = new Label { Text = "My Workspace", AutoSize = false, Width = 150, Dock = DockStyle.Fill };
 
+                
                 tblTask.Controls.Add(checkBox, 0, i);
                 tblTask.Controls.Add(dtpDeadline, 1, i);
                 tblTask.Controls.Add(txtBox1, 2, i);
@@ -196,9 +204,11 @@ namespace Mytask
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Addtask addTaskForm = new Addtask();
+            Addtask addTaskForm = new Addtask(projects);
             if (addTaskForm.ShowDialog() == DialogResult.OK)
             {
+                
+                
                 tasks.Add(addTaskForm.NewTask); // Thêm task mới vào danh sách
                 RenderTasks(tasks); // Cập nhật lại danh sách trên giao diện
             }

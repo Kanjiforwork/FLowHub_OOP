@@ -14,13 +14,15 @@ namespace Mytask
         //private User assighedTo { get; set; }
 
         public DateTime dealine { get; set; }
+        public string projectID { get; set; }   
 
-        public Task(string taskID, string taskName, string status, DateTime dealine)
+        public Task(string taskID, string taskName, string status, DateTime dealine, string projectID)
         {
             this.taskID = taskID;
             this.taskName = taskName;
             this.status = status;
             this.dealine = dealine;
+            this.projectID = projectID;
         }
 
         public void UpdateStatus(string newStatus)
@@ -32,12 +34,12 @@ namespace Mytask
 
     public class Project
     {
-        private int projectID { get; set; }
-        private string projectName { get; set; }
+        public string projectID { get; set; }
+        public string projectName { get; set; }
 
         public List<Task> tasks = new List<Task>();
 
-        public Project(int projectID, string projectName)
+        public Project(string  projectID, string projectName)
         {
             this.projectID = projectID;
             this.projectName = projectName;

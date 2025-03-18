@@ -13,14 +13,20 @@ namespace Mytask
     public partial class Addtask : Form
     {
         public Task NewTask { get; set; }
-        public Addtask()
+        List<Project> projects;
+        public Addtask(List<Project> projects)
         {
             InitializeComponent();
+            this.projects = projects;
         }
 
         private void Addtask_Load(object sender, EventArgs e)
         {
-
+            
+            foreach (Project p in this.projects)
+            {
+                cbbSelectProject.Items.Add(p.projectID);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -45,7 +51,8 @@ namespace Mytask
             string taskName = txtbInputNameTask.Text;
             string status = cbbStatus.Text;
             DateTime deadline = dtpNewTask.Value;
-            NewTask = new Task(taskID, taskName,status, deadline);
+            string prId = cbbSelectProject.Text;
+            NewTask = new Task(taskID, taskName,status, deadline,prId);
             DialogResult = DialogResult.OK;
             Close();
             

@@ -38,6 +38,8 @@
             this.dtpNewTask = new System.Windows.Forms.DateTimePicker();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAddinProject = new System.Windows.Forms.Label();
+            this.cbbSelectProject = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lbInputName
@@ -54,7 +56,7 @@
             // txtbInputNameTask
             // 
             this.txtbInputNameTask.Location = new System.Drawing.Point(289, 101);
-            this.txtbInputNameTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbInputNameTask.Margin = new System.Windows.Forms.Padding(4);
             this.txtbInputNameTask.Name = "txtbInputNameTask";
             this.txtbInputNameTask.Size = new System.Drawing.Size(385, 22);
             this.txtbInputNameTask.TabIndex = 1;
@@ -74,7 +76,7 @@
             // txtbInputID
             // 
             this.txtbInputID.Location = new System.Drawing.Point(289, 162);
-            this.txtbInputID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbInputID.Margin = new System.Windows.Forms.Padding(4);
             this.txtbInputID.Name = "txtbInputID";
             this.txtbInputID.Size = new System.Drawing.Size(385, 22);
             this.txtbInputID.TabIndex = 3;
@@ -98,7 +100,7 @@
             "Hoàn thành",
             "Đang làm"});
             this.cbbStatus.Location = new System.Drawing.Point(289, 214);
-            this.cbbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Size = new System.Drawing.Size(385, 24);
             this.cbbStatus.TabIndex = 5;
@@ -118,7 +120,7 @@
             // dtpNewTask
             // 
             this.dtpNewTask.Location = new System.Drawing.Point(289, 267);
-            this.dtpNewTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNewTask.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNewTask.Name = "dtpNewTask";
             this.dtpNewTask.Size = new System.Drawing.Size(385, 22);
             this.dtpNewTask.TabIndex = 7;
@@ -143,11 +145,32 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnAddinProject
+            // 
+            this.btnAddinProject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnAddinProject.Location = new System.Drawing.Point(80, 322);
+            this.btnAddinProject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnAddinProject.Name = "btnAddinProject";
+            this.btnAddinProject.Size = new System.Drawing.Size(158, 24);
+            this.btnAddinProject.TabIndex = 10;
+            this.btnAddinProject.Text = "Project";
+            this.btnAddinProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbbSelectProject
+            // 
+            this.cbbSelectProject.FormattingEnabled = true;
+            this.cbbSelectProject.Location = new System.Drawing.Point(289, 322);
+            this.cbbSelectProject.Name = "cbbSelectProject";
+            this.cbbSelectProject.Size = new System.Drawing.Size(385, 24);
+            this.cbbSelectProject.TabIndex = 11;
+            // 
             // Addtask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.cbbSelectProject);
+            this.Controls.Add(this.btnAddinProject);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.dtpNewTask);
@@ -158,7 +181,7 @@
             this.Controls.Add(this.lbInputID);
             this.Controls.Add(this.txtbInputNameTask);
             this.Controls.Add(this.lbInputName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Addtask";
             this.Text = "Addtask";
             this.Load += new System.EventHandler(this.Addtask_Load);
@@ -179,5 +202,9 @@
         private System.Windows.Forms.DateTimePicker dtpNewTask;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label btnAddinProject;
+        private System.Windows.Forms.ComboBox cbbSelectProject;
+
+        
     }
 }

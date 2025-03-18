@@ -61,16 +61,16 @@ namespace Mytask
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            tasks.Add(new Task(1, "hoàn thành báo cáo", "đang làm", new DateTime(2025, 3, 20)));
-            tasks.Add(new Task(2, "họp nhóm", "chưa bắt đầu", new DateTime(2025, 3, 21)));
-            tasks.Add(new Task(3, "kiểm tra code", "hoàn thành", new DateTime(2025, 3, 18)));
-            tasks.Add(new Task(4, "gửi email khách hàng", "chưa bắt đầu", new DateTime(2025, 3, 22)));
-            tasks.Add(new Task(5, "viết tài liệu", "đang làm", new DateTime(2025, 3, 25)));
-            tasks.Add(new Task(6, "cập nhật database", "chưa bắt đầu", new DateTime(2025, 3, 23)));
-            tasks.Add(new Task(7, "fix bug giao diện", "đang làm", new DateTime(2025, 3, 19)));
-            tasks.Add(new Task(8, "test hệ thống", "hoàn thành", new DateTime(2025, 3, 17)));
-            tasks.Add(new Task(9, "đánh giá tiến độ", "chưa bắt đầu", new DateTime(2025, 3, 24)));
-            tasks.Add(new Task(10, "báo cáo tổng kết", "đang làm", new DateTime(2025, 3, 26)));
+            tasks.Add(new Task("1", "hoàn thành báo cáo", "đang làm", new DateTime(2025, 3, 20)));
+            tasks.Add(new Task("2", "họp nhóm", "chưa bắt đầu", new DateTime(2025, 3, 21)));
+            tasks.Add(new Task("3", "kiểm tra code", "hoàn thành", new DateTime(2025, 3, 18)));
+            tasks.Add(new Task("4", "gửi email khách hàng", "chưa bắt đầu", new DateTime(2025, 3, 22)));
+            tasks.Add(new Task("5", "viết tài liệu", "đang làm", new DateTime(2025, 3, 25)));
+            tasks.Add(new Task("6", "cập nhật database", "chưa bắt đầu", new DateTime(2025, 3, 23)));
+            tasks.Add(new Task("7", "fix bug giao diện", "đang làm", new DateTime(2025, 3, 19)));
+            tasks.Add(new Task("8", "test hệ thống", "hoàn thành", new DateTime(2025, 3, 17)));
+            tasks.Add(new Task("9", "đánh giá tiến độ", "chưa bắt đầu", new DateTime(2025, 3, 24)));
+            tasks.Add(new Task("10", "báo cáo tổng kết", "đang làm", new DateTime(2025, 3, 26)));
 
             RenderTasks(tasks);
         }
@@ -199,7 +199,7 @@ namespace Mytask
             Addtask addTaskForm = new Addtask();
             if (addTaskForm.ShowDialog() == DialogResult.OK)
             {
-                //tasks.Add(addTaskForm.NewTask); // Thêm task mới vào danh sách
+                tasks.Add(addTaskForm.NewTask); // Thêm task mới vào danh sách
                 RenderTasks(tasks); // Cập nhật lại danh sách trên giao diện
             }
         }

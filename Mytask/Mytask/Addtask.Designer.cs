@@ -35,50 +35,57 @@
             this.lbStatus = new System.Windows.Forms.Label();
             this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.lbDeadline = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNewTask = new System.Windows.Forms.DateTimePicker();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbInputName
             // 
             this.lbInputName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbInputName.Location = new System.Drawing.Point(60, 82);
+            this.lbInputName.Location = new System.Drawing.Point(80, 101);
+            this.lbInputName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInputName.Name = "lbInputName";
-            this.lbInputName.Size = new System.Drawing.Size(119, 20);
+            this.lbInputName.Size = new System.Drawing.Size(158, 24);
             this.lbInputName.TabIndex = 0;
             this.lbInputName.Text = "Nhập tên nhiệm vụ";
             this.lbInputName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtbInputNameTask
             // 
-            this.txtbInputNameTask.Location = new System.Drawing.Point(217, 82);
+            this.txtbInputNameTask.Location = new System.Drawing.Point(289, 101);
+            this.txtbInputNameTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbInputNameTask.Name = "txtbInputNameTask";
-            this.txtbInputNameTask.Size = new System.Drawing.Size(290, 20);
+            this.txtbInputNameTask.Size = new System.Drawing.Size(385, 22);
             this.txtbInputNameTask.TabIndex = 1;
             this.txtbInputNameTask.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lbInputID
             // 
             this.lbInputID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbInputID.Location = new System.Drawing.Point(60, 131);
+            this.lbInputID.Location = new System.Drawing.Point(80, 161);
+            this.lbInputID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInputID.Name = "lbInputID";
-            this.lbInputID.Size = new System.Drawing.Size(119, 20);
+            this.lbInputID.Size = new System.Drawing.Size(158, 24);
             this.lbInputID.TabIndex = 2;
             this.lbInputID.Text = "Nhập ID";
             this.lbInputID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtbInputID
             // 
-            this.txtbInputID.Location = new System.Drawing.Point(217, 132);
+            this.txtbInputID.Location = new System.Drawing.Point(289, 162);
+            this.txtbInputID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbInputID.Name = "txtbInputID";
-            this.txtbInputID.Size = new System.Drawing.Size(290, 20);
+            this.txtbInputID.Size = new System.Drawing.Size(385, 22);
             this.txtbInputID.TabIndex = 3;
             // 
             // lbStatus
             // 
             this.lbStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbStatus.Location = new System.Drawing.Point(60, 176);
+            this.lbStatus.Location = new System.Drawing.Point(80, 217);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(119, 20);
+            this.lbStatus.Size = new System.Drawing.Size(158, 24);
             this.lbStatus.TabIndex = 4;
             this.lbStatus.Text = "Trạng thái";
             this.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,35 +97,60 @@
             "Chưa hoàn thành",
             "Hoàn thành",
             "Đang làm"});
-            this.cbbStatus.Location = new System.Drawing.Point(217, 174);
+            this.cbbStatus.Location = new System.Drawing.Point(289, 214);
+            this.cbbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbStatus.Name = "cbbStatus";
-            this.cbbStatus.Size = new System.Drawing.Size(290, 21);
+            this.cbbStatus.Size = new System.Drawing.Size(385, 24);
             this.cbbStatus.TabIndex = 5;
             // 
             // lbDeadline
             // 
             this.lbDeadline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbDeadline.Location = new System.Drawing.Point(60, 218);
+            this.lbDeadline.Location = new System.Drawing.Point(80, 268);
+            this.lbDeadline.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDeadline.Name = "lbDeadline";
-            this.lbDeadline.Size = new System.Drawing.Size(119, 20);
+            this.lbDeadline.Size = new System.Drawing.Size(158, 24);
             this.lbDeadline.TabIndex = 6;
             this.lbDeadline.Text = "Deadline";
             this.lbDeadline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbDeadline.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dateTimePicker1
+            // dtpNewTask
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(217, 217);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(290, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dtpNewTask.Location = new System.Drawing.Point(289, 267);
+            this.dtpNewTask.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNewTask.Name = "dtpNewTask";
+            this.dtpNewTask.Size = new System.Drawing.Size(385, 22);
+            this.dtpNewTask.TabIndex = 7;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(200, 366);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(109, 47);
+            this.btnConfirm.TabIndex = 8;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(518, 366);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(109, 47);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // Addtask
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.dtpNewTask);
             this.Controls.Add(this.lbDeadline);
             this.Controls.Add(this.cbbStatus);
             this.Controls.Add(this.lbStatus);
@@ -126,6 +158,7 @@
             this.Controls.Add(this.lbInputID);
             this.Controls.Add(this.txtbInputNameTask);
             this.Controls.Add(this.lbInputName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Addtask";
             this.Text = "Addtask";
             this.Load += new System.EventHandler(this.Addtask_Load);
@@ -143,6 +176,8 @@
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.ComboBox cbbStatus;
         private System.Windows.Forms.Label lbDeadline;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNewTask;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

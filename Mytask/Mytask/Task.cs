@@ -8,14 +8,14 @@ namespace Mytask
 {
     public class Task
     {
-        public int taskID { get; set; }
+        public string taskID { get; set; }
         public string taskName { get; set; }
         public string status { get; set; }
         //private User assighedTo { get; set; }
 
         public DateTime dealine { get; set; }
 
-        public Task(int taskID, string taskName, string status, DateTime dealine)
+        public Task(string taskID, string taskName, string status, DateTime dealine)
         {
             this.taskID = taskID;
             this.taskName = taskName;

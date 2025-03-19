@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOP.Models
+{
+    
+        public class Task
+    {
+        public string taskID { get; set; }
+        public string taskName { get; set; }
+        public string status { get; set; }
+        //private User assighedTo { get; set; }
+
+        public DateTime dealine { get; set; }
+        public string projectID { get; set; }
+
+        public Task(string taskID, string taskName, string status, DateTime dealine, string projectID)
+        {
+            this.taskID = taskID;
+            this.taskName = taskName;
+            this.status = status;
+            this.dealine = dealine;
+            this.projectID = projectID;
+        }
+
+        public void UpdateStatus(string newStatus)
+        {
+
+        }
+
+    }
+
+}

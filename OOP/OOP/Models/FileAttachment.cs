@@ -21,8 +21,8 @@ namespace OOP.Models
             if (File.Exists(filePath))
             {
                 FilePath = filePath;
-                MessageBox.Show("Tệp tin đã được đính kèm vào nhiệm vụ: " + RelatedTask.Title, 
-                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               /* MessageBox.Show("Tệp tin đã được đính kèm vào nhiệm vụ: " + RelatedTask.Title, 
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
             }
             else
             {

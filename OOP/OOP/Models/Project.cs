@@ -8,12 +8,12 @@ namespace OOP.Models
 {
     public class Project
     {
-        private int projectID { get; set; }
-        private string projectName { get; set; }
+        public string projectID { get; set; }
+        public string projectName { get; set; }
 
         public List<Task> tasks = new List<Task>();
 
-        public Project(int projectID, string projectName)
+        public Project(string projectID, string projectName)
         {
             this.projectID = projectID;
             this.projectName = projectName;

@@ -1,26 +1,19 @@
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\bin\Debug\OOP.exe.config
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\bin\Debug\OOP.exe
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\bin\Debug\OOP.pdb
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\bin\Debug\ReaLTaiizor.dll
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\bin\Debug\ReaLTaiizor.xml
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.Form1.resources
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.Properties.Resources.resources
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.cache
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.csproj.CopyComplete
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.exe
-C:\Users\baole\Desktop\Hướng đối tượng\BT trên lớp\OOP\OOP\obj\Debug\OOP.pdb
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Addtask.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Home.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Tasks.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Properties.Resources.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Usercontrols.HomeProjectUserControl.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Usercontrols.HomeTaskUserControl.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Usercontrols.TasksFullUserControl.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.cache
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\Resources\checkUnfinished.png
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\OOP.exe.config
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\OOP.exe
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\OOP.pdb
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\ReaLTaiizor.dll
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\ReaLTaiizor.xml
-C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
-C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Form1.resources
-C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Properties.Resources.resources
-C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.GenerateResource.cache
-C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.csproj.CopyComplete
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.exe
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.pdb

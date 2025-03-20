@@ -1,28 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace OOP.Models
+public class Task : IComparable<Task>
 {
-    public class Task
+    public string taskID { get; set; }
+    public string taskName { get; set; }
+    public string status { get; set; }
+    //private User assighedTo { get; set; }
+
+    public DateTime dealine { get; set; }
+
+    public string projectName { get; set; }
+
+    public Task(string taskID, string taskName, string status, DateTime dealine, string projectName)
     {
-        public int ID { get; set; }
-        public string Content { get; set; }
-        public string Title { get; set; }
-        public DateTime Deadline { get; set; }
-        public Project Project { get; set; }
-        public User AssignedTo { get; set; }
-
-        public Task(int id, string content, DateTime deadline, Project project, User assignedTo)
-        {
-            ID = id;
-            Content = content;
-            Deadline = deadline;
-            Project = project;
-            AssignedTo = assignedTo;
-        }
+        this.taskID = taskID;
+        this.taskName = taskName;
+        this.status = status;
+        this.dealine = dealine;
+        this.projectName = projectName;
     }
+    public int CompareTo(Task other)
+    {
+        if (this.dealine < other.dealine) return -1;
+        if (this.dealine > other.dealine) { return 1; }
+        return 0;
+    }
+    public void UpdateStatus(string newStatus)
+    {
 
+    }
 }
+

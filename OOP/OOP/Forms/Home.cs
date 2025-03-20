@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OOP.Models;
+using OOP.Usercontrols;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +10,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace OOP
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
 
             InitializeComponent();
@@ -22,6 +25,11 @@ namespace OOP
             ApplyMouseEvents(TopPanel);
             ApplyMouseEvents(projectPanel);
             ApplyMouseEvents(taskPanel);
+
+            //Task
+            LoadTasks();
+            //Project
+            Loadprojects();
         }
         // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
         void ApplyMouseEvents(Panel panel)
@@ -77,7 +85,7 @@ namespace OOP
         }
 
         private Timer timer;
-        private void Form1_Load(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
             // Cập nhật thời gian ban đầu và người dùng
             UpdateDateTime();
@@ -102,134 +110,45 @@ namespace OOP
             sidebarTransition.Start();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        private void label1_Click(object sender, EventArgs e)
+        private List<Task> tasks = new List<Task>();
+        private void LoadTasks()
         {
+            // Ví dụ: tạo danh sách Task mẫu
+            tasks.Add(new Task("1", "Quýnh VietAnh", "Pending", DateTime.Now.AddDays(3), "Project Alpha"));
+            tasks.Add(new Task("2", "Code Login", "In Progress", DateTime.Now.AddDays(5), "Project Beta"));
+            tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha"));
 
+
+            // Xóa các control cũ trong panel trước khi thêm mới
+            taskContainer.Controls.Clear();
+
+            foreach (var task in tasks)
+            {
+                HomeTaskUserControl  taskItem = new HomeTaskUserControl(task);
+                taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
+                taskContainer.Controls.Add(taskItem);
+                ApplyMouseEvents(taskItem.TaskPanel);
+            }
+        }
+        private List<Project> projects = new List<Project>();
+        private void Loadprojects()
+        {
+            // Ví dụ: tạo danh sách Project mẫu
+            projects.Add(new Project("1", "Quýnh vietAnh"));
+            projects.Add(new Project("1", "Quýnh ThoaiHao"));
+            // Xóa các control cũ trong panel trước khi thêm mới
+            projectContainer.Controls.Clear();
+
+            foreach (var project in projects)
+            {
+                HomeProjectUserControl projectItem = new HomeProjectUserControl(project);
+                projectItem.Dock = DockStyle.Top; // Stack Project from top to bottom
+                projectContainer.Controls.Add(projectItem);
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void menu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer3_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sidebar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void menuContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Completed_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }

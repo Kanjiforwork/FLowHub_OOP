@@ -408,10 +408,19 @@ namespace OOP
             txtDescription.Text = project.projectDescription;
             txtDescription.Size = new Size(300, 30);
             txtDescription.Location = new Point(10, 80);
-            txtDescription.TextChanged += (s, e) =>
+
+            // Xử lý sự kiện KeyDown (lưu khi nhấn Enter)
+            txtDescription.KeyDown += (s, e) =>
             {
-                project.projectDescription = txtDescription.Text;
+                if (e.KeyCode == Keys.Enter)  // Kiểm tra nếu phím Enter được nhấn
+                {
+                    project.projectDescription = txtDescription.Text; // Cập nhật mô tả vào đối tượng Project
+                    SaveProjectsToFile(); // Lưu lại dự án vào file sau khi thay đổi
+                    MessageBox.Show("Dữ liệu đã được lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);  // Hiển thị thông báo
+                    e.Handled = true;  // Ngăn chặn việc nhấn Enter làm textBox mất focus
+                }
             };
+
             panel3.Controls.Add(txtDescription);
 
             // Label Project Role

@@ -1,4 +1,4 @@
-﻿using OOP.Models;
+using OOP.Models;
 using OOP.Services;
 using System;
 using System.Collections.Generic;
@@ -249,6 +249,7 @@ namespace OOP
         //
         private void btnCreateProject_Click(object sender, EventArgs e)
         {
+            // Hiện hộp thoại yêu cầu nhập tên dự án
             string inputName = Prompt.ShowDialog("Nhập tên dự án:", "Tạo Project");
 
             if (string.IsNullOrWhiteSpace(inputName))
@@ -257,16 +258,34 @@ namespace OOP
                 return;
             }
 
+            // Lấy ID dự án (giả sử dựa trên số lượng dự án hiện tại)
             int projectID = projects.Count + 1;
-            string projectDescription = "Mô tả của " + inputName;
-            RoleType defaultRole = RoleType.Member;
 
+            // Mô tả mặc định cho dự án
+            string projectDescription = "Mô tả của " + inputName;
+
+            // Quyền mặc định cho người tạo là 'Admin'
+            RoleType defaultRole = RoleType.Admin;
+
+            // Sử dụng tên người dùng đăng nhập làm người tạo dự án
+            string createdBy = User.GetLoggedInUserName();
+
+            // Tạo dự án mới
             Project newProject = new Project(projectID, inputName, projectDescription, defaultRole);
+            newProject.CreatedBy = createdBy; // Gán người tạo dự án
+
+            // Thêm vào danh sách dự án
             projects.Add(newProject);
+
+            // Lưu dự án vào file
             SaveProjectsToFile();
+
+            // Thêm nút dự án mới vào giao diện
+            AddProjectButton(newProject);
 
             AddProjectButton(newProject); // Chỉ thêm nút mới, không load lại toàn bộ danh sách
         }
+
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
@@ -362,7 +381,7 @@ namespace OOP
         {
             panel3.Controls.Clear(); // Xóa nội dung cũ
 
-            // Thêm lại nút Overview trên cùng
+            // Tạo nút Overview trên cùng
             Button btnOverview = new Button();
             btnOverview.Text = "Overview";
             btnOverview.Size = new Size(100, 30);
@@ -376,6 +395,13 @@ namespace OOP
             lblProjectDesc.Font = new Font("Arial", 12, FontStyle.Bold);
             lblProjectDesc.Location = new Point(10, 50);
             panel3.Controls.Add(lblProjectDesc);
+
+            // Hiển thị tên người tạo
+            Label lblCreator = new Label();
+            lblCreator.Text = $"Created by: {project.CreatedBy}"; // Hiển thị người tạo dự án
+            lblCreator.Font = new Font("Arial", 10, FontStyle.Regular);
+            lblCreator.Location = new Point(10, 110);
+            panel3.Controls.Add(lblCreator);
 
             // TextBox nhập mô tả dự án
             TextBox txtDescription = new TextBox();
@@ -490,7 +516,7 @@ namespace OOP
         {
 
         }
-
+        
         private void textBox1_Enter(object sender, EventArgs e)
         {
 

@@ -16,7 +16,15 @@ namespace OOP.Models
         Member
         
     }
-   
+
+    public class Post
+    {
+        public string Content { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime Timestamp { get; set; }
+        public List<string> Comments { get; set; } = new List<string>(); // Danh sách bình lu?n
+        public int Id { get; set; }  // Thêm thu?c tính ID
+    }
     public class Project
     {
         private int projectID { get; set; }
@@ -28,7 +36,8 @@ namespace OOP.Models
         public string CreatedBy { get; set; } 
         public Project() { }
         public RoleType UserRole { get; private set; }
-        
+        public List<Post> Posts { get; set; }
+
 
         public Project(int projectID, string projectName, string projectDescription, RoleType role)
         {

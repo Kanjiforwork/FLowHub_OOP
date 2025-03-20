@@ -17,6 +17,7 @@ namespace OOP
 {
     public partial class ProjectForm : Form
     {
+        private Project selectedProject = null;
         private Label lblProjectDescription;
         List<Panel> projectPosts = new List<Panel>();
         private Button btnBack;
@@ -28,10 +29,11 @@ namespace OOP
             panelPostContainer = new Panel();
             panelPostContainer.AutoScroll = true;
             panelPostContainer.BorderStyle = BorderStyle.FixedSingle;
-            panelPostContainer.Size = new Size(500, 300);
+            //panelPostContainer.Size = new Size(657, 417);
             // panelPostContainer.Location = new Point(textBox1.Location.X, textBox1.Bottom + 10);
-            panelPostContainer.Size = new Size(panel1.Width - 40, 120);
+            panelPostContainer.Size = new Size(panel1.Width,401);
             this.Controls.Add(panelPostContainer);
+            
         }
         public ProjectForm()
         {
@@ -283,7 +285,7 @@ namespace OOP
             // Thêm nút dự án mới vào giao diện
             AddProjectButton(newProject);
 
-            AddProjectButton(newProject); // Chỉ thêm nút mới, không load lại toàn bộ danh sách
+             // Chỉ thêm nút mới, không load lại toàn bộ danh sách
         }
 
 
@@ -325,15 +327,22 @@ namespace OOP
 
 
 
-        private void btnDeleteProject_Click(object sender, EventArgs e)
+        private void BtnDeleteProject_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedIndex >= 0)
+            if (selectedProject == null) return;
+
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa dự án '{selectedProject.projectName}'?",
+                                                  "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
             {
-                int index = listBox2.SelectedIndex;
-                projects.RemoveAt(index);
-                SaveProjectsToFile(); // Cập nhật file JSON
-                listBox2.Items.RemoveAt(index);
-                panel2.Controls.Clear();
+                projects.Remove(selectedProject); // Xóa khỏi danh sách
+                SaveProjectsToFile(); // Lưu lại dữ liệu
+
+                // Cập nhật giao diện
+                panel3.Visible = false;
+                panel2.Visible = true;
+                LoadProjectButtons();
             }
         }
 
@@ -354,8 +363,9 @@ namespace OOP
         }
         private void ShowProjectDetails(Project project)
         {
+            selectedProject = project;
             panel3.Controls.Clear(); // Xóa nội dung cũ trong panel3
-
+            panel3.Size = new Size(657, 417);
             // Tạo nút Overview (đặt trên cùng)
             Button btnOverview = new Button();
             btnOverview.Text = "Overview";
@@ -379,8 +389,9 @@ namespace OOP
         // Hiển thị thông tin Overview của project
         private void LoadOverviewPanel(Project project)
         {
+            
             panel3.Controls.Clear(); // Xóa nội dung cũ
-
+           
             // Tạo nút Overview trên cùng
             Button btnOverview = new Button();
             btnOverview.Text = "Overview";
@@ -394,7 +405,7 @@ namespace OOP
             lblProjectDesc.Text = "Project Description";
             lblProjectDesc.Font = new Font("Arial", 12, FontStyle.Bold);
             lblProjectDesc.Location = new Point(10, 50);
-            panel3.Controls.Add(lblProjectDesc);
+            panel3.Controls.Add(lblProjectDesc);        
 
             // Hiển thị tên người tạo
             Label lblCreator = new Label();
@@ -422,18 +433,67 @@ namespace OOP
             };
 
             panel3.Controls.Add(txtDescription);
+            // phần đăng bài 
+            Label lblPost = new Label();
+            lblPost.Text = "Post an update:";
+            lblPost.Location = new Point(10, 140);
+            lblPost.Font = new Font("Arial", 12, FontStyle.Bold);
+            panel3.Controls.Add(lblPost);
+
+            TextBox txtPostContent = new TextBox();
+            txtPostContent.Size = new Size(300, 30);
+            txtPostContent.Location = new Point(10, 160);
+            panel3.Controls.Add(txtPostContent);
+            Button btnPost = new Button();
+            btnPost.Text = "Post";
+            btnPost.Location = new Point(320, 160);
+            btnPost.Size = new Size(75, 30);
+            btnPost.Click += (s, e) =>
+            {
+                string content = txtPostContent.Text.Trim();
+                if (!string.IsNullOrEmpty(content))
+                {
+                    // Tạo post mới
+                    Post newPost = new Post
+                    {
+                        Id = project.Posts.Count + 1,
+                        Content = content,
+                        CreatedBy = project.CreatedBy,
+                        Timestamp = DateTime.Now
+                    };
+
+                    // Thêm bài viết vào danh sách bài viết của dự án
+                    project.Posts.Add(newPost);
+
+                    // Lưu lại thông tin
+                    SaveProjectsToFile();
+                    
+                    // Hiển thị lại bài viết
+                    LoadPostList(project);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Bài viết không thể trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            };
+            panel3.Controls.Add(btnPost);
+
+            // Hiển thị danh sách bài viết
+            LoadPostList(project);
+
 
             // Label Project Role
             Label lblRole = new Label();
             lblRole.Text = "Project Role";
             lblRole.Font = new Font("Arial", 12, FontStyle.Bold);
-            lblRole.Location = new Point(10, 120);
+            lblRole.Location = new Point(10, 280);
             panel3.Controls.Add(lblRole);
 
             // ListBox hiển thị thành viên
             ListBox listBoxMembers = new ListBox();
-            listBoxMembers.Size = new Size(200, 100);
-            listBoxMembers.Location = new Point(10, 150);
+            listBoxMembers.Size = new Size(200, 80);
+            listBoxMembers.Location = new Point(10, 310);
             listBoxMembers.Items.Clear();
 
             if (project.members == null)
@@ -447,7 +507,7 @@ namespace OOP
             Button btnAddMember = new Button();
             btnAddMember.Text = "Add Member";
             btnAddMember.Size = new Size(100, 30);
-            btnAddMember.Location = new Point(10, 260);
+            btnAddMember.Location = new Point(10, 380);
             btnAddMember.Click += (s, e) =>
             {
                 Addmembercs userForm = new Addmembercs(this);
@@ -470,7 +530,7 @@ namespace OOP
             Button btnBack = new Button();
             btnBack.Text = "Back";
             btnBack.Size = new Size(100, 30);
-            btnBack.Location = new Point(120, 260);
+            btnBack.Location = new Point(120, 380);
             btnBack.Click += (s, e) =>
             {
                 panel3.Visible = false;  // Ẩn panel3
@@ -510,6 +570,64 @@ namespace OOP
         }
 
 
+        private void LoadPostList(Project project)
+        {
+            if (project == null)
+            {
+                MessageBox.Show("Lỗi: Dự án không hợp lệ!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (project.Posts == null)
+            {
+                project.Posts = new List<Post>(); // Khởi tạo danh sách nếu bị null
+            }
+
+            // Xóa hết bài viết cũ
+            int yOffset = 200;  // Vị trí bắt đầu hiển thị các bài viết
+            foreach (var post in project.Posts)
+            {
+                Label lblPost = new Label();
+                
+                lblPost.Text = $"{post.CreatedBy} - {post.Timestamp}: {post.Content}";
+                lblPost.Location = new Point(10, yOffset);
+                panel3.Controls.Add(lblPost);
+               
+                Label lblPostContent = new Label();
+                lblPostContent.Text = post.Content;
+                lblPostContent.Location = new Point(10, yOffset + 20);
+                lblPostContent.AutoSize = true;
+                panel3.Controls.Add(lblPostContent);
+                // Nút "Confirm đã đọc"
+                Button btnConfirmRead = new Button();
+                btnConfirmRead.Text = "Confirm đã đọc";
+                btnConfirmRead.Size = new Size(120, 30);
+                btnConfirmRead.Location = new Point(10, yOffset + 40);
+                btnConfirmRead.Click += (s, e) =>
+                {
+                    MessageBox.Show("Bạn đã xác nhận đã đọc!");
+                    btnConfirmRead.Visible = false;
+                };
+                panel3.Controls.Add(btnConfirmRead);
+
+               
+
+                // Nút "Bình luận"
+                Button btnComment = new Button
+                {
+                    Text = "Bình luận",
+                    Size = new Size(120, 30),
+                    Location = new Point(140, yOffset + 50)
+                };
+                btnComment.Click += (s, e) =>
+                {
+                    CommentForm commentForm = new CommentForm(post.Id.ToString(), post.Comments);
+                    commentForm.ShowDialog(); // Hiển thị form bình luận
+                };
+                panel3.Controls.Add(btnComment);
+
+                yOffset += 100;
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {

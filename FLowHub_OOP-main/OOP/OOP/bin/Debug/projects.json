@@ -2,29 +2,75 @@
   {
     "tasks": [],
     "projectName": "123123",
-    "projectDescription": "Mô tả của 123123",
-    "members": [],
-    "UserRole": 0
+    "projectDescription": "project như cặc",
+    "members": [
+      "31231 (Member)"
+    ],
+    "AdminID": 0,
+    "CreatedBy": null,
+    "UserRole": 0,
+    "Posts": [
+      {
+        "Content": "123123",
+        "CreatedBy": null,
+        "Timestamp": "2025-03-20T14:37:09.720916+07:00",
+        "Comments": [],
+        "Id": 0
+      }
+    ]
   },
   {
     "tasks": [],
     "projectName": "3333",
-    "projectDescription": "Mô tả của 3333",
+    "projectDescription": "asdasd",
     "members": [],
-    "UserRole": 0
+    "AdminID": 0,
+    "CreatedBy": null,
+    "UserRole": 0,
+    "Posts": [
+      {
+        "Content": "123123123",
+        "CreatedBy": null,
+        "Timestamp": "2025-03-20T16:23:21.4921257+07:00",
+        "Comments": [],
+        "Id": 0
+      }
+    ]
   },
   {
     "tasks": [],
-    "projectName": "33123123",
-    "projectDescription": "Mô tả của 33123123",
+    "projectName": "46565651321",
+    "projectDescription": "iugijnlkn",
     "members": [],
-    "UserRole": 0
+    "AdminID": 0,
+    "CreatedBy": "No user logged in",
+    "UserRole": 0,
+    "Posts": [
+      {
+        "Content": "ihbjkhjbkjkjbkjbkjbkjbkb",
+        "CreatedBy": "No user logged in",
+        "Timestamp": "2025-03-20T20:08:19.726946+07:00",
+        "Comments": [],
+        "Id": 1
+      }
+    ]
   },
   {
     "tasks": [],
-    "projectName": "123123123123",
-    "projectDescription": "Mô tả của 123123123123",
+    "projectName": "khkjhkjhk",
+    "projectDescription": "987hkjk",
     "members": [],
-    "UserRole": 1
+    "AdminID": 0,
+    "CreatedBy": "No user logged in",
+    "UserRole": 0,
+    "Posts": [
+      {
+        "Content": "kjlkjlkjlkjlk",
+        "CreatedBy": "No user logged in",
+        "Timestamp": "2025-03-20T20:09:10.2775801+07:00",
+        "Comments": [],
+        "Id": 1
+      }
+    ]
   }
 ]

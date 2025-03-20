@@ -1,4 +1,4 @@
-﻿using OOP.Services;
+using OOP.Services;
 using OOP;
 using System;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ namespace OOP.Models
     public enum RoleType
     {
         Admin,
-        Member,
-        Viewer
+        Member
+        
     }
    
     public class Project
@@ -24,10 +24,11 @@ namespace OOP.Models
         public string projectDescription { get; set; }
         public List<Task> tasks = new List<Task>();
         public List<string> members { get; set; } = new List<string>();
-
-
+        public int AdminID { get; set; }
+        public string CreatedBy { get; set; } 
         public Project() { }
         public RoleType UserRole { get; private set; }
+        
 
         public Project(int projectID, string projectName, string projectDescription, RoleType role)
         {
@@ -36,6 +37,15 @@ namespace OOP.Models
             this.projectDescription = projectDescription;
             this.UserRole = role;
 
+        }
+        public Project(int projectID, string projectName, string projectDescription, RoleType role, string createdBy)
+        {
+            this.projectID = projectID;
+            this.projectName = projectName;
+            this.projectDescription = projectDescription;
+            this.UserRole = role;
+            //this.AdminID = adminID;
+            this.members = new List<string> { $"{createdBy} (Admin)" };
         }
         public Project(int id, string name, string description)
         {

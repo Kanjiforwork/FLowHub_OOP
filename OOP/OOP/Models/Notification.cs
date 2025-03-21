@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Windows.Forms;
 
 public class Notification
-{ 
-        public int ID { get; set; }
-        public string Message { get; set; }
-        public DateTime Timestamp { get; set; }
+{
+    public string TieuDe { get; set; }
+    public string NguoiGui { get; set; }
+    public DateTime ThoiGian { get; set; }
+    public string NoiDung { get; set; }
+    public bool DaDoc { get; set; }
 
-        public Notification(int id, string message)
-        {
-            ID = id;
-            Message = message;
-            Timestamp = DateTime.Now;
-        }
-  
+    public Notification(string tieuDe, string nguoiGui, DateTime thoiGian, string noiDung, bool daDoc)
+    {
+        TieuDe = tieuDe;
+        NguoiGui = nguoiGui;
+        ThoiGian = thoiGian;
+        NoiDung = noiDung;
+        DaDoc = daDoc;
+    }
 }

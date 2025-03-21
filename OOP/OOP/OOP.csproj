@@ -104,6 +104,12 @@
     <Compile Include="Forms\AvaterForm.Designer.cs">
       <DependentUpon>AvaterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Inbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inbox.Designer.cs">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
     </Compile>
     <Compile Include="Usercontrols\TasksFullUserControl.Designer.cs">
       <DependentUpon>TasksFullUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\NotiUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\NotiUserControl.Designer.cs">
+      <DependentUpon>NotiUserControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AddMembers.resx">
       <DependentUpon>AddMembers.cs</DependentUpon>

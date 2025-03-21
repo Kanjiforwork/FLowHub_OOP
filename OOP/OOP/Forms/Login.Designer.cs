@@ -112,8 +112,8 @@ namespace OOP
             Controls.Add(txtUsername);
             Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Inbox";
+            Text = "Inbox";
             ResumeLayout(false);
             PerformLayout();
         }

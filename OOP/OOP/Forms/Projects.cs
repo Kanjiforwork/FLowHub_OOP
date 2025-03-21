@@ -24,7 +24,7 @@ namespace OOP
         private Button btnBack;
 
         List<Models.Project> projects = new List<Models.Project>();
-        private void Form1_Load(object sender, EventArgs e)
+        private void Inbox_Load(object sender, EventArgs e)
         {
             // Tạo panel chứa các post (cuộn được)
             panelPostContainer = new Panel();

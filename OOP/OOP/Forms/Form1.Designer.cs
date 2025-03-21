@@ -39,11 +39,9 @@
             this.panel4 = new ReaLTaiizor.Controls.Panel();
             this.button3 = new ReaLTaiizor.Controls.Button();
             this.panel5 = new ReaLTaiizor.Controls.Panel();
-            this.button4 = new ReaLTaiizor.Controls.Button();
             this.menu = new ReaLTaiizor.Controls.Panel();
             this.button1 = new ReaLTaiizor.Controls.Button();
             this.panel2 = new ReaLTaiizor.Controls.Panel();
-            this.button5 = new ReaLTaiizor.Controls.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,7 +67,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnHam = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -77,6 +74,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnHam = new System.Windows.Forms.PictureBox();
+            this.button5 = new ReaLTaiizor.Controls.Button();
+            this.button4 = new ReaLTaiizor.Controls.Button();
             this.TopPanel.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,7 +94,6 @@
             this.projectContainer.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -102,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -275,29 +275,6 @@
             this.panel5.TabIndex = 5;
             this.panel5.Text = "Dashboard";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BorderColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button4.EnteredColor = System.Drawing.Color.Transparent;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Image = global::OOP.Properties.Resources.noti;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.InactiveColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(17, 6);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button4.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button4.PressedColor = System.Drawing.Color.Transparent;
-            this.button4.Size = new System.Drawing.Size(305, 56);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "              Notification";
-            this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
@@ -350,29 +327,6 @@
             this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel2.TabIndex = 6;
             this.panel2.Text = "Dashboard";
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BorderColor = System.Drawing.Color.Transparent;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button5.EnteredColor = System.Drawing.Color.Transparent;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button5.Image = global::OOP.Properties.Resources.user;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.InactiveColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(17, 6);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button5.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button5.PressedColor = System.Drawing.Color.Transparent;
-            this.button5.Size = new System.Drawing.Size(305, 56);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "              User";
-            this.button5.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // sidebarTransition
             // 
@@ -575,7 +529,7 @@
             this.timeDetail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.timeDetail.Location = new System.Drawing.Point(218, 99);
             this.timeDetail.Name = "timeDetail";
-            this.timeDetail.Size = new System.Drawing.Size(982, 40);
+            this.timeDetail.Size = new System.Drawing.Size(1029, 40);
             this.timeDetail.TabIndex = 0;
             this.timeDetail.Text = "Time";
             this.timeDetail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -654,17 +608,6 @@
             this.label8.Size = new System.Drawing.Size(76, 38);
             this.label8.TabIndex = 4;
             this.label8.Text = "OOP";
-            // 
-            // btnHam
-            // 
-            this.btnHam.Location = new System.Drawing.Point(25, 19);
-            this.btnHam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnHam.Name = "btnHam";
-            this.btnHam.Size = new System.Drawing.Size(45, 36);
-            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHam.TabIndex = 1;
-            this.btnHam.TabStop = false;
-            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // pictureBox3
             // 
@@ -746,6 +689,63 @@
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
+            // btnHam
+            // 
+            this.btnHam.Location = new System.Drawing.Point(25, 19);
+            this.btnHam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHam.Name = "btnHam";
+            this.btnHam.Size = new System.Drawing.Size(45, 36);
+            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHam.TabIndex = 1;
+            this.btnHam.TabStop = false;
+            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BorderColor = System.Drawing.Color.Transparent;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button5.EnteredColor = System.Drawing.Color.Transparent;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button5.Image = global::OOP.Properties.Resources.user;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.InactiveColor = System.Drawing.Color.Transparent;
+            this.button5.Location = new System.Drawing.Point(17, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button5.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button5.PressedColor = System.Drawing.Color.Transparent;
+            this.button5.Size = new System.Drawing.Size(305, 56);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "              User";
+            this.button5.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BorderColor = System.Drawing.Color.Transparent;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button4.EnteredColor = System.Drawing.Color.Transparent;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button4.Image = global::OOP.Properties.Resources.noti;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.InactiveColor = System.Drawing.Color.Transparent;
+            this.button4.Location = new System.Drawing.Point(17, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button4.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button4.PressedColor = System.Drawing.Color.Transparent;
+            this.button4.Size = new System.Drawing.Size(305, 56);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "              Notification";
+            this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -784,7 +784,6 @@
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -792,6 +791,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -799,7 +799,6 @@
         #endregion
 
         private System.Windows.Forms.Panel TopPanel;
-        private System.Windows.Forms.PictureBox btnHam;
         private System.Windows.Forms.Label label1;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
@@ -810,10 +809,8 @@
         private ReaLTaiizor.Controls.Panel panel4;
         private ReaLTaiizor.Controls.Button button3;
         private ReaLTaiizor.Controls.Panel panel5;
-        private ReaLTaiizor.Controls.Button button4;
         private System.Windows.Forms.Timer sidebarTransition;
         private ReaLTaiizor.Controls.Panel panel2;
-        private ReaLTaiizor.Controls.Button button5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label timeDetail;
@@ -847,6 +844,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel projectContainer;
+        private System.Windows.Forms.PictureBox btnHam;
+        private ReaLTaiizor.Controls.Button button4;
+        private ReaLTaiizor.Controls.Button button5;
     }
 }
 

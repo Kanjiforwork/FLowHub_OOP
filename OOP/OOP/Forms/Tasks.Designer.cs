@@ -38,20 +38,14 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new ReaLTaiizor.Controls.Panel();
-            this.button1 = new ReaLTaiizor.Controls.Button();
             this.panel2 = new ReaLTaiizor.Controls.Panel();
-            this.button3 = new ReaLTaiizor.Controls.Button();
             this.panel6 = new ReaLTaiizor.Controls.Panel();
-            this.button4 = new ReaLTaiizor.Controls.Button();
             this.menu = new ReaLTaiizor.Controls.Panel();
-            this.button5 = new ReaLTaiizor.Controls.Button();
             this.panel7 = new ReaLTaiizor.Controls.Panel();
-            this.button6 = new ReaLTaiizor.Controls.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.WelcomeName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnHam = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.mnuList = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBoard = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,22 +57,28 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.taskProject = new System.Windows.Forms.Label();
             this.taskContent = new System.Windows.Forms.Label();
-            this.checkBox = new System.Windows.Forms.PictureBox();
             this.taskDeadline = new System.Windows.Forms.Label();
             this.btnMore = new System.Windows.Forms.Button();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox = new System.Windows.Forms.PictureBox();
+            this.btnHome = new ReaLTaiizor.Controls.Button();
+            this.btnTask = new ReaLTaiizor.Controls.Button();
+            this.button4 = new ReaLTaiizor.Controls.Button();
+            this.button5 = new ReaLTaiizor.Controls.Button();
+            this.button6 = new ReaLTaiizor.Controls.Button();
+            this.btnHam = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             this.sidebar.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -87,17 +87,17 @@
             this.menu.SuspendLayout();
             this.panel7.SuspendLayout();
             this.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.taskContainer.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -164,7 +164,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnHome);
             this.panel3.EdgeColor = System.Drawing.Color.Transparent;
             this.panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel3.Location = new System.Drawing.Point(3, 5);
@@ -176,33 +176,10 @@
             this.panel3.TabIndex = 4;
             this.panel3.Text = "Dashboard";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BorderColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button1.EnteredColor = System.Drawing.Color.Transparent;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Image = global::OOP.Properties.Resources.Home__2_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.InactiveColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(16, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button1.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button1.PressedColor = System.Drawing.Color.Transparent;
-            this.button1.Size = new System.Drawing.Size(306, 56);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "              Home";
-            this.button1.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnTask);
             this.panel2.EdgeColor = System.Drawing.Color.Transparent;
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Location = new System.Drawing.Point(3, 83);
@@ -213,29 +190,6 @@
             this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel2.TabIndex = 4;
             this.panel2.Text = "Dashboard";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BorderColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button3.EnteredColor = System.Drawing.Color.Transparent;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Image = global::OOP.Properties.Resources.image__1___1_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.InactiveColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(16, 6);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button3.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button3.PressedColor = System.Drawing.Color.Transparent;
-            this.button3.Size = new System.Drawing.Size(306, 56);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "              Task";
-            this.button3.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // panel6
             // 
@@ -252,29 +206,6 @@
             this.panel6.TabIndex = 5;
             this.panel6.Text = "Dashboard";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BorderColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button4.EnteredColor = System.Drawing.Color.Transparent;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Image = global::OOP.Properties.Resources.noti;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.InactiveColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(16, 6);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button4.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button4.PressedColor = System.Drawing.Color.Transparent;
-            this.button4.Size = new System.Drawing.Size(306, 56);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "              Notification";
-            this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
@@ -290,29 +221,6 @@
             this.menu.TabIndex = 3;
             this.menu.Text = "Dashboard";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BorderColor = System.Drawing.Color.Transparent;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button5.EnteredColor = System.Drawing.Color.Transparent;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button5.Image = global::OOP.Properties.Resources.image;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.InactiveColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(16, 6);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button5.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button5.PressedColor = System.Drawing.Color.Transparent;
-            this.button5.Size = new System.Drawing.Size(306, 56);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "               Project";
-            this.button5.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
@@ -327,29 +235,6 @@
             this.panel7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel7.TabIndex = 6;
             this.panel7.Text = "Dashboard";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BorderColor = System.Drawing.Color.Transparent;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button6.EnteredColor = System.Drawing.Color.Transparent;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button6.Image = global::OOP.Properties.Resources.user;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.InactiveColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(16, 6);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button6.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button6.PressedColor = System.Drawing.Color.Transparent;
-            this.button6.Size = new System.Drawing.Size(306, 56);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "              User";
-            this.button6.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // TopPanel
             // 
@@ -414,17 +299,6 @@
             this.label5.Size = new System.Drawing.Size(141, 38);
             this.label5.TabIndex = 2;
             this.label5.Text = "FlowHub";
-            // 
-            // btnHam
-            // 
-            this.btnHam.Image = global::OOP.Properties.Resources.image__8_;
-            this.btnHam.Location = new System.Drawing.Point(26, 18);
-            this.btnHam.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnHam.Name = "btnHam";
-            this.btnHam.Size = new System.Drawing.Size(45, 35);
-            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHam.TabIndex = 1;
-            this.btnHam.TabStop = false;
             // 
             // miniToolStrip
             // 
@@ -539,19 +413,6 @@
             this.label6.Text = "Check bài nhóm";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(7, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -601,19 +462,6 @@
             this.label2.Text = "Check bài nhóm";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -662,19 +510,6 @@
             this.taskContent.TabIndex = 3;
             this.taskContent.Text = "Check bài nhóm";
             this.taskContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // checkBox
-            // 
-            this.checkBox.ErrorImage = global::OOP.Properties.Resources.check;
-            this.checkBox.Image = ((System.Drawing.Image)(resources.GetObject("checkBox.Image")));
-            this.checkBox.InitialImage = null;
-            this.checkBox.Location = new System.Drawing.Point(7, 6);
-            this.checkBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(31, 31);
-            this.checkBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.checkBox.TabIndex = 1;
-            this.checkBox.TabStop = false;
             // 
             // taskDeadline
             // 
@@ -740,6 +575,173 @@
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = global::OOP.Properties.Resources.check;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(7, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = global::OOP.Properties.Resources.check;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // checkBox
+            // 
+            this.checkBox.ErrorImage = global::OOP.Properties.Resources.check;
+            this.checkBox.Image = ((System.Drawing.Image)(resources.GetObject("checkBox.Image")));
+            this.checkBox.InitialImage = null;
+            this.checkBox.Location = new System.Drawing.Point(7, 6);
+            this.checkBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(31, 31);
+            this.checkBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.checkBox.TabIndex = 1;
+            this.checkBox.TabStop = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHome.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.btnHome.EnteredColor = System.Drawing.Color.Transparent;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHome.Image = global::OOP.Properties.Resources.Home__2_;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.InactiveColor = System.Drawing.Color.Transparent;
+            this.btnHome.Location = new System.Drawing.Point(16, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.btnHome.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.btnHome.PressedColor = System.Drawing.Color.Transparent;
+            this.btnHome.Size = new System.Drawing.Size(306, 56);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "              Home";
+            this.btnHome.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnHome.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnTask
+            // 
+            this.btnTask.BackColor = System.Drawing.Color.Transparent;
+            this.btnTask.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTask.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTask.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.btnTask.EnteredColor = System.Drawing.Color.Transparent;
+            this.btnTask.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTask.Image = global::OOP.Properties.Resources.image__1___1_;
+            this.btnTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTask.InactiveColor = System.Drawing.Color.Transparent;
+            this.btnTask.Location = new System.Drawing.Point(16, 6);
+            this.btnTask.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnTask.Name = "btnTask";
+            this.btnTask.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.btnTask.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.btnTask.PressedColor = System.Drawing.Color.Transparent;
+            this.btnTask.Size = new System.Drawing.Size(306, 56);
+            this.btnTask.TabIndex = 2;
+            this.btnTask.Text = "              Task";
+            this.btnTask.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BorderColor = System.Drawing.Color.Transparent;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button4.EnteredColor = System.Drawing.Color.Transparent;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button4.Image = global::OOP.Properties.Resources.noti;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.InactiveColor = System.Drawing.Color.Transparent;
+            this.button4.Location = new System.Drawing.Point(16, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button4.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button4.PressedColor = System.Drawing.Color.Transparent;
+            this.button4.Size = new System.Drawing.Size(306, 56);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "              Notification";
+            this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BorderColor = System.Drawing.Color.Transparent;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button5.EnteredColor = System.Drawing.Color.Transparent;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button5.Image = global::OOP.Properties.Resources.image;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.InactiveColor = System.Drawing.Color.Transparent;
+            this.button5.Location = new System.Drawing.Point(16, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button5.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button5.PressedColor = System.Drawing.Color.Transparent;
+            this.button5.Size = new System.Drawing.Size(306, 56);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "               Project";
+            this.button5.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BorderColor = System.Drawing.Color.Transparent;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button6.EnteredColor = System.Drawing.Color.Transparent;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button6.Image = global::OOP.Properties.Resources.user;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.InactiveColor = System.Drawing.Color.Transparent;
+            this.button6.Location = new System.Drawing.Point(16, 6);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button6.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button6.PressedColor = System.Drawing.Color.Transparent;
+            this.button6.Size = new System.Drawing.Size(306, 56);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "              User";
+            this.button6.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // btnHam
+            // 
+            this.btnHam.Image = global::OOP.Properties.Resources.image__8_;
+            this.btnHam.Location = new System.Drawing.Point(26, 18);
+            this.btnHam.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnHam.Name = "btnHam";
+            this.btnHam.Size = new System.Drawing.Size(45, 35);
+            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHam.TabIndex = 1;
+            this.btnHam.TabStop = false;
+            // 
             // Tasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -767,18 +769,18 @@
             this.panel7.ResumeLayout(false);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.taskContainer.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -796,9 +798,9 @@
         private System.Windows.Forms.PictureBox btnHam;
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private ReaLTaiizor.Controls.Panel panel3;
-        private ReaLTaiizor.Controls.Button button1;
+        private ReaLTaiizor.Controls.Button btnHome;
         private ReaLTaiizor.Controls.Panel panel2;
-        private ReaLTaiizor.Controls.Button button3;
+        private ReaLTaiizor.Controls.Button btnTask;
         private ReaLTaiizor.Controls.Panel panel6;
         private ReaLTaiizor.Controls.Button button4;
         private ReaLTaiizor.Controls.Panel menu;

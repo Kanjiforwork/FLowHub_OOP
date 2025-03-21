@@ -1,16 +1,19 @@
-﻿using OOP.Models;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using OOP.Models;
 using OOP.Usercontrols;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using User = OOP.Models.User;
 
 namespace OOP
 {
@@ -134,8 +137,8 @@ namespace OOP
         private void Loadprojects()
         {
             // Ví dụ: tạo danh sách Project mẫu
-            projects.Add(new Project("1", "Quýnh vietAnh"));
-            projects.Add(new Project("1", "Quýnh ThoaiHao"));
+           /* projects.Add(new Project("1", "Quýnh vietAnh"));
+            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
             // Xóa các control cũ trong panel trước khi thêm mới
             projectContainer.Controls.Clear();
 
@@ -151,6 +154,28 @@ namespace OOP
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private User _user;
+        public Home(User user)
+        {
+            InitializeComponent();
+            _user = user;
+           /* lblUsername.Text = _user.Username;
+            lblEmail.Text = _user.Email;*/
+            if (_user.Avatar != null && _user.Avatar.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(_user.Avatar))
+                {
+                    try
+                    {
+                        //pbUserAvatar.Image = Image.FromStream(ms);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi hiển thị ảnh đại diện: {ex.Message}");
+                    }
+                }
+            }
         }
     }
 }

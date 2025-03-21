@@ -93,6 +93,16 @@ namespace OOP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DefaultAvatar {
+            get {
+                object obj = ResourceManager.GetObject("DefaultAvatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap defaultProjectPic {
             get {
                 object obj = ResourceManager.GetObject("defaultProjectPic", resourceCulture);

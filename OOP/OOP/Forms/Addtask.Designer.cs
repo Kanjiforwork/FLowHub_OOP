@@ -43,14 +43,16 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.WelcomeName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.TopPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbInputName
             // 
             this.lbInputName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbInputName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbInputName.Location = new System.Drawing.Point(63, 79);
+            this.lbInputName.Location = new System.Drawing.Point(84, 24);
             this.lbInputName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInputName.Name = "lbInputName";
             this.lbInputName.Size = new System.Drawing.Size(192, 30);
@@ -60,7 +62,7 @@
             // 
             // txtbInputNameTask
             // 
-            this.txtbInputNameTask.Location = new System.Drawing.Point(298, 79);
+            this.txtbInputNameTask.Location = new System.Drawing.Point(320, 24);
             this.txtbInputNameTask.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbInputNameTask.Name = "txtbInputNameTask";
             this.txtbInputNameTask.Size = new System.Drawing.Size(433, 26);
@@ -71,7 +73,7 @@
             // 
             this.lbInputID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbInputID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbInputID.Location = new System.Drawing.Point(63, 154);
+            this.lbInputID.Location = new System.Drawing.Point(84, 99);
             this.lbInputID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInputID.Name = "lbInputID";
             this.lbInputID.Size = new System.Drawing.Size(192, 30);
@@ -81,7 +83,7 @@
             // 
             // txtbInputID
             // 
-            this.txtbInputID.Location = new System.Drawing.Point(298, 155);
+            this.txtbInputID.Location = new System.Drawing.Point(320, 99);
             this.txtbInputID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbInputID.Name = "txtbInputID";
             this.txtbInputID.Size = new System.Drawing.Size(433, 26);
@@ -91,7 +93,7 @@
             // 
             this.lbStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbStatus.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbStatus.Location = new System.Drawing.Point(63, 224);
+            this.lbStatus.Location = new System.Drawing.Point(84, 169);
             this.lbStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(192, 30);
@@ -106,7 +108,7 @@
             this.cbbStatus.Items.AddRange(new object[] {
             "Chưa hoàn thành",
             "Hoàn thành"});
-            this.cbbStatus.Location = new System.Drawing.Point(298, 221);
+            this.cbbStatus.Location = new System.Drawing.Point(320, 169);
             this.cbbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Size = new System.Drawing.Size(433, 28);
@@ -116,7 +118,7 @@
             // 
             this.lbDeadline.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbDeadline.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbDeadline.Location = new System.Drawing.Point(63, 288);
+            this.lbDeadline.Location = new System.Drawing.Point(84, 233);
             this.lbDeadline.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDeadline.Name = "lbDeadline";
             this.lbDeadline.Size = new System.Drawing.Size(192, 30);
@@ -127,7 +129,7 @@
             // 
             // dtpNewTask
             // 
-            this.dtpNewTask.Location = new System.Drawing.Point(298, 287);
+            this.dtpNewTask.Location = new System.Drawing.Point(320, 233);
             this.dtpNewTask.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpNewTask.Name = "dtpNewTask";
             this.dtpNewTask.Size = new System.Drawing.Size(433, 26);
@@ -136,7 +138,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnConfirm.Location = new System.Drawing.Point(190, 446);
+            this.btnConfirm.Location = new System.Drawing.Point(194, 391);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(123, 59);
@@ -148,7 +150,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCancel.Location = new System.Drawing.Point(557, 446);
+            this.btnCancel.Location = new System.Drawing.Point(506, 446);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 59);
@@ -161,7 +163,7 @@
             // 
             this.btnAddinProject.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddinProject.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddinProject.Location = new System.Drawing.Point(63, 355);
+            this.btnAddinProject.Location = new System.Drawing.Point(84, 300);
             this.btnAddinProject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnAddinProject.Name = "btnAddinProject";
             this.btnAddinProject.Size = new System.Drawing.Size(192, 30);
@@ -173,7 +175,7 @@
             // 
             this.cbbSelectProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSelectProject.FormattingEnabled = true;
-            this.cbbSelectProject.Location = new System.Drawing.Point(298, 355);
+            this.cbbSelectProject.Location = new System.Drawing.Point(320, 300);
             this.cbbSelectProject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbSelectProject.Name = "cbbSelectProject";
             this.cbbSelectProject.Size = new System.Drawing.Size(433, 28);
@@ -208,7 +210,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(682, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(681, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -230,6 +232,25 @@
             this.WelcomeName.Text = "Add task";
             this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtbInputNameTask);
+            this.panel1.Controls.Add(this.btnAddinProject);
+            this.panel1.Controls.Add(this.btnConfirm);
+            this.panel1.Controls.Add(this.cbbSelectProject);
+            this.panel1.Controls.Add(this.lbInputID);
+            this.panel1.Controls.Add(this.lbStatus);
+            this.panel1.Controls.Add(this.lbDeadline);
+            this.panel1.Controls.Add(this.lbInputName);
+            this.panel1.Controls.Add(this.txtbInputID);
+            this.panel1.Controls.Add(this.cbbStatus);
+            this.panel1.Controls.Add(this.dtpNewTask);
+            this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(820, 490);
+            this.panel1.TabIndex = 13;
+            // 
             // Addtask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -237,18 +258,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(821, 548);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.cbbSelectProject);
-            this.Controls.Add(this.btnAddinProject);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.dtpNewTask);
-            this.Controls.Add(this.lbDeadline);
-            this.Controls.Add(this.cbbStatus);
-            this.Controls.Add(this.lbStatus);
-            this.Controls.Add(this.txtbInputID);
-            this.Controls.Add(this.lbInputID);
-            this.Controls.Add(this.txtbInputNameTask);
-            this.Controls.Add(this.lbInputName);
+            this.Controls.Add(this.panel1);
             this.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -256,8 +267,9 @@
             this.Text = "Addtask";
             this.Load += new System.EventHandler(this.Addtask_Load);
             this.TopPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -278,5 +290,6 @@
         private System.Windows.Forms.Panel TopPanel;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private System.Windows.Forms.Label WelcomeName;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OOP.Models;
 
 namespace OOP.Services
 {
@@ -19,7 +20,7 @@ namespace OOP.Services
         {
             Projects.Add(new Project());
         }
-        public void DeleteProject(string ProjectName)
+       /* public void DeleteProject(string ProjectName)
         {
             Project project = Projects.Find(p => p.ProjectName == ProjectName);
             if (project != null)
@@ -34,16 +35,7 @@ namespace OOP.Services
         public Project FindProject(string ProjectName)
         {
             return Projects.Find(p => p.ProjectName == ProjectName);
-        }
-
-    }
-
-
-    public class Project
-    {
-        public string ProjectName { get; set; }
-        public string ProjectId {  get; set; }
-
+        }*/
 
     }
 

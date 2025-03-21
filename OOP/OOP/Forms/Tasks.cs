@@ -18,8 +18,8 @@ namespace OOP
             tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha"));
 
             // Ví dụ: tạo danh sách project mẫu
-            projects.Add(new Project("1", "Quýnh vietAnh"));
-            projects.Add(new Project("1", "Quýnh ThoaiHao"));
+          /*  projects.Add(new Project("1", "Quýnh vietAnh"));
+            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
             LoadTasks(tasks);
 
             //Apply mouseEvent
@@ -67,7 +67,7 @@ namespace OOP
             //  }
             //Console.WriteLine(mnuList.Checked);
         }
-        public List<Project> projects = new List<Project>();
+        private List<Project> projects = new List<Project>();
         private List<Task> tasks = new List<Task>();
 
         private void LoadTasks(List<Task> tasks)
@@ -169,6 +169,20 @@ namespace OOP
             }
             LoadTasks(taskslistother);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home home = new Home(); // Create a new instance of Form2
+            this.Hide(); // Hide the current form
+            home.Show(); // Show Form2
+        }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            Tasks tasks = new Tasks(); // Create a new instance of Form2
+            this.Hide(); // Hide the current form
+            tasks.Show(); // Show 
         }
     }
 }

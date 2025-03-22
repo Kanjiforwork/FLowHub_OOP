@@ -24,7 +24,7 @@ namespace OOP
         private Button btnBack;
 
         List<Models.Project> projects = new List<Models.Project>();
-        private void Inbox_Load(object sender, EventArgs e)
+       /* private void Inbox_Load(object sender, EventArgs e)
         {
             // Tạo panel chứa các post (cuộn được)
             panelPostContainer = new Panel();
@@ -34,7 +34,7 @@ namespace OOP
             // panelPostContainer.Location = new Point(textBox1.Location.X, textBox1.Bottom + 10);
             panelPostContainer.Size = new Size(panel1.Width - 40, 120);
             this.Controls.Add(panelPostContainer);
-        }
+        }*/
         public Projects()
         {
             InitializeComponent();
@@ -44,8 +44,8 @@ namespace OOP
             btnBack.Size = new Size(117, 34);
             btnBack.Location = new Point(0, 10);
             btnBack.Visible = false; // Ẩn ban đầu
-            btnBack.Click += BtnBack_Click; // Gắn sự kiện click
-            panel2.Controls.Add(btnBack); // Thêm vào panel2
+           // btnBack.Click += BtnBack_Click; // Gắn sự kiện click
+            //panel2.Controls.Add(btnBack); // Thêm vào panel2
             LoadProjectsFromFile();
 
         }
@@ -74,7 +74,7 @@ namespace OOP
         //    }
         //}
 
-        private void AddPost(string content)
+       /* private void AddPost(string content)
         {
             if (panelPostContainer == null)
             {
@@ -122,7 +122,7 @@ namespace OOP
 
             // Cập nhật vị trí listBox1 nhưng không làm nó mất
             //listBox1.Top = Math.Max(button1.Bottom + 10, panelPostContainer.Bottom + 10);
-        }
+        }*/
         private void SaveProjectsToFile()
         {
             string filePath = "projects.json";
@@ -143,7 +143,7 @@ namespace OOP
                 projects = new List<Project>();
             }
 
-            LoadProjectButtons(); // Gọi hàm này để load lại UI từ JSON
+            //LoadProjectButtons(); // Gọi hàm này để load lại UI từ JSON
         }
         private void RearrangePosts()
         {
@@ -284,11 +284,11 @@ namespace OOP
 
             // Thêm nút dự án mới vào giao diện
 
-            AddProjectButton(newProject); // Chỉ thêm nút mới, không load lại toàn bộ danh sách
+            //AddProjectButton(newProject); // Chỉ thêm nút mới, không load lại toàn bộ danh sách
         }
 
 
-        private void BtnBack_Click(object sender, EventArgs e)
+       /* private void BtnBack_Click(object sender, EventArgs e)
         {
             panel3.Visible = false; // Ẩn panel3 (hiển thị chi tiết project)
             panel2.Visible = true;  // Hiển thị lại danh sách dự án
@@ -322,32 +322,10 @@ namespace OOP
 
                 panel2.Controls.Add(btnProject);
             }
-        }
+        }*/
 
 
 
-        private void btnDeleteProject_Click(object sender, EventArgs e)
-        {
-            if (listBox2.SelectedIndex >= 0)
-            {
-                int index = listBox2.SelectedIndex;
-                projects.RemoveAt(index);
-                SaveProjectsToFile(); // Cập nhật file JSON
-                listBox2.Items.RemoveAt(index);
-                panel2.Controls.Clear();
-            }
-        }
-
-
-
-        private void listBoxProjects_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = listBox2.SelectedIndex;
-            if (index >= 0)
-            {
-                ShowProjectDetails(projects[index]);
-            }
-        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -374,7 +352,7 @@ namespace OOP
 
             // Hiển thị panel3 và ẩn panel2
             panel3.Visible = true;
-            panel2.Visible = false;
+            //panel2.Visible = false;
         }
 
         // Hiển thị thông tin Overview của project
@@ -475,13 +453,13 @@ namespace OOP
             btnBack.Click += (s, e) =>
             {
                 panel3.Visible = false;  // Ẩn panel3
-                panel2.Visible = true;   // Hiển thị danh sách project
+                //panel2.Visible = true;   // Hiển thị danh sách project
             };
             panel3.Controls.Add(btnBack);
         }
 
 
-        private void LoadProjectButtons()
+      /*  private void LoadProjectButtons()
         {
             panel2.Controls.Clear(); // Xóa hết các nút cũ trước khi load lại
 
@@ -489,8 +467,8 @@ namespace OOP
             {
                 AddProjectButton(project);
             }
-        }
-        private void AddProjectButton(Project project)
+        }*/
+       /* private void AddProjectButton(Project project)
         {
             Button btnProject = new Button();
             btnProject.Text = project.projectName;
@@ -508,7 +486,7 @@ namespace OOP
             };
 
             panel2.Controls.Add(btnProject);
-        }
+        }*/
 
 
 
@@ -533,6 +511,16 @@ namespace OOP
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }

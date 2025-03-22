@@ -73,6 +73,16 @@ namespace OOP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_White {
+            get {
+                object obj = ResourceManager.GetObject("add_White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap check {
             get {
                 object obj = ResourceManager.GetObject("check", resourceCulture);
@@ -146,6 +156,16 @@ namespace OOP.Properties {
         internal static System.Drawing.Bitmap image__1___1_1 {
             get {
                 object obj = ResourceManager.GetObject("image (1) (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image__12_ {
+            get {
+                object obj = ResourceManager.GetObject("image (12)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

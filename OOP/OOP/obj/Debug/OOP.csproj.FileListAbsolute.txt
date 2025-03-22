@@ -41,3 +41,4 @@ C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\System.Text.Encodings.
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\System.Text.Json.xml
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\bin\Debug\System.ValueTuple.xml
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Projects.resources

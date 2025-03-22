@@ -86,6 +86,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\Textbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\AddMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +195,9 @@
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Projects.resx">
+      <DependentUpon>Projects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tasks.resx">
       <DependentUpon>Tasks.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add.png" />
+    <None Include="Resources\add_White.png" />
     <Content Include="Resources\DefaultAvatar.png" />
     <Content Include="Resources\defaultProjectPic.png" />
     <None Include="Resources\Home %282%29.png" />
@@ -254,6 +261,7 @@
     <None Include="Resources\image %281%29 %281%29.png" />
     <None Include="Resources\image %281%29 %281%291.png" />
     <None Include="Resources\image.png" />
+    <None Include="Resources\image %2812%29.png" />
     <Content Include="Resources\user.png" />
     <Content Include="Resources\noti.png" />
     <Content Include="Resources\sort.png" />

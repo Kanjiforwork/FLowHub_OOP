@@ -32,6 +32,7 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHam = new System.Windows.Forms.PictureBox();
             this.WelcomeName = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new ReaLTaiizor.Controls.Panel();
@@ -39,9 +40,11 @@
             this.panel4 = new ReaLTaiizor.Controls.Panel();
             this.button3 = new ReaLTaiizor.Controls.Button();
             this.panel5 = new ReaLTaiizor.Controls.Panel();
+            this.button4 = new ReaLTaiizor.Controls.Button();
             this.menu = new ReaLTaiizor.Controls.Panel();
             this.button1 = new ReaLTaiizor.Controls.Button();
             this.panel2 = new ReaLTaiizor.Controls.Panel();
+            this.button5 = new ReaLTaiizor.Controls.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,35 +52,33 @@
             this.taskContainer = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Completed = new System.Windows.Forms.Label();
             this.Overdue = new System.Windows.Forms.Label();
             this.UpComing = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Mytask = new System.Windows.Forms.Label();
             this.timeDetail = new System.Windows.Forms.Label();
             this.projectPanel = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.projectContainer = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.btnHam = new System.Windows.Forms.PictureBox();
-            this.button5 = new ReaLTaiizor.Controls.Button();
-            this.button4 = new ReaLTaiizor.Controls.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -88,20 +89,19 @@
             this.taskPanel.SuspendLayout();
             this.taskContainer.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.projectPanel.SuspendLayout();
-            this.projectContainer.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.projectPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.projectContainer.SuspendLayout();
+            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -154,6 +154,18 @@
             this.label1.Size = new System.Drawing.Size(141, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "FlowHub";
+            // 
+            // btnHam
+            // 
+            this.btnHam.Image = global::OOP.Properties.Resources.image__8_;
+            this.btnHam.Location = new System.Drawing.Point(25, 19);
+            this.btnHam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHam.Name = "btnHam";
+            this.btnHam.Size = new System.Drawing.Size(45, 36);
+            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHam.TabIndex = 1;
+            this.btnHam.TabStop = false;
+            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // WelcomeName
             // 
@@ -208,7 +220,7 @@
             this.button2.EnteredBorderColor = System.Drawing.Color.Transparent;
             this.button2.EnteredColor = System.Drawing.Color.Transparent;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button2.Image = null;
+            this.button2.Image = global::OOP.Properties.Resources.Home__2_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button2.InactiveColor = System.Drawing.Color.Transparent;
             this.button2.Location = new System.Drawing.Point(17, 6);
@@ -246,7 +258,7 @@
             this.button3.EnteredBorderColor = System.Drawing.Color.Transparent;
             this.button3.EnteredColor = System.Drawing.Color.Transparent;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Image = null;
+            this.button3.Image = global::OOP.Properties.Resources.image__1___1_1;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.InactiveColor = System.Drawing.Color.Transparent;
             this.button3.Location = new System.Drawing.Point(17, 6);
@@ -275,6 +287,29 @@
             this.panel5.TabIndex = 5;
             this.panel5.Text = "Dashboard";
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BorderColor = System.Drawing.Color.Transparent;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button4.EnteredColor = System.Drawing.Color.Transparent;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button4.Image = global::OOP.Properties.Resources.noti;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.InactiveColor = System.Drawing.Color.Transparent;
+            this.button4.Location = new System.Drawing.Point(17, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button4.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button4.PressedColor = System.Drawing.Color.Transparent;
+            this.button4.Size = new System.Drawing.Size(305, 56);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "              Notification";
+            this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
@@ -299,7 +334,7 @@
             this.button1.EnteredBorderColor = System.Drawing.Color.Transparent;
             this.button1.EnteredColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Image = null;
+            this.button1.Image = global::OOP.Properties.Resources.image;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.InactiveColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(17, 6);
@@ -327,6 +362,29 @@
             this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel2.TabIndex = 6;
             this.panel2.Text = "Dashboard";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BorderColor = System.Drawing.Color.Transparent;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.button5.EnteredColor = System.Drawing.Color.Transparent;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button5.Image = global::OOP.Properties.Resources.user;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.InactiveColor = System.Drawing.Color.Transparent;
+            this.button5.Location = new System.Drawing.Point(17, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
+            this.button5.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.button5.PressedColor = System.Drawing.Color.Transparent;
+            this.button5.Size = new System.Drawing.Size(305, 56);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "              User";
+            this.button5.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // sidebarTransition
             // 
@@ -405,6 +463,18 @@
             this.label4.Text = "29/3";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ErrorImage = global::OOP.Properties.Resources.check;
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(28, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -440,6 +510,19 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "23/3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = global::OOP.Properties.Resources.check;
+            this.pictureBox2.Image = global::OOP.Properties.Resources.check;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -477,6 +560,18 @@
             this.panel10.Size = new System.Drawing.Size(356, 4);
             this.panel10.TabIndex = 5;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.ErrorImage = global::OOP.Properties.Resources.check;
+            this.pictureBox4.InitialImage = null;
+            this.pictureBox4.Location = new System.Drawing.Point(366, 21);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
             // Completed
             // 
             this.Completed.AutoSize = true;
@@ -509,6 +604,17 @@
             this.UpComing.Size = new System.Drawing.Size(98, 25);
             this.UpComing.TabIndex = 2;
             this.UpComing.Text = "Upcoming";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OOP.Properties.Resources.images__3_;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Mytask
             // 
@@ -546,6 +652,18 @@
             this.projectPanel.Size = new System.Drawing.Size(419, 442);
             this.projectPanel.TabIndex = 3;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.ErrorImage = global::OOP.Properties.Resources.check;
+            this.pictureBox7.InitialImage = null;
+            this.pictureBox7.Location = new System.Drawing.Point(362, 19);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(39, 44);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -577,6 +695,16 @@
             this.panel11.Size = new System.Drawing.Size(382, 65);
             this.panel11.TabIndex = 5;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(17, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(56, 62);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -598,87 +726,6 @@
             this.panel12.Size = new System.Drawing.Size(382, 65);
             this.panel12.TabIndex = 6;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(91, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 38);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "OOP";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(28, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox2.Image = global::OOP.Properties.Resources.check;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(366, 21);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP.Properties.Resources.images__3_;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox7.InitialImage = null;
-            this.pictureBox7.Location = new System.Drawing.Point(362, 19);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(39, 44);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(17, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(56, 62);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Location = new System.Drawing.Point(17, 0);
@@ -689,62 +736,16 @@
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
             // 
-            // btnHam
+            // label8
             // 
-            this.btnHam.Location = new System.Drawing.Point(25, 19);
-            this.btnHam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnHam.Name = "btnHam";
-            this.btnHam.Size = new System.Drawing.Size(45, 36);
-            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHam.TabIndex = 1;
-            this.btnHam.TabStop = false;
-            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BorderColor = System.Drawing.Color.Transparent;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button5.EnteredColor = System.Drawing.Color.Transparent;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button5.Image = global::OOP.Properties.Resources.user;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.InactiveColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(17, 6);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button5.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button5.PressedColor = System.Drawing.Color.Transparent;
-            this.button5.Size = new System.Drawing.Size(305, 56);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "              User";
-            this.button5.TextAlignment = System.Drawing.StringAlignment.Near;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BorderColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.button4.EnteredColor = System.Drawing.Color.Transparent;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Image = global::OOP.Properties.Resources.noti;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.InactiveColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(17, 6);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
-            this.button4.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.button4.PressedColor = System.Drawing.Color.Transparent;
-            this.button4.Size = new System.Drawing.Size(305, 56);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "              Notification";
-            this.button4.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(91, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 38);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "OOP";
             // 
             // Home
             // 
@@ -764,6 +765,7 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -774,24 +776,23 @@
             this.taskPanel.ResumeLayout(false);
             this.taskContainer.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.projectPanel.ResumeLayout(false);
             this.projectPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.projectContainer.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.ResumeLayout(false);
 
         }

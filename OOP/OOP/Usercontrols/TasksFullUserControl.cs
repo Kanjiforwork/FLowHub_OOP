@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace OOP.Usercontrols
+{
+    public partial class TasksFullUserControl : UserControl
+    {
+        private Task task;  // Tham chiếu đến Task gốc
+        public event EventHandler<Task> OnTaskFinished;
+
+        public Panel TaskPanel // Thuộc tính công khai để truy cập Panel
+        {
+            get { return panel9; } // panelContainer là tên Panel bên trong TaskControl
+        }
+        public TasksFullUserControl(Task task)
+        {
+            InitializeComponent();
+            this.task = task;
+            UpdateUI();
+        }
+
+        private void UpdateUI()
+        {
+            taskContent.Text = task.taskName;
+            taskDeadline.Text = $"{task.dealine:dd/MM/yyyy}";
+            taskProject.Text = task.projectName;
+            UpdateButtonState();
+        }
+
+        private void UpdateButtonState()
+        {
+            if (task.status == "Finished")
+            {
+                checkBox.Image = Properties.Resources.check;
+            }
+            else
+            {
+                checkBox.Image = Properties.Resources.checkUnfinished;
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox_Click(object sender, EventArgs e)
+        {
+            if (task.status == "Finished")
+            {
+                task.status = "UnFinished"; // Cập nhật trạng thái Task gốc
+                UpdateButtonState();
+                OnTaskFinished?.Invoke(this, task);
+            }
+            else
+            {
+                task.status = "Finished"; // Cập nhật trạng thái Task gốc
+                UpdateButtonState();
+                OnTaskFinished?.Invoke(this, task);
+            }
+        }
+    }
+}

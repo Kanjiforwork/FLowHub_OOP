@@ -1,0 +1,728 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\oop logic\\FLowHub_OOP\\OOP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|d:\\oop logic\\flowhub_oop\\oop\\oop\\forms\\projects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\projects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\projects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\projects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\tasks.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\tasks.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\projects.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\projects.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\memberitem .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\memberitem .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\memberitem .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\memberitem .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\memberitem .designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\memberitem .designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\addmembers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addmembers.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\register.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\register.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\services\\projectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\services\\projectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\services\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\services\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\addmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\addtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\models\\fileattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\fileattachment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\homeprojectusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\homeprojectusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\addmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\tasksfullusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\tasksfullusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\homeprojectusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\homeprojectusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\customcontrols\\textbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\customcontrols\\textbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\login.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\login.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\addtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\usercontrols\\tasksfullusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\tasksfullusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|D:\\oop logic\\FLowHub_OOP\\OOP\\oop\\forms\\addtask.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addtask.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Project.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Project.cs",
+              "RelativeToolTip": "OOP\\Models\\Project.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:51:30.244Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Projects.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Projects.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Projects.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Projects.cs",
+              "RelativeToolTip": "OOP\\Forms\\Projects.cs",
+              "ViewState": "AgIAABkCAAAAAAAAAAAhwDMCAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:08.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MemberItem .cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\MemberItem .cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\MemberItem .cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\MemberItem .cs [Design]",
+              "RelativeToolTip": "OOP\\Usercontrols\\MemberItem .cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:13:15.84Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Projects.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Projects.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Projects.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Projects.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\Projects.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:08.644Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Projects.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Projects.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Projects.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Projects.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\Projects.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T02:06:19.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Tasks.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Tasks.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Tasks.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Tasks.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\Tasks.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MemberItem .cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\MemberItem .cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\MemberItem .cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\MemberItem .cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\MemberItem .cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAASwDgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:13:27.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MemberItem .Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\MemberItem .Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\MemberItem .Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\MemberItem .Designer.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\MemberItem .Designer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAABRwAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:13:23.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddMembers.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AddMembers.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\AddMembers.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AddMembers.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\AddMembers.Designer.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAYwAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Register.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Register.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Register.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\Register.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "OOP\\Services\\UserService.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Services\\UserService.cs",
+              "RelativeToolTip": "OOP\\Services\\UserService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Projectmanager.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Services\\Projectmanager.cs",
+              "RelativeDocumentMoniker": "OOP\\Services\\Projectmanager.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Services\\Projectmanager.cs",
+              "RelativeToolTip": "OOP\\Services\\Projectmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataManager.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Services\\DataManager.cs",
+              "RelativeDocumentMoniker": "OOP\\Services\\DataManager.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Services\\DataManager.cs",
+              "RelativeToolTip": "OOP\\Services\\DataManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddMembers.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AddMembers.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\AddMembers.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AddMembers.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\AddMembers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:51:38.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Addtask.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Addtask.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Addtask.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Addtask.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\Addtask.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:08.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\User.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\User.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\User.cs",
+              "RelativeToolTip": "OOP\\Models\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Task.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Task.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Task.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Task.cs",
+              "RelativeToolTip": "OOP\\Models\\Task.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:51:28.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Notification.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Notification.cs",
+              "RelativeToolTip": "OOP\\Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FileAttachment.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\FileAttachment.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\FileAttachment.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\FileAttachment.cs",
+              "RelativeToolTip": "OOP\\Models\\FileAttachment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T07:33:00.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Comment.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Models\\Comment.cs",
+              "RelativeToolTip": "OOP\\Models\\Comment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.141Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Register.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Register.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Register.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HomeProjectUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\HomeProjectUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\HomeProjectUserControl.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\HomeProjectUserControl.cs [Design]",
+              "RelativeToolTip": "OOP\\Usercontrols\\HomeProjectUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:51:07.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AvaterForm.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AvaterForm.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\AvaterForm.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AvaterForm.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\AvaterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AddMembers.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AddMembers.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\AddMembers.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AddMembers.cs",
+              "RelativeToolTip": "OOP\\Forms\\AddMembers.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAlwGUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AvaterForm.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AvaterForm.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\AvaterForm.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\AvaterForm.cs",
+              "RelativeToolTip": "OOP\\Forms\\AvaterForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TasksFullUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\TasksFullUserControl.cs [Design]",
+              "RelativeToolTip": "OOP\\Usercontrols\\TasksFullUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NotiUserControl.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\NotiUserControl.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs [Design]",
+              "RelativeToolTip": "OOP\\Usercontrols\\NotiUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "HomeProjectUserControl.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\HomeProjectUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\HomeProjectUserControl.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\HomeProjectUserControl.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\HomeProjectUserControl.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:09:50.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Tasks.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Tasks.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Tasks.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Tasks.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\Tasks.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:08.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Tasks.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Tasks.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Tasks.cs",
+              "RelativeToolTip": "OOP\\Forms\\Tasks.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAlwHUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Program.cs",
+              "RelativeDocumentMoniker": "OOP\\Program.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Program.cs",
+              "RelativeToolTip": "OOP\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:08.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Textbox.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\CustomControls\\Textbox.cs",
+              "RelativeDocumentMoniker": "OOP\\CustomControls\\Textbox.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\CustomControls\\Textbox.cs",
+              "RelativeToolTip": "OOP\\CustomControls\\Textbox.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:08.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Home.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Home.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Home.cs [Design]",
+              "RelativeToolTip": "OOP\\Forms\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "NotiUserControl.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\NotiUserControl.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\NotiUserControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Home.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Home.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Home.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Home.cs",
+              "RelativeToolTip": "OOP\\Forms\\Home.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowKgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Login.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Login.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Login.cs",
+              "RelativeToolTip": "OOP\\Forms\\Login.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwC0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Register.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Register.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Register.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Register.cs",
+              "RelativeToolTip": "OOP\\Forms\\Register.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAcwGUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Login.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Login.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\Login.Designer.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAABRwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Login.resx",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Login.resx",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Login.resx",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Login.resx",
+              "RelativeToolTip": "OOP\\Forms\\Login.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-22T01:38:09.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Form1.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Form1.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\Form1.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAABRwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Addtask.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Addtask.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Addtask.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Addtask.cs",
+              "RelativeToolTip": "OOP\\Forms\\Addtask.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "TasksFullUserControl.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Addtask.Designer.cs",
+              "DocumentMoniker": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Addtask.Designer.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Addtask.Designer.cs",
+              "ToolTip": "D:\\oop logic\\FLowHub_OOP\\OOP\\OOP\\Forms\\Addtask.Designer.cs",
+              "RelativeToolTip": "OOP\\Forms\\Addtask.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T01:38:09.145Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

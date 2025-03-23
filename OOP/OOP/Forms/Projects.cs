@@ -14,6 +14,8 @@ using Newtonsoft.Json;
 
 using System.IO;
 using System.Xml;
+using OOP.Usercontrols;
+using System.Reflection;
 
 namespace OOP
 {
@@ -47,9 +49,9 @@ namespace OOP
            // btnBack.Click += BtnBack_Click; // Gắn sự kiện click
             //panel2.Controls.Add(btnBack); // Thêm vào panel2
             LoadProjectsFromFile();
-
+            LoadProjectsToComboBox();
         }
-
+        
 
         private List<Label> projectDescriptions = new List<Label>(); // Danh sách để lưu các Label
         private int currentYOffset = 10; // Khoảng cách giữa các dòng mô tả
@@ -129,6 +131,7 @@ namespace OOP
             string json = JsonConvert.SerializeObject(projects, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(filePath, json);
             MessageBox.Show("Dữ liệu đã được lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          
         }
 
         private void LoadProjectsFromFile()
@@ -261,10 +264,10 @@ namespace OOP
             }
 
             // Lấy ID dự án (giả sử dựa trên số lượng dự án hiện tại)
-            int projectID = projects.Count + 1;
+            int projectID = projects.Count + 1; 
 
             // Mô tả mặc định cho dự án
-            string projectDescription = "Mô tả của " + inputName;
+            string projectDescription = "What's this project about ";
 
             // Quyền mặc định cho người tạo là 'Admin'
             RoleType defaultRole = RoleType.Admin;
@@ -278,51 +281,63 @@ namespace OOP
 
             // Thêm vào danh sách dự án
             projects.Add(newProject);
-
+            
             // Lưu dự án vào file
             SaveProjectsToFile();
+            // thêm vào comboBox1
+            comboBox1.Items.Add($"{newProject.projectID} - {newProject.projectName}");
 
             // Thêm nút dự án mới vào giao diện
 
             //AddProjectButton(newProject); // Chỉ thêm nút mới, không load lại toàn bộ danh sách
         }
 
-
-       /* private void BtnBack_Click(object sender, EventArgs e)
+        private void LoadProjectsToComboBox()
         {
-            panel3.Visible = false; // Ẩn panel3 (hiển thị chi tiết project)
-            panel2.Visible = true;  // Hiển thị lại danh sách dự án
+            comboBox1.Items.Clear(); // Xóa danh sách cũ
 
-            // Kiểm tra xem đã có nút dự án nào chưa
-            if (panel2.Controls.OfType<Button>().Count() == projects.Count)
-                return; // Nếu số lượng nút đã khớp với số project, không cần thêm lại
-
-            panel2.Controls.Clear(); // Xóa UI cũ
-
-            // Ẩn nút "Quay về"
-            btnBack.Visible = false;
-
-            // Hiển thị lại danh sách project
             foreach (var project in projects)
             {
-                Button btnProject = new Button();
-                btnProject.Text = project.projectName;
-                btnProject.Size = new Size(117, 34);
-                btnProject.BackColor = Color.LightGray;
-                btnProject.Tag = project;
-
-                int yOffset = panel2.Controls.Count * 50;
-                btnProject.Location = new Point(0, yOffset);
-
-                btnProject.Click += (s, ev) =>
-                {
-                    Project selectedProject = (Project)((Button)s).Tag;
-                    ShowProjectDetails(selectedProject);
-                };
-
-                panel2.Controls.Add(btnProject);
+                comboBox1.Items.Add($"{project.projectID} - {project.projectName}");
             }
-        }*/
+        }
+
+
+        /* private void BtnBack_Click(object sender, EventArgs e)
+         {
+             panel3.Visible = false; // Ẩn panel3 (hiển thị chi tiết project)
+             panel2.Visible = true;  // Hiển thị lại danh sách dự án
+
+             // Kiểm tra xem đã có nút dự án nào chưa
+             if (panel2.Controls.OfType<Button>().Count() == projects.Count)
+                 return; // Nếu số lượng nút đã khớp với số project, không cần thêm lại
+
+             panel2.Controls.Clear(); // Xóa UI cũ
+
+             // Ẩn nút "Quay về"
+             btnBack.Visible = false;
+
+             // Hiển thị lại danh sách project
+             foreach (var project in projects)
+             {
+                 Button btnProject = new Button();
+                 btnProject.Text = project.projectName;
+                 btnProject.Size = new Size(117, 34);
+                 btnProject.BackColor = Color.LightGray;
+                 btnProject.Tag = project;
+
+                 int yOffset = panel2.Controls.Count * 50;
+                 btnProject.Location = new Point(0, yOffset);
+
+                 btnProject.Click += (s, ev) =>
+                 {
+                     Project selectedProject = (Project)((Button)s).Tag;
+                     ShowProjectDetails(selectedProject);
+                 };
+
+                 panel2.Controls.Add(btnProject);
+             }
+         }*/
 
 
 
@@ -429,7 +444,7 @@ namespace OOP
             btnAddMember.Location = new Point(10, 260);
             btnAddMember.Click += (s, e) =>
             {
-                Addmember userForm = new Addmember();
+                Addmember userForm = new Addmember(this);
                 if (userForm.ShowDialog() == DialogResult.OK)
                 {
                     string newMember = userForm.MemberName;
@@ -521,6 +536,145 @@ namespace OOP
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn một project!");
+                return;
+            }
+
+            int selectedProjectID = int.Parse(comboBox1.SelectedItem.ToString().Split('-')[0].Trim());
+            Project selectedProject = projects.FirstOrDefault(p => p.projectID == selectedProjectID);
+
+            if (selectedProject != null)
+            {
+                Addmember userForm = new Addmember(this);
+                if (userForm.ShowDialog() == DialogResult.OK)
+                {
+                    string newMember = userForm.MemberName;
+                    string role = userForm.SelectedRole.ToString();
+                    string memberInfo = $"{newMember} \n({role})"; // Lưu chuỗi thay vì object
+                   // memberInfo.Margin = new Padding(5); // Cách nhau 5px
+                    //memberItem.Size = new Size(120, 50); // Định kích thước cố định
+                    //int xOffset = selectedProject.Members.Count * (memberItem.Width + 10);
+                    //memberItem.Location = new Point(xOffset, 0);
+
+                    selectedProject.Members.Add(memberInfo);
+
+                    DisplayMembers(selectedProject.Members);
+                    SaveProjectsToFile();
+                }
+            }
+        }
+
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projectContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            if (projects.Count == 0)
+            {
+                MessageBox.Show("Danh sách dự án trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            comboBox1.Items.Clear();
+
+            foreach (var project in projects)
+            {
+                comboBox1.Items.Add($"{project.projectID} - {project.projectName}");
+            }
+        }
+
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          if (comboBox1.SelectedIndex != -1) // Kiểm tra nếu có project được chọn
+           {
+        string selectedProjectText = comboBox1.SelectedItem.ToString();
+        int selectedProjectID = int.Parse(selectedProjectText.Split('-')[0].Trim());
+
+        // Tìm project theo ID (không dùng lambda)
+        Project selectedProject = null;
+        foreach (Project project in projects)
+        {
+            if (project.projectID == selectedProjectID)
+            {
+                selectedProject = project;
+                break; // Thoát vòng lặp khi tìm thấy project
+            }
+        }
+
+            if (selectedProject != null)
+            {
+            description.Text = selectedProject.projectDescription;
+                    // Hiển thị mô tả của project
+                    DisplayMembers(selectedProject.Members);
+                }
+           }
+        }
+
+        private void description_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Kiểm tra nếu nhấn Enter
+            {
+                if (comboBox1.SelectedIndex != -1) // Đảm bảo có project được chọn
+                {
+                    string selectedProjectText = comboBox1.SelectedItem.ToString();
+                    int selectedProjectID = int.Parse(selectedProjectText.Split('-')[0].Trim());
+
+                    // Tìm project theo ID
+                    Project selectedProject = projects.FirstOrDefault(p => p.projectID == selectedProjectID);
+                    if (selectedProject != null)
+                    {
+                        selectedProject.projectDescription = description.Text; // Cập nhật mô tả
+
+                        SaveProjectsToFile(); // Lưu vào file JSON
+                        MessageBox.Show("Mô tả đã được lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+        private void DisplayMembers(List<string> members)
+        {
+            panel2.Controls.Clear(); // Xóa danh sách cũ để tránh trùng lặp
+
+            int xOffset = 0; // Vị trí ban đầu
+            for (int i = 0; i < members.Count; i++) // Duyệt từ trái sang phải
+            {
+                string[] info = members[i].Split('('); // Giả sử dữ liệu là "UserName (Role)"
+                string name = info[0].Trim();
+                string role = info.Length > 1 ? info[1].Replace(")", "").Trim() : "Member";
+
+                MemberItem memberItem = new MemberItem(name, role);
+
+                memberItem.Margin = new Padding(5);
+                memberItem.Size = new Size(120, 50); // Cố định kích thước
+                memberItem.Location = new Point(xOffset, 0); // Đặt vị trí theo xOffset
+
+                panel2.Controls.Add(memberItem);
+
+                xOffset += memberItem.Width + memberItem.Margin.Left + memberItem.Margin.Right + 10; // Cộng dồn để thành viên tiếp theo nằm bên phải
+            }
+            panel2.Width = Math.Max(panel2.Width, xOffset);
+
+        }
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void memberItem1_Load(object sender, EventArgs e)
         {
 
         }

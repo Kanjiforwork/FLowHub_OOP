@@ -58,5 +58,10 @@ namespace OOP
         {
             return _avatarBytes;
         }
+
+        private void pbAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,11 @@ namespace OOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new Inbox ());
+=======
+            Application.Run(new Projects ());
+>>>>>>> Stashed changes
         }
     }
 }

@@ -37,8 +37,8 @@ namespace OOP
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.WelcomeName = new System.Windows.Forms.Label();
+            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@ namespace OOP
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.TopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TopPanel.Controls.Add(this.WelcomeName);
             this.TopPanel.Controls.Add(this.nightControlBox1);
@@ -113,6 +113,20 @@ namespace OOP
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(517, 73);
             this.TopPanel.TabIndex = 15;
+            // 
+            // WelcomeName
+            // 
+            this.WelcomeName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WelcomeName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.WelcomeName.Location = new System.Drawing.Point(123, 8);
+            this.WelcomeName.Name = "WelcomeName";
+            this.WelcomeName.Size = new System.Drawing.Size(245, 51);
+            this.WelcomeName.TabIndex = 19;
+            this.WelcomeName.Text = "Add member";
+            this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.WelcomeName.Click += new System.EventHandler(this.WelcomeName_Click);
             // 
             // nightControlBox1
             // 
@@ -138,25 +152,11 @@ namespace OOP
             this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
             this.nightControlBox1.TabIndex = 1;
             // 
-            // WelcomeName
-            // 
-            this.WelcomeName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.WelcomeName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.WelcomeName.Location = new System.Drawing.Point(123, 8);
-            this.WelcomeName.Name = "WelcomeName";
-            this.WelcomeName.Size = new System.Drawing.Size(245, 51);
-            this.WelcomeName.TabIndex = 19;
-            this.WelcomeName.Text = "Add member";
-            this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.WelcomeName.Click += new System.EventHandler(this.WelcomeName_Click);
-            // 
             // Addmember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(48)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(517, 301);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

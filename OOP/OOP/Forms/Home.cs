@@ -159,6 +159,16 @@ namespace OOP
         public Home(User user)
         {
             InitializeComponent();
+            //Mouse Hover
+            ApplyMouseEvents(TopPanel);
+            ApplyMouseEvents(projectPanel);
+            ApplyMouseEvents(taskPanel);
+
+            //Task
+            LoadTasks();
+            //Project
+            Loadprojects();
+
             _user = user;
            /* lblUsername.Text = _user.Username;
             lblEmail.Text = _user.Email;*/
@@ -176,6 +186,34 @@ namespace OOP
                     }
                 }
             }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            Tasks tasks = new Tasks();
+            tasks.Show();
+            this.Hide();
+        }
+
+        private void btnNoti_Click(object sender, EventArgs e)
+        {
+            Inbox inbox = new Inbox();
+            inbox.Show();
+            this.Hide();
+        }
+
+        private void btnProject_Click(object sender, EventArgs e)
+        {
+            Projects projects = new Projects();
+            projects.Show();
+            this.Hide();
         }
     }
 }

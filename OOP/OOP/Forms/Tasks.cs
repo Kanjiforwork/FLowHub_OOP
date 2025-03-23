@@ -171,18 +171,32 @@ namespace OOP
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            Home home = new Home(); // Create a new instance of Form2
-            this.Hide(); // Hide the current form
-            home.Show(); // Show Form2
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            Tasks tasks = new Tasks(); // Create a new instance of Form2
-            this.Hide(); // Hide the current form
-            tasks.Show(); // Show 
+            Tasks tasks = new Tasks();
+            tasks.Show();
+            this.Hide();
+        }
+
+        private void btnNoti_Click(object sender, EventArgs e)
+        {
+            Inbox inbox = new Inbox();
+            inbox.Show();
+            this.Hide();
+        }
+
+        private void btnProject_Click(object sender, EventArgs e)
+        {
+            Projects projects = new Projects();
+            projects.Show();
+            this.Hide();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace OOP
 {
@@ -21,6 +22,8 @@ namespace OOP
             InitializeComponent();
             LoadSampleData();
             DisplayNotifications();
+            Debug.WriteLine($"Inbox Size: {this.Size}");
+            Debug.WriteLine($"Inbox ClientSize: {this.ClientSize}");
             // Đăng ký sự kiện
             NotificationAdded += Inbox_NotificationAdded;
         }
@@ -116,5 +119,34 @@ namespace OOP
         {
 
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+   {
+       Home home = new Home();
+       home.Show();
+       this.Hide();
+   }
+
+   private void btnTask_Click(object sender, EventArgs e)
+   {
+       Tasks tasks = new Tasks();
+       tasks.Show();
+       this.Hide();
+   }
+
+   private void btnNoti_Click(object sender, EventArgs e)
+   {
+       Inbox inbox = new Inbox();
+       inbox.Show();
+       this.Hide();
+   }
+
+   private void btnProject_Click(object sender, EventArgs e)
+   {
+       Projects projects = new Projects();
+       projects.Show();
+       this.Hide();
+   }
+
     }
 }

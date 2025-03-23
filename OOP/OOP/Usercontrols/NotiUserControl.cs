@@ -36,5 +36,10 @@ namespace OOP
         {
 
         }
+
+        private void NotiUserControl_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

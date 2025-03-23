@@ -183,7 +183,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.White;
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.TopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TopPanel.Controls.Add(this.nightControlBox1);
             this.TopPanel.Controls.Add(this.WelcomeName);
@@ -224,7 +224,7 @@
             this.WelcomeName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WelcomeName.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.WelcomeName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.WelcomeName.ForeColor = System.Drawing.Color.White;
             this.WelcomeName.Location = new System.Drawing.Point(312, -1);
             this.WelcomeName.Name = "WelcomeName";
             this.WelcomeName.Size = new System.Drawing.Size(197, 51);
@@ -234,6 +234,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtbInputNameTask);
             this.panel1.Controls.Add(this.btnAddinProject);
@@ -248,7 +249,7 @@
             this.panel1.Controls.Add(this.dtpNewTask);
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 490);
+            this.panel1.Size = new System.Drawing.Size(820, 491);
             this.panel1.TabIndex = 13;
             // 
             // Addtask
@@ -260,10 +261,11 @@
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Addtask";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Addtask";
             this.Load += new System.EventHandler(this.Addtask_Load);
             this.TopPanel.ResumeLayout(false);

@@ -33,88 +33,95 @@ namespace OOP
         /// </summary>
         private void InitializeComponent()
         {
-            Avatar = new PictureBox();
-            SenderName = new Label();
-            SendDate = new Label();
-            Content = new Label();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)Avatar).BeginInit();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.Avatar = new System.Windows.Forms.PictureBox();
+            this.SenderName = new System.Windows.Forms.Label();
+            this.SendDate = new System.Windows.Forms.Label();
+            this.Content = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // Avatar
             // 
-            Avatar.BackColor = Color.Transparent;
-            Avatar.BackgroundImageLayout = ImageLayout.None;
-            Avatar.ErrorImage = null;
-            Avatar.InitialImage = null;
-            Avatar.Location = new Point(33, 30);
-            Avatar.Name = "Avatar";
-            Avatar.Size = new Size(39, 39);
-            Avatar.SizeMode = PictureBoxSizeMode.Zoom;
-            Avatar.TabIndex = 0;
-            Avatar.TabStop = false;
-            Avatar.Click += Avatar_Click;
+            this.Avatar.BackColor = System.Drawing.Color.Transparent;
+            this.Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Avatar.ErrorImage = null;
+            this.Avatar.InitialImage = null;
+            this.Avatar.Location = new System.Drawing.Point(26, 18);
+            this.Avatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Avatar.Name = "Avatar";
+            this.Avatar.Size = new System.Drawing.Size(56, 57);
+            this.Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Avatar.TabIndex = 0;
+            this.Avatar.TabStop = false;
             // 
             // SenderName
             // 
-            SenderName.AutoSize = true;
-            SenderName.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SenderName.Location = new Point(104, 37);
-            SenderName.Name = "SenderName";
-            SenderName.Size = new Size(51, 19);
-            SenderName.TabIndex = 2;
-            SenderName.Text = "label1";
+            this.SenderName.AutoSize = true;
+            this.SenderName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.SenderName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SenderName.Location = new System.Drawing.Point(104, 18);
+            this.SenderName.Name = "SenderName";
+            this.SenderName.Size = new System.Drawing.Size(48, 20);
+            this.SenderName.TabIndex = 2;
+            this.SenderName.Text = "label1";
             // 
             // SendDate
             // 
-            SendDate.AutoSize = true;
-            SendDate.Font = new Font("Times New Roman", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SendDate.Location = new Point(203, 37);
-            SendDate.Name = "SendDate";
-            SendDate.Size = new Size(51, 19);
-            SendDate.TabIndex = 3;
-            SendDate.Text = "label2";
+            this.SendDate.AutoSize = true;
+            this.SendDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.SendDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SendDate.Location = new System.Drawing.Point(104, 43);
+            this.SendDate.Name = "SendDate";
+            this.SendDate.Size = new System.Drawing.Size(50, 20);
+            this.SendDate.TabIndex = 3;
+            this.SendDate.Text = "label2";
             // 
             // Content
             // 
-            Content.AutoSize = true;
-            Content.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Content.ForeColor = SystemColors.Desktop;
-            Content.Location = new Point(14, 20);
-            Content.Name = "Content";
-            Content.Size = new Size(60, 22);
-            Content.TabIndex = 4;
-            Content.Text = "label1";
-            Content.Click += Content_Click;
+            this.Content.AutoSize = true;
+            this.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.Content.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Content.Location = new System.Drawing.Point(14, 16);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(48, 20);
+            this.Content.TabIndex = 4;
+            this.Content.Text = "label1";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(Content);
-            panel1.Location = new Point(81, 91);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(380, 126);
-            panel1.TabIndex = 5;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.Content);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Location = new System.Drawing.Point(43, 93);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(502, 80);
+            this.panel1.TabIndex = 5;
             // 
             // NotiUserControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DimGray;
-            Controls.Add(panel1);
-            Controls.Add(SendDate);
-            Controls.Add(SenderName);
-            Controls.Add(Avatar);
-            ForeColor = SystemColors.ControlText;
-            Name = "NotiUserControl";
-            Size = new Size(559, 264);
-            Load += NotiUserControl_Load;
-            ((System.ComponentModel.ISupportInitialize)Avatar).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SendDate);
+            this.Controls.Add(this.SenderName);
+            this.Controls.Add(this.Avatar);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "NotiUserControl";
+            this.Size = new System.Drawing.Size(567, 183);
+            this.Load += new System.EventHandler(this.NotiUserControl_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

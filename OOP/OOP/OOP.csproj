@@ -189,6 +189,12 @@
     <EmbeddedResource Include="Forms\Addtask.resx">
       <DependentUpon>Addtask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AvaterForm.resx">
+      <DependentUpon>AvaterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inbox.resx">
+      <DependentUpon>Inbox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Projects.resx">
       <DependentUpon>Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tasks.resx">
       <DependentUpon>Tasks.cs</DependentUpon>
@@ -211,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\HomeTaskUserControl.resx">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\NotiUserControl.resx">
+      <DependentUpon>NotiUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TasksFullUserControl.resx">
       <DependentUpon>TasksFullUserControl.cs</DependentUpon>

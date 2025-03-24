@@ -61,9 +61,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Completed = new System.Windows.Forms.Label();
-            this.Overdue = new System.Windows.Forms.Label();
-            this.UpComing = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Mytask = new System.Windows.Forms.Label();
             this.timeDetail = new System.Windows.Forms.Label();
@@ -134,7 +131,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(943, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(928, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -163,7 +160,6 @@
             this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHam.TabIndex = 1;
             this.btnHam.TabStop = false;
-            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // WelcomeName
             // 
@@ -525,9 +521,6 @@
             // 
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Controls.Add(this.pictureBox4);
-            this.panel8.Controls.Add(this.Completed);
-            this.panel8.Controls.Add(this.Overdue);
-            this.panel8.Controls.Add(this.UpComing);
             this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.Mytask);
             this.panel8.Location = new System.Drawing.Point(-2, -2);
@@ -538,7 +531,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(28, 95);
+            this.panel10.Location = new System.Drawing.Point(25, 85);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(316, 3);
             this.panel10.TabIndex = 5;
@@ -553,39 +546,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
-            // 
-            // Completed
-            // 
-            this.Completed.AutoSize = true;
-            this.Completed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Completed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Completed.Location = new System.Drawing.Point(245, 66);
-            this.Completed.Name = "Completed";
-            this.Completed.Size = new System.Drawing.Size(83, 20);
-            this.Completed.TabIndex = 4;
-            this.Completed.Text = "Completed";
-            // 
-            // Overdue
-            // 
-            this.Overdue.AutoSize = true;
-            this.Overdue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Overdue.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Overdue.Location = new System.Drawing.Point(171, 66);
-            this.Overdue.Name = "Overdue";
-            this.Overdue.Size = new System.Drawing.Size(68, 20);
-            this.Overdue.TabIndex = 3;
-            this.Overdue.Text = "Overdue";
-            // 
-            // UpComing
-            // 
-            this.UpComing.AutoSize = true;
-            this.UpComing.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.UpComing.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpComing.Location = new System.Drawing.Point(85, 66);
-            this.UpComing.Name = "UpComing";
-            this.UpComing.Size = new System.Drawing.Size(80, 20);
-            this.UpComing.TabIndex = 2;
-            this.UpComing.Text = "Upcoming";
             // 
             // pictureBox1
             // 
@@ -793,9 +753,6 @@
         private System.Windows.Forms.Panel projectPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label Completed;
-        private System.Windows.Forms.Label Overdue;
-        private System.Windows.Forms.Label UpComing;
         private System.Windows.Forms.Label Mytask;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel taskContainer;

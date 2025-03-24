@@ -171,6 +171,12 @@
     <Compile Include="Usercontrols\HomeTaskUserControl.Designer.cs">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrols\MemberItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MemberItem.Designer.cs">
+      <DependentUpon>MemberItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrols\TasksFullUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

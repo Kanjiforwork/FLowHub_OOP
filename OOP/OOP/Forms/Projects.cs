@@ -15,6 +15,7 @@ using System.IO;
 using System.Xml;
 using OOP.Usercontrols;
 using System.Reflection;
+using System.Web.UI.Design;
 
 namespace OOP
 {
@@ -31,7 +32,7 @@ namespace OOP
             InitializeComponent();
 
             LoadProjectsFromFile();
-            LoadProjectsToComboBox();
+            UpdateComboBox();
         }
 
       
@@ -148,6 +149,8 @@ namespace OOP
             Project newProject = new Project(projectID, inputName, projectDescription, defaultRole);
             newProject.CreatedBy = createdBy; // Gán người tạo dự án
 
+            newProject.AdminID = User.LoggedInUser.ID;
+
             // Thêm vào danh sách dự án
             projects.Add(newProject);
 
@@ -161,15 +164,7 @@ namespace OOP
             //AddProjectButton(newProject); // Chỉ thêm nút mới, không load lại toàn bộ danh sách
         }
 
-        private void LoadProjectsToComboBox()
-        {
-            comboBox1.Items.Clear(); // Xóa danh sách cũ
 
-            foreach (var project in projects)
-            {
-                comboBox1.Items.Add($"{project.projectID} - {project.projectName}");
-            } 
-        }
 
 
 
@@ -381,6 +376,7 @@ namespace OOP
             comboBox1.Items.Clear();
             foreach (var project in projectManager.Projects)
             {
+                Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
                 if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
                 {
                     comboBox1.Items.Add($"{project.projectID} - {project.projectName}");

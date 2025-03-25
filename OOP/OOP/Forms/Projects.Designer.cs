@@ -42,7 +42,7 @@ namespace OOP
             this.projectName = new System.Windows.Forms.Label();
             this.projectRole = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCreateProject = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -196,16 +196,16 @@ namespace OOP
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnCreateProject
             // 
-            this.button2.Location = new System.Drawing.Point(485, 12);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 42);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Tạo Project";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnCreateProject_Click);
+            this.btnCreateProject.Location = new System.Drawing.Point(485, 12);
+            this.btnCreateProject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCreateProject.Name = "btnCreateProject";
+            this.btnCreateProject.Size = new System.Drawing.Size(135, 42);
+            this.btnCreateProject.TabIndex = 7;
+            this.btnCreateProject.Text = "Tạo Project";
+            this.btnCreateProject.UseVisualStyleBackColor = true;
+            this.btnCreateProject.Click += new System.EventHandler(this.btnCreateProject_Click);
             // 
             // TopPanel
             // 
@@ -238,7 +238,7 @@ namespace OOP
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1044, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(1061, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -498,7 +498,7 @@ namespace OOP
             this.projectPanel.Controls.Add(this.label6);
             this.projectPanel.Controls.Add(this.projectContainer);
             this.projectPanel.Controls.Add(this.button3);
-            this.projectPanel.Controls.Add(this.button2);
+            this.projectPanel.Controls.Add(this.btnCreateProject);
             this.projectPanel.Location = new System.Drawing.Point(256, 84);
             this.projectPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.projectPanel.Name = "projectPanel";
@@ -600,7 +600,7 @@ namespace OOP
         #endregion
         private System.Windows.Forms.Panel panel1;
         private Button button3;
-        private Button button2;
+        private Button btnCreateProject;
         private Panel TopPanel;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private Label label3;

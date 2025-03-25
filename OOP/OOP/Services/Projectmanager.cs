@@ -11,31 +11,34 @@ namespace OOP.Services
     {
         public List<Project> Projects { get; set; }
 
-        public ProjectManager() 
+        public ProjectManager()
         {
             Projects = new List<Project>();
         }
 
-        public void AddProject()
+        public void AddProject(Project project)
         {
-            Projects.Add(new Project());
+            Projects.Add(project);
+
+            // Gửi thông báo đến tất cả user về dự án mới
+            NotificationManager.Instance.Notify(new ProjectAnnouncementNotification("System", $"Dự án '{project.projectName}' đã được tạo!"));
         }
-       /* public void DeleteProject(string ProjectName)
-        {
-            Project project = Projects.Find(p => p.ProjectName == ProjectName);
-            if (project != null)
-            {
-                Projects.Remove(project);
-            }
-            else
-            {
-                //Raise exception
-            }
-        }
-        public Project FindProject(string ProjectName)
-        {
-            return Projects.Find(p => p.ProjectName == ProjectName);
-        }*/
+        /* public void DeleteProject(string ProjectName)
+         {
+             Project project = Projects.Find(p => p.ProjectName == ProjectName);
+             if (project != null)
+             {
+                 Projects.Remove(project);
+             }
+             else
+             {
+                 //Raise exception
+             }
+         }
+         public Project FindProject(string ProjectName)
+         {
+             return Projects.Find(p => p.ProjectName == ProjectName);
+         }*/
 
     }
 

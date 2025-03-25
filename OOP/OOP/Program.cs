@@ -16,7 +16,7 @@ namespace OOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inbox ());
+            Application.Run(new Login ());
         }
     }
 }

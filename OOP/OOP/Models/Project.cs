@@ -66,6 +66,18 @@ namespace OOP.Models
             }
 
         }
+        public void AssignTask(Task task, User assignee)
+        {
+            if (assignee.Role != RoleType.Member)
+            {
+                throw new InvalidOperationException("Chỉ thành viên (Member) mới có thể được gán task!");
+            }
+
+            tasks.Add(task);
+
+            // Gửi thông báo cho Member khi nhận task
+            NotificationManager.Instance.Notify(new TaskUpdateNotification(assignee.Username, "Bạn đã được giao một nhiệm vụ mới!"));
+        }
 
 
         public void RemoveTask(Task task)

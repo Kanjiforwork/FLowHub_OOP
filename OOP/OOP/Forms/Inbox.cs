@@ -38,7 +38,7 @@ namespace OOP
         {
             try
             {
-                notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được thăng chức...", false));
+                /*notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được thăng chức...", false));
                 notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được giao nhiệm vụ mới...", false));
                 notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được giao nhiệm vụ mới...", false));
                 notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được giao nhiệm vụ mới...", false));
@@ -47,7 +47,7 @@ namespace OOP
                 notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được giao nhiệm vụ mới...", false));
                 notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được giao nhiệm vụ mới...", false));
                 notifications.Add(new Notification("Nhiệm vụ mới", "John Doe", DateTime.Now, "Bạn được giao nhiệm vụ mới...", false));
-                notifications.Add(new Notification("Bình luận", "Jane Smith", DateTime.Now.AddMinutes(-10), "Có bình luận mới...", false));
+                notifications.Add(new Notification("Bình luận", "Jane Smith", DateTime.Now.AddMinutes(-10), "Có bình luận mới...", false));*/
             }
             catch (Exception ex)
             {

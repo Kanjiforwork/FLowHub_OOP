@@ -19,7 +19,7 @@ namespace OOP.Models
         public List<Task> Tasks { get; set; } = new List<Task>();
         public List<User> Friends { get; set; } = new List<User>();
         public List<User> allUsers = new List<User>();
-        public static User LoggedInUser { get; private set; } // Đây là người dùng đã đăng nhập, ví dụ "admin"
+        public static User LoggedInUser { get; set; } // Đây là người dùng đã đăng nhập, ví dụ "admin"
 
         public User(int id, string username, RoleType role, string password, string email)
         {

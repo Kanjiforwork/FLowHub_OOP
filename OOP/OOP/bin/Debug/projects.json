@@ -1,34 +1,12 @@
 [
   {
     "tasks": [],
-    "projectID": 0,
-    "projectName": "hi",
-    "projectDescription": "hiiiiiiiiiiiiiiii",
+    "projectID": 1,
+    "projectName": "HI",
+    "projectDescription": "What's this project about ",
     "members": [],
     "AdminID": 0,
-    "CreatedBy": "No user logged in",
-    "UserRole": 0,
-    "Members": []
-  },
-  {
-    "tasks": [],
-    "projectID": 0,
-    "projectName": "g",
-    "projectDescription": "Mô tả của g",
-    "members": [],
-    "AdminID": 0,
-    "CreatedBy": "No user logged in",
-    "UserRole": 0,
-    "Members": []
-  },
-  {
-    "tasks": [],
-    "projectID": 3,
-    "projectName": "Sup bro",
-    "projectDescription": "Hello bro",
-    "members": [],
-    "AdminID": 0,
-    "CreatedBy": "No user logged in",
+    "CreatedBy": "hi",
     "UserRole": 0,
     "Members": []
   }

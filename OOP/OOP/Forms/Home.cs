@@ -19,7 +19,7 @@ namespace OOP
 {
     public partial class Home : Form
     {
-        public Home()
+      /*  public Home()
         {
 
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace OOP
             LoadTasks();
             //Project
             Loadprojects();
-        }
+        }*/
         // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
         void ApplyMouseEvents(Panel panel)
         {
@@ -92,8 +92,6 @@ namespace OOP
         {
             // Cập nhật thời gian ban đầu và người dùng
             UpdateDateTime();
-            UpdateName();
-
             // Tạo và cấu hình Timer
             timer = new Timer();
             timer.Interval = 1000; // Cập nhật mỗi giây
@@ -104,10 +102,6 @@ namespace OOP
         {
             timeDetail.Text = DateTime.Now.ToString("dddd, 'ngày' dd 'tháng' M");
         }
-        private void UpdateName()
-        {
-            WelcomeName.Text = "Welcome back, Kanji";
-        }
         private void btnHam_Click(object sender, EventArgs e)
         {
             sidebarTransition.Start();
@@ -116,18 +110,18 @@ namespace OOP
         private List<Task> tasks = new List<Task>();
         private void LoadTasks()
         {
-            // Ví dụ: tạo danh sách Task mẫu
-            tasks.Add(new Task("1", "Quýnh VietAnh", "Pending", DateTime.Now.AddDays(3), "Project Alpha"));
-            tasks.Add(new Task("2", "Code Login", "In Progress", DateTime.Now.AddDays(5), "Project Beta"));
-            tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha"));
-
+            if (User.LoggedInUser == null || User.LoggedInUser.Tasks == null)
+            {
+                MessageBox.Show("Không có người dùng đăng nhập hoặc không có task nào.");
+                return;
+            }
 
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
 
-            foreach (var task in tasks)
+            foreach (var task in User.LoggedInUser.Tasks)
             {
-                HomeTaskUserControl  taskItem = new HomeTaskUserControl(task);
+                HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
                 taskContainer.Controls.Add(taskItem);
                 ApplyMouseEvents(taskItem.TaskPanel);
@@ -151,12 +145,7 @@ namespace OOP
         }
 
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private User _user;
-        public Home(User user)
+        public Home()
         {
             InitializeComponent();
             //Mouse Hover
@@ -169,21 +158,28 @@ namespace OOP
             //Project
             Loadprojects();
 
-            _user = user;
-           /* lblUsername.Text = _user.Username;
-            lblEmail.Text = _user.Email;*/
-            if (_user.Avatar != null && _user.Avatar.Length > 0)
+            if (User.LoggedInUser != null)
             {
-                using (MemoryStream ms = new MemoryStream(_user.Avatar))
+
+                WelcomeName.Text = $"Hey {User.LoggedInUser.Username}, sẵn sàng làm việc chưa? 🚀";
+                if (User.LoggedInUser.Avatar != null && User.LoggedInUser.Avatar.Length > 0)
                 {
-                    try
+                    using (MemoryStream ms = new MemoryStream(User.LoggedInUser.Avatar))
                     {
-                        //pbUserAvatar.Image = Image.FromStream(ms);
+                        try
+                        {
+                            avatar.Image = Image.FromStream(ms);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi hiển thị ảnh đại diện: {ex.Message}");
+                           avatar.Image = Properties.Resources.DefaultAvatar; // Ảnh mặc định nếu lỗi
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Lỗi hiển thị ảnh đại diện: {ex.Message}");
-                    }
+                }
+                else
+                {
+                    avatar.Image = Properties.Resources.DefaultAvatar; // Ảnh mặc định nếu không có ảnh
                 }
             }
         }
@@ -215,5 +211,7 @@ namespace OOP
             projects.Show();
             this.Hide();
         }
+
+       
     }
 }

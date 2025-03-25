@@ -35,7 +35,9 @@ namespace OOP
 
             if (authenticatedUser != null)
             {
-                Home mainForm = new Home(authenticatedUser);
+                User.LoggedInUser = authenticatedUser; // Gán user vào LoggedInUser
+
+                Home mainForm = new Home(); // Không cần truyền user nữa
                 mainForm.Show();
                 this.Hide();
             }

@@ -12,14 +12,16 @@ namespace OOP
         public Tasks()
         {
             InitializeComponent();
-            // Ví dụ: tạo danh sách Task mẫu
-            tasks.Add(new Task("1", "Quýnh VietAnh", "Pending", DateTime.Now.AddDays(3), "Project Alpha"));
-            tasks.Add(new Task("2", "Code Login", "In Progress", DateTime.Now.AddDays(5), "Project Beta"));
-            tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha"));
 
-            // Ví dụ: tạo danh sách project mẫu
-          /*  projects.Add(new Project("1", "Quýnh vietAnh"));
-            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
+            if (User.LoggedInUser != null)
+            {
+                tasks = User.LoggedInUser.Tasks; // Lấy danh sách task thực tế
+            }
+            else
+            {
+                tasks = new List<Task>(); // Nếu chưa đăng nhập, dùng danh sách trống
+            }
+
             LoadTasks(tasks);
 
             //Apply mouseEvent

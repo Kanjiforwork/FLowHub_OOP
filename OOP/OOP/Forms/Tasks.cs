@@ -205,7 +205,8 @@ namespace OOP
 
         private void lblAddoption_Click(object sender, EventArgs e)
         {
-            ctmsAddoption.Show(lblAddoption, new Point(20, btnMore.Height));
+            Console.WriteLine(User.LoggedInUser.Username);
+            ctmsAddoption.Show(btnAddTask, new Point(20, btnMore.Height));
 
         }
 

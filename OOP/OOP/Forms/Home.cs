@@ -107,7 +107,6 @@ namespace OOP
             sidebarTransition.Start();
         }
 
-        private List<Task> tasks = new List<Task>();
         private void LoadTasks()
         {
             if (User.LoggedInUser == null || User.LoggedInUser.Tasks == null)
@@ -130,10 +129,7 @@ namespace OOP
         private List<Project> projects = new List<Project>();
         private void Loadprojects()
         {
-            // Ví dụ: tạo danh sách Project mẫu
-           /* projects.Add(new Project("1", "Quýnh vietAnh"));
-            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
-            // Xóa các control cũ trong panel trước khi thêm mới
+          
             projectContainer.Controls.Clear();
 
             foreach (var project in projects)
@@ -159,8 +155,7 @@ namespace OOP
             Loadprojects();
 
             if (User.LoggedInUser != null)
-            {
-
+            { 
                 WelcomeName.Text = $"Hey {User.LoggedInUser.Username}, sẵn sàng làm việc chưa? 🚀";
                 if (User.LoggedInUser.Avatar != null && User.LoggedInUser.Avatar.Length > 0)
                 {

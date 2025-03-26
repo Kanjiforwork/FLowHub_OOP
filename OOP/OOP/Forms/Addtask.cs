@@ -15,10 +15,17 @@ namespace OOP
     {
         public Task NewTask { get; set; }
         List<Project> projects;
-        public Addtask(List<Project> projects)
+        List<Task> tasks;
+        List<User> users;
+        List<Milestone> milestone;
+        List<Meeting> meeting;
+
+        public Addtask(List<Project> projects, List<Task> tasks, List<User> users)
         {
             InitializeComponent();
             this.projects = projects;
+            this.tasks = tasks;
+            this.users = users;
         }
 
         private void Addtask_Load(object sender, EventArgs e)
@@ -27,6 +34,10 @@ namespace OOP
             foreach (Project p in this.projects)
             {
                 cbbSelectProject.Items.Add(p.projectName);
+            }
+            foreach (User u in users)
+            {
+                cbbAssignedUser.Items.Add(u.Username);
             }
         }
 
@@ -48,13 +59,34 @@ namespace OOP
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            string taskID = txtbInputID.Text;
+
+            Random rnd = new Random();
+            string tasknewID = (rnd.Next(1000, 9999)).ToString();
+            List<string> ManageId = new List<string>();
+            foreach (Task task in tasks)
+            {
+                ManageId.Add(task.taskID);
+            }
+
+            while (ManageId.Contains(tasknewID))
+            {
+                tasknewID = (rnd.Next(1000, 9999)).ToString();
+            }
+
             string taskName = txtbInputNameTask.Text;
             string status = cbbStatus.Text;
             DateTime deadline = dtpNewTask.Value;
             string projectName = cbbSelectProject.Text;
+            User user = null;
+            foreach (User user1 in users)
+            {
+                if (user1.Username == cbbAssignedUser.Text)
+                {
+                    user = user1;
+                }
+            }
 
-            NewTask = new Task(taskID, taskName, status, deadline,projectName);
+            NewTask = new Task(tasknewID, taskName, status, deadline, projectName, user);
             DialogResult = DialogResult.OK;
             Close();
 

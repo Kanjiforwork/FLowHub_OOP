@@ -8,25 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using OOP.Models;
 
 namespace OOP
 {
-    public partial class Addmember : Form
+    public partial class Addmember: Form
     {
         public TextBox txtUsername;
         private Projects parentForm;
 
-        public Addmember(Projects parent)
-        {
-            if (parent == null)
-            {
-                MessageBox.Show("Error: Parent form is null!");
-                return;
-            }
-            this.parentForm = parent;
-            InitializeComponent();
-        }
         public void Addmembercs(Projects parent)
         {
             if (parent == null)

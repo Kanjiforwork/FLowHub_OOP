@@ -89,11 +89,23 @@
     <Compile Include="CustomControls\Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\AddMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMeeting.Designer.cs">
+      <DependentUpon>AddMeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddMembers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AddMembers.Designer.cs">
       <DependentUpon>AddMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddMilestone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMilestone.Designer.cs">
+      <DependentUpon>AddMilestone.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Addtask.cs">
       <SubType>Form</SubType>
@@ -143,9 +155,14 @@
     <Compile Include="Forms\Tasks.Designer.cs">
       <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Done.cs" />
+    <Compile Include="Models\FarNormalUrgent.cs" />
     <Compile Include="Models\FileAttachment.cs" />
+    <Compile Include="Models\Important.cs" />
+    <Compile Include="Models\IUpdateStatus.cs" />
+    <Compile Include="Models\NotDone.cs" />
     <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotImportant.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\User.cs" />
@@ -171,12 +188,6 @@
     <Compile Include="Usercontrols\HomeTaskUserControl.Designer.cs">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usercontrols\MemberItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Usercontrols\MemberItem.Designer.cs">
-      <DependentUpon>MemberItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usercontrols\TasksFullUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,8 +200,14 @@
     <Compile Include="Usercontrols\NotiUserControl.Designer.cs">
       <DependentUpon>NotiUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddMeeting.resx">
+      <DependentUpon>AddMeeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMembers.resx">
       <DependentUpon>AddMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddMilestone.resx">
+      <DependentUpon>AddMilestone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Addtask.resx">
       <DependentUpon>Addtask.cs</DependentUpon>

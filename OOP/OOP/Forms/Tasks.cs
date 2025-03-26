@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using OOP.Forms;
 using OOP.Models;
 using OOP.Usercontrols;
 
@@ -12,16 +13,17 @@ namespace OOP
         public Tasks()
         {
             InitializeComponent();
+            // Ví dụ: tạo danh sách Task mẫu
+            User Bao = new User(1,"Bao");
+            users.Add(Bao);
+            users.Add(new User(1,"Hao"));
+            tasks.Add(new Task("1", "Quýnh VietAnh", "Pending", DateTime.Now.AddDays(3), "Project Alpha", Bao));
+            tasks.Add(new Task("2", "Code Login", "In Progress", DateTime.Now.AddDays(5), "Project Beta", Bao));
+            tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha", Bao));
 
-            if (User.LoggedInUser != null)
-            {
-                tasks = User.LoggedInUser.Tasks; // Lấy danh sách task thực tế
-            }
-            else
-            {
-                tasks = new List<Task>(); // Nếu chưa đăng nhập, dùng danh sách trống
-            }
-
+            // Ví dụ: tạo danh sách project mẫu
+          /*  projects.Add(new Project("1", "Quýnh vietAnh"));
+            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
             LoadTasks(tasks);
 
             //Apply mouseEvent
@@ -71,19 +73,24 @@ namespace OOP
         }
         private List<Project> projects = new List<Project>();
         private List<Task> tasks = new List<Task>();
+        private List<User> users = new List<User>();
+        private List<Milestone> milestone = new List<Milestone>();
+        private List<Meeting> meeting = new List<Meeting>();
 
         private void LoadTasks(List<Task> tasks)
         {
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
 
-            foreach (var task in tasks)
+            foreach (Task task in tasks)
             {
                 TasksFullUserControl taskItem = new TasksFullUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
                 taskContainer.Controls.Add(taskItem);
                 ApplyMouseEvents(taskItem.TaskPanel);
             }
+
+           
         }
 
         // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
@@ -122,7 +129,7 @@ namespace OOP
 
         private void btnAddTask_Click_1(object sender, EventArgs e)
         {
-            Addtask addTaskForm = new Addtask(projects);
+            Addtask addTaskForm = new Addtask(projects, tasks,users );
             if (addTaskForm.ShowDialog() == DialogResult.OK)
             {
                 tasks.Add(addTaskForm.NewTask); // Thêm task mới vào danh sách
@@ -199,6 +206,45 @@ namespace OOP
             Projects projects = new Projects();
             projects.Show();
             this.Hide();
+        }
+
+        private void lblAddoption_Click(object sender, EventArgs e)
+        {
+            ctmsAddoption.Show(lblAddoption, new Point(20, btnMore.Height));
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Addtask addTaskForm = new Addtask(projects, tasks, users);
+            if (addTaskForm.ShowDialog() == DialogResult.OK)
+            {
+                tasks.Add(addTaskForm.NewTask); // Thêm task mới vào danh sách
+                LoadTasks(tasks);
+            }
+
+        }
+
+        private void milestoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMilestone addMilestone = new AddMilestone();
+            if (addMilestone.ShowDialog() == DialogResult.OK)
+            {
+                milestone.Add(addMilestone.milestone); // Thêm task mới vào danh sách
+                LoadTasks(tasks);
+            }
+
+        }
+
+        private void meetingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           AddMeeting addMeeting = new AddMeeting(users, meeting);
+        addMeeting.ShowDialog();
         }
     }
 }

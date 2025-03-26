@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using OOP.Models;
+
+namespace OOP.Usercontrols
+{
+    public partial class MeetingUserControl : UserControl
+    {
+        private Meeting meeting;  // Tham chiếu đến Meeting gốc
+        public event EventHandler<Meeting> OnMeetingFinished;
+
+        public Panel TaskPanel // Thuộc tính công khai để truy cập Panel
+        {
+            get { return panel9; } // panelContainer là tên Panel bên trong MeetingUserControl
+        }
+
+        public MeetingUserControl(Meeting meeting)
+        {
+            InitializeComponent();
+            this.meeting = meeting;
+            UpdateUI();
+        }
+
+        private void UpdateUI()
+        {
+            taskContent.Text = meeting.taskName;
+            //taskDeadline.Text = $"{meeting.dealine:dd/MM/yyyy}";
+            taskProject.Text = meeting.Location; // Dùng location thay vì project
+            UpdateButtonState();
+        }
+
+        private void UpdateButtonState()
+        {
+            if (meeting.status == "Finished")
+            {
+                checkBox.Image = Properties.Resources.check;
+            }
+            else
+            {
+                checkBox.Image = Properties.Resources.checkUnfinished;
+            }
+        }
+
+        private void checkBox_Click(object sender, EventArgs e)
+        {
+            if (meeting.status == "Finished")
+            {
+                meeting.status = "UnFinished"; // Cập nhật trạng thái Meeting gốc
+                UpdateButtonState();
+                OnMeetingFinished?.Invoke(this, meeting);
+            }
+            else
+            {
+                meeting.status = "Finished"; // Cập nhật trạng thái Meeting gốc
+                UpdateButtonState();
+                OnMeetingFinished?.Invoke(this, meeting);
+            }
+        }
+    }
+}

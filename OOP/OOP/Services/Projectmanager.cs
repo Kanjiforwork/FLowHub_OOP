@@ -73,10 +73,18 @@ namespace OOP.Services
                 throw new Exception($"Project với ID {projectID} không tồn tại.");
             }
         }
-        //public Project FindProject(string ProjectName)
-        //{
-        //    return Projects.Find(p => p.projectName == ProjectName);
-        //}
+        public Project FindProject(string ProjectName)
+        {
+            foreach (Project project in Projects)
+            {
+                if (project.projectName == ProjectName)
+                {
+                    return project;
+                }
+            }
+            return null; // Nếu không tìm thấy project, trả về null
+        }
+
 
     }
 

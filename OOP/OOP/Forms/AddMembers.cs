@@ -26,6 +26,7 @@ namespace OOP
             }
             this.parentForm = parent;
             InitializeComponent();
+            this.Load += Addmember_Load;
         }
         public void Addmembercs(Projects parent)
         {
@@ -44,17 +45,20 @@ namespace OOP
 
         public RoleType SelectedRole
         {
-            get
-            {
-                if (Enum.TryParse(comboBox1.SelectedItem?.ToString(), out RoleType role))
-                {
-                    return role;
-                }
-                return RoleType.Member; // Hoặc giá trị mặc định
-            }
+            get { return RoleType.Member; } // sửa thành cái này là ngon
         }
 
+        private void Addmember_Load(object sender, EventArgs e)
+        {
+            // Xóa dữ liệu cũ nếu có
+            comboBox1.Items.Clear();
 
+            // Chỉ thêm RoleType.Member
+            comboBox1.Items.Add(RoleType.Member.ToString());
+
+            // Chọn mặc định là "Member"
+            comboBox1.SelectedItem = RoleType.Member.ToString();
+        }
         public void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -80,11 +84,6 @@ namespace OOP
                 MessageBox.Show("Error: Parent form is not set.");
                 return;
             }
-            if (comboBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a role.");
-                return;
-            }
 
             string username = txtUsername.Text;
             if (string.IsNullOrWhiteSpace(username))
@@ -93,18 +92,15 @@ namespace OOP
                 return;
             }
 
-            if (Enum.TryParse(comboBox1.SelectedItem?.ToString(), out RoleType selectedRole))
-            {
-                parentForm.AddMember(username, selectedRole);
+            // Chỉ cho phép RoleType.Member
+            RoleType selectedRole = RoleType.Member;
 
-                // Gán kết quả để lấy dữ liệu từ Projects
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Please select a valid role.");
-            }
+            // Gửi thông tin đến Projects
+            parentForm.AddMember(username, selectedRole);
+
+            // Gán kết quả để lấy dữ liệu từ Projects
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -141,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(76, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 38);
@@ -165,7 +165,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WelcomeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.WelcomeName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.WelcomeName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.WelcomeName.Location = new System.Drawing.Point(212, 16);
             this.WelcomeName.Name = "WelcomeName";
             this.WelcomeName.Size = new System.Drawing.Size(983, 51);
@@ -408,6 +408,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(288, 162);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
@@ -547,6 +548,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel10.Location = new System.Drawing.Point(28, 106);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel10.Name = "panel10";
@@ -568,7 +570,7 @@
             // 
             this.Mytask.AutoSize = true;
             this.Mytask.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Mytask.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Mytask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Mytask.Location = new System.Drawing.Point(94, 32);
             this.Mytask.Name = "Mytask";
             this.Mytask.Size = new System.Drawing.Size(136, 38);
@@ -580,7 +582,7 @@
             this.timeDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.timeDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.timeDetail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.timeDetail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.timeDetail.Location = new System.Drawing.Point(263, 99);
             this.timeDetail.Name = "timeDetail";
             this.timeDetail.Size = new System.Drawing.Size(932, 40);
@@ -603,7 +605,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(27, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(171, 38);

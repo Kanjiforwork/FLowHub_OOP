@@ -69,7 +69,7 @@ namespace OOP.Forms
                 Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
                 if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
                 {
-                    cbbSelectProject.Items.Add($"{project.projectID} - {project.projectName}");
+                    cbbSelectProject.Items.Add($"{project.projectName}");
                 }
             }
         }

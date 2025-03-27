@@ -28,6 +28,7 @@ namespace OOP
             this.tasks = tasks;
             this.users = users;
             UpdateComboBox();
+         
         }
 
         private void Addtask_Load(object sender, EventArgs e)
@@ -76,11 +77,68 @@ namespace OOP
             }
 
             string taskName = txtbInputNameTask.Text;
-            string status = cbbStatus.Text;
             DateTime deadline = dtpNewTask.Value;
             string projectName = cbbSelectProject.Text;
+            string receiver = cbbAssignedUser.Text;
+            List<User> users = UserService.LoadUsers();
+            int receiverID = 0;
+            Project selectedProject = projectManager.FindProject(projectName);
 
-            NewTask = new Task(tasknewID, taskName, status, deadline, projectName, User.LoggedInUser.ID);
+            if (selectedProject == null)
+            {
+                MessageBox.Show("Project not found.");
+                return;
+            }
+
+            // ✅ If "Myself" is selected, use the logged-in user's ID directly
+            if (receiver.Trim() == "Myself")
+            {
+                receiverID = User.LoggedInUser.ID;
+            }
+            else
+            {
+                if (selectedProject == null)
+                {
+                    MessageBox.Show("No project selected.");
+                    return;
+                }
+
+                User matchedUser = null;
+
+                // Xử lý receiver: Loại bỏ phần "(member)" nếu có
+                string cleanReceiver = receiver.Split('(')[0].Trim();
+
+                foreach (User user in users)
+                {
+                    string cleanUsername = user.Username.Trim(); // Đảm bảo không dư khoảng trắng
+
+                    if (cleanUsername == cleanReceiver) // So sánh username đã làm sạch
+                    {
+                        foreach (string member in selectedProject.members)
+                        {
+                            string cleanMember = member.Split('(')[0].Trim(); // Xóa "(member)"
+
+                            if (cleanMember == cleanUsername)
+                            {
+                                matchedUser = user;
+                                receiverID = user.ID;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (matchedUser != null) break;
+                }
+
+                if (matchedUser == null)
+                {
+                    MessageBox.Show($"_{receiver}_ is NOT a member of this project.");
+                }
+            }
+
+
+
+            NewTask = new Task(tasknewID, taskName, "Unfinish", deadline, projectName, receiverID);
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -96,10 +154,31 @@ namespace OOP
                 Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
                 if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
                 {
-                    cbbSelectProject.Items.Add($"{project.projectID} - {project.projectName}");
+                    cbbSelectProject.Items.Add($"{project.projectName}");
                 }
             }
         }
 
+        private void cbbSelectProject_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            savedProjectName = cbbSelectProject.Text;
+            UpdateMember();
+        }
+        string savedProjectName;
+        private void UpdateMember()
+        {
+            cbbAssignedUser.Items.Clear();
+            cbbAssignedUser.Items.Add("Myself");
+            Project projectChosen = projectManager.FindProject(savedProjectName);
+            foreach (string name in projectChosen.members)
+            {
+                cbbAssignedUser.Items.Add(name);
+            }
+        }
+
+        private void cbbAssignedUser_Click(object sender, EventArgs e)
+        {
+          //  UpdateMember();
+        }
     }
 }

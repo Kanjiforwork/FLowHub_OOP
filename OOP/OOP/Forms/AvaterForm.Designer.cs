@@ -31,24 +31,15 @@ namespace OOP
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.btnSkip = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.WelcomeName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbAvatar
-            // 
-            this.pbAvatar.Location = new System.Drawing.Point(205, 83);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(190, 158);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvatar.TabIndex = 0;
-            this.pbAvatar.TabStop = false;
             // 
             // btnBrowse
             // 
@@ -106,6 +97,15 @@ namespace OOP
             this.WelcomeName.Text = "Avatar";
             this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pbAvatar
+            // 
+            this.pbAvatar.Location = new System.Drawing.Point(205, 83);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(190, 158);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
+            // 
             // AvatarForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -120,8 +120,8 @@ namespace OOP
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AvatarForm";
             this.Text = "AvatarForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }

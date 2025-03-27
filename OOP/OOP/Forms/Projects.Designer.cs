@@ -63,7 +63,6 @@ namespace OOP
             this.projectContainer = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.TopPanel.SuspendLayout();
@@ -77,7 +76,6 @@ namespace OOP
             this.projectPanel.SuspendLayout();
             this.projectContainer.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -140,7 +138,7 @@ namespace OOP
             this.btnAddMember.Image = global::OOP.Properties.Resources.add_White;
             this.btnAddMember.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMember.InactiveColor = System.Drawing.Color.Transparent;
-            this.btnAddMember.Location = new System.Drawing.Point(10, 406);
+            this.btnAddMember.Location = new System.Drawing.Point(22, 406);
             this.btnAddMember.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddMember.Name = "btnAddMember";
             this.btnAddMember.Padding = new System.Windows.Forms.Padding(112, 0, 0, 0);
@@ -522,7 +520,6 @@ namespace OOP
             // panel11
             // 
             this.panel11.Controls.Add(this.comboBox1);
-            this.panel11.Controls.Add(this.pictureBox5);
             this.panel11.Location = new System.Drawing.Point(19, 29);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel11.Name = "panel11";
@@ -533,23 +530,13 @@ namespace OOP
             // 
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(75, 16);
+            this.comboBox1.Location = new System.Drawing.Point(4, 4);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 36);
+            this.comboBox1.Size = new System.Drawing.Size(208, 36);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.Text = " Project List";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(17, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(56, 62);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
             // 
             // Projects
             // 
@@ -584,7 +571,6 @@ namespace OOP
             this.projectPanel.PerformLayout();
             this.projectContainer.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -615,7 +601,6 @@ namespace OOP
         private Label label6;
         private Panel projectContainer;
         private Panel panel11;
-        private PictureBox pictureBox5;
         private ReaLTaiizor.Controls.Button btnAddMember;
         private PlaceholderTextBox description;
         private Panel memberPanel;

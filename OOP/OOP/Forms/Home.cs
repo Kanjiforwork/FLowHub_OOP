@@ -18,7 +18,7 @@ using User = OOP.Models.User;
 
 namespace OOP
 {
-    public partial class Home : Form
+    public partial class Home : BaseForm
     {
 
         TaskManager taskManager = TaskManager.GetInstance();
@@ -130,7 +130,6 @@ namespace OOP
             ApplyMouseEvents(TopPanel);
             ApplyMouseEvents(projectPanel);
             ApplyMouseEvents(taskPanel);
-
             //Task
             LoadTasks();
             //Project
@@ -191,25 +190,7 @@ namespace OOP
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (ConfirmExit()) // Nếu người dùng chọn Yes, thoát chương trình
-            {
-                Application.Exit();
-            }
-        }
-
-        private void OnFormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ConfirmExit())
-            {
-                e.Cancel = true; // Hủy đóng chương trình nếu chọn No
-            }
-        }
-
-        private bool ConfirmExit()
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
-                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            return result == DialogResult.Yes;
+            ExitApplication(); // Gọi hàm chung để thoát
         }
     }
 }

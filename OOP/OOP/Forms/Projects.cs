@@ -19,7 +19,7 @@ using System.Web.UI.Design;
 
 namespace OOP
 {
-    public partial class Projects : Form
+    public partial class Projects : BaseForm
     {
         private Label lblProjectDescription;
         List<Panel> projectPosts = new List<Panel>();
@@ -33,6 +33,7 @@ namespace OOP
 
             LoadProjectsFromFile();
             UpdateComboBox();
+
         }
 
       
@@ -577,28 +578,9 @@ namespace OOP
             projects.Show();
             this.Hide();
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (ConfirmExit()) // Nếu người dùng chọn Yes, thoát chương trình
-            {
-                Application.Exit();
-            }
-        }
-
-        private void OnFormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ConfirmExit())
-            {
-                e.Cancel = true; // Hủy đóng chương trình nếu chọn No
-            }
-        }
-
-        private bool ConfirmExit()
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
-                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            return result == DialogResult.Yes;
+            ExitApplication(); // Gọi hàm chung để thoát
         }
     }
 

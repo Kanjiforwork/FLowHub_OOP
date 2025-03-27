@@ -10,7 +10,7 @@ using OOP.Usercontrols;
 
 namespace OOP
 {
-    public partial class Tasks : Form
+    public partial class Tasks : BaseForm
     {
         TaskManager taskManager = TaskManager.GetInstance();
         public Tasks()
@@ -23,8 +23,6 @@ namespace OOP
             ApplyMouseEvents(taskContainer);
             ApplyMouseEvents(sidebar);
             ApplyMouseEvents(TopPanel);
-
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -274,22 +272,7 @@ namespace OOP
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void OnFormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ConfirmExit())
-            {
-                e.Cancel = true; // Hủy đóng chương trình nếu chọn No
-            }
-        }
-
-        private bool ConfirmExit()
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
-                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            return result == DialogResult.Yes;
+            ExitApplication(); // Gọi hàm chung để thoát
         }
     }
 }

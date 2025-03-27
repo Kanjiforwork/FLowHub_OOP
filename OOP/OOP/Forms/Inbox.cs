@@ -11,7 +11,7 @@ using System.Diagnostics;
 
 namespace OOP
 {
-    public partial class Inbox : Form
+    public partial class Inbox : BaseForm
     {
         private List<Notification> notifications = new List<Notification>();
         // Delegate để thông báo khi có thông báo mới
@@ -26,6 +26,7 @@ namespace OOP
             Debug.WriteLine($"Inbox ClientSize: {this.ClientSize}");
             // Đăng ký sự kiện
             NotificationAdded += Inbox_NotificationAdded;
+
         }
 
         // Hàm xử lý sự kiện khi có thông báo được thêm.
@@ -147,28 +148,9 @@ namespace OOP
        projects.Show();
        this.Hide();
    }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (ConfirmExit()) // Nếu người dùng chọn Yes, thoát chương trình
-            {
-                Application.Exit();
-            }
-        }
-
-        private void OnFormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (!ConfirmExit())
-            {
-                e.Cancel = true; // Hủy đóng chương trình nếu chọn No
-            }
-        }
-
-        private bool ConfirmExit()
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
-                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            return result == DialogResult.Yes;
+            ExitApplication(); // Gọi hàm chung để thoát
         }
     }
 }

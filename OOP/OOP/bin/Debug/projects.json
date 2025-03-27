@@ -1,38 +1,26 @@
 [
   {
     "tasks": [],
-    "projectName": "hi",
-    "projectDescription": "Mô tả của hi",
+    "projectID": 1,
+    "projectName": "gg",
+    "projectDescription": "What's this project about ",
     "members": [],
-    "AdminID": 0,
-    "CreatedBy": "No user logged in",
-    "UserRole": 0
+    "AdminID": 1,
+    "CreatedBy": "Tuan",
+    "UserRole": 0,
+    "Members": [
+      "Tuan \n(Admin)"
+    ]
   },
   {
     "tasks": [],
-    "projectName": "g",
-    "projectDescription": "Mô tả của g",
+    "projectID": 2,
+    "projectName": "gg",
+    "projectDescription": "What's this project about ",
     "members": [],
-    "AdminID": 0,
-    "CreatedBy": "No user logged in",
-    "UserRole": 0
-  },
-  {
-    "tasks": [],
-    "projectName": "Làm đồ án cuối kì",
-    "projectDescription": "Mô tả của Làm đồ án cuối kì",
-    "members": [],
-    "AdminID": 0,
-    "CreatedBy": "No user logged in",
-    "UserRole": 0
-  },
-  {
-    "tasks": [],
-    "projectName": "Lập dự án cuối kì",
-    "projectDescription": "Mô tả của Lập dự án cuối kì",
-    "members": [],
-    "AdminID": 0,
-    "CreatedBy": "No user logged in",
-    "UserRole": 0
+    "AdminID": 1,
+    "CreatedBy": "Tuan",
+    "UserRole": 0,
+    "Members": []
   }
 ]

@@ -89,11 +89,23 @@
     <Compile Include="CustomControls\Textbox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\AddMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMeeting.Designer.cs">
+      <DependentUpon>AddMeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddMembers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AddMembers.Designer.cs">
       <DependentUpon>AddMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddMilestone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMilestone.Designer.cs">
+      <DependentUpon>AddMilestone.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Addtask.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,12 @@
     </Compile>
     <Compile Include="Forms\AvaterForm.Designer.cs">
       <DependentUpon>AvaterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Inbox.cs">
       <SubType>Form</SubType>
@@ -144,7 +162,11 @@
       <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Done.cs" />
+    <Compile Include="Models\FarNormalUrgent .cs" />
     <Compile Include="Models\FileAttachment.cs" />
+    <Compile Include="Models\IUpdateStatus.cs" />
+    <Compile Include="Models\NotDone.cs" />
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Task.cs" />
@@ -156,8 +178,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Services\DataManager.cs" />
+    <Compile Include="Services\NotificationManager.cs" />
     <Compile Include="Services\Projectmanager.cs" />
+    <Compile Include="Services\TaskManager.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Usercontrols\HomeProjectUserControl.cs">
       <SubType>UserControl</SubType>
@@ -171,6 +194,24 @@
     <Compile Include="Usercontrols\HomeTaskUserControl.Designer.cs">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrols\MeetingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MeetingUserControl.Designer.cs">
+      <DependentUpon>MeetingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\MemberItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MemberItem.Designer.cs">
+      <DependentUpon>MemberItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\MilestoneUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MilestoneUserControl.Designer.cs">
+      <DependentUpon>MilestoneUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrols\TasksFullUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,8 +224,14 @@
     <Compile Include="Usercontrols\NotiUserControl.Designer.cs">
       <DependentUpon>NotiUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddMeeting.resx">
+      <DependentUpon>AddMeeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMembers.resx">
       <DependentUpon>AddMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddMilestone.resx">
+      <DependentUpon>AddMilestone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Addtask.resx">
       <DependentUpon>Addtask.cs</DependentUpon>
@@ -220,6 +267,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\HomeTaskUserControl.resx">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\MeetingUserControl.resx">
+      <DependentUpon>MeetingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\MilestoneUserControl.resx">
+      <DependentUpon>MilestoneUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\NotiUserControl.resx">
       <DependentUpon>NotiUserControl.cs</DependentUpon>
@@ -268,6 +321,7 @@
     <Content Include="Resources\DefaultAvatar.png" />
     <Content Include="Resources\defaultProjectPic.png" />
     <None Include="Resources\Home %282%29.png" />
+    <None Include="Resources\exit.png" />
     <Content Include="Resources\home.png" />
     <None Include="Resources\image %288%29.png" />
     <None Include="Resources\image %281%29 %281%29.png" />

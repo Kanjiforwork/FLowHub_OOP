@@ -1,50 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\",
+  "WorkspaceRootPath": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|c:\\users\\godxdemon\\downloads\\flowhub_oop-main (3)\\flowhub_oop-main\\oop\\oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|c:\\users\\godxdemon\\downloads\\flowhub_oop-main\\oop\\oop\\forms\\projects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\projects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|c:\\users\\godxdemon\\downloads\\flowhub_oop-main (3)\\flowhub_oop-main\\oop\\oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\avaterform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\services\\notificationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\services\\notificationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|c:\\users\\godxdemon\\downloads\\flowhub_oop-main (3)\\flowhub_oop-main\\oop\\oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\usercontrols\\tasksfullusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\tasksfullusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\oop\\forms\\inbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\inbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|c:\\users\\godxdemon\\downloads\\flowhub_oop-main (3)\\flowhub_oop-main\\oop\\oop\\services\\projectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\services\\projectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\usercontrols\\milestoneusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\milestoneusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|c:\\users\\godxdemon\\downloads\\flowhub_oop-main (3)\\flowhub_oop-main\\oop\\oop\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\forms\\addtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\addtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\usercontrols\\meetingusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\meetingusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\notiusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\oop\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\forms\\inbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\inbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\oop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\forms\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\forms\\tasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\oop\\usercontrols\\memberitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{498AF7CB-ABCC-481F-A120-99E5FB569005}|OOP\\OOP.csproj|solutionrelative:oop\\usercontrols\\memberitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,145 +70,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AvaterForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\AvaterForm.cs",
-              "RelativeDocumentMoniker": "OOP\\Forms\\AvaterForm.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\AvaterForm.cs [Design]",
-              "RelativeToolTip": "OOP\\Forms\\AvaterForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:56:30.439Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AvaterForm.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\AvaterForm.cs",
-              "RelativeDocumentMoniker": "OOP\\Forms\\AvaterForm.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\AvaterForm.cs",
-              "RelativeToolTip": "OOP\\Forms\\AvaterForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:55:04.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Register.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Register.cs",
-              "RelativeDocumentMoniker": "OOP\\Forms\\Register.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Register.cs [Design]",
-              "RelativeToolTip": "OOP\\Forms\\Register.cs [Design]",
+              "Title": "TasksFullUserControl.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\TasksFullUserControl.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAkwEYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:54:58.852Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-27T06:14:46.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Register.cs",
-              "RelativeDocumentMoniker": "OOP\\Forms\\Register.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Register.cs",
-              "RelativeToolTip": "OOP\\Forms\\Register.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwFIAAACHAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Task.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Task.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Task.cs",
+              "RelativeToolTip": "OOP\\Models\\Task.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAIA+wEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T06:29:57.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T06:07:15.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Project.cs",
-              "RelativeDocumentMoniker": "OOP\\Models\\Project.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Project.cs",
-              "RelativeToolTip": "OOP\\Models\\Project.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAUwEQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "NotificationManager.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Services\\NotificationManager.cs",
+              "RelativeDocumentMoniker": "OOP\\Services\\NotificationManager.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Services\\NotificationManager.cs",
+              "RelativeToolTip": "OOP\\Services\\NotificationManager.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAkwJIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T06:19:58.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T05:08:13.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Models\\User.cs",
-              "RelativeDocumentMoniker": "OOP\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Models\\User.cs",
-              "RelativeToolTip": "OOP\\Models\\User.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA9wCIAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Addtask.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Addtask.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Addtask.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Addtask.cs",
+              "RelativeToolTip": "OOP\\Forms\\Addtask.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T06:17:11.686Z"
+              "WhenOpened": "2025-03-27T04:35:21.577Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Notification.cs",
-              "RelativeDocumentMoniker": "OOP\\Models\\Notification.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Notification.cs",
-              "RelativeToolTip": "OOP\\Models\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T05:43:10.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Inbox.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Inbox.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Inbox.cs",
               "RelativeDocumentMoniker": "OOP\\Forms\\Inbox.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Inbox.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Inbox.cs",
               "RelativeToolTip": "OOP\\Forms\\Inbox.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAqwDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T05:39:14.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T04:46:35.009Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "NotiUserControl.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
               "RelativeDocumentMoniker": "OOP\\Usercontrols\\NotiUserControl.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\NotiUserControl.cs",
               "RelativeToolTip": "OOP\\Usercontrols\\NotiUserControl.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAWwBMAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T05:22:46.285Z"
+              "WhenOpened": "2025-03-27T04:37:08.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Program.cs",
-              "RelativeDocumentMoniker": "OOP\\Program.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Program.cs",
-              "RelativeToolTip": "OOP\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Projects.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Projects.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Projects.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Projects.cs",
+              "RelativeToolTip": "OOP\\Forms\\Projects.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAIAwwKIAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T05:22:46.287Z",
+              "WhenOpened": "2025-03-27T04:36:46.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Projectmanager.cs",
-              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Services\\Projectmanager.cs",
-              "RelativeDocumentMoniker": "OOP\\Services\\Projectmanager.cs",
-              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main (3)\\FLowHub_OOP-main\\OOP\\OOP\\Services\\Projectmanager.cs",
-              "RelativeToolTip": "OOP\\Services\\Projectmanager.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Register.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Register.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Register.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Register.cs",
+              "RelativeToolTip": "OOP\\Forms\\Register.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:29:34.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T04:36:08.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MeetingUserControl.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\MeetingUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\MeetingUserControl.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\MeetingUserControl.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\MeetingUserControl.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAkwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:55:39.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MilestoneUserControl.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\MilestoneUserControl.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\MilestoneUserControl.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\MilestoneUserControl.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\MilestoneUserControl.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T10:25:15.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Notification.cs",
+              "RelativeToolTip": "OOP\\Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:34:03.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "OOP\\Models\\Project.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Models\\Project.cs",
+              "RelativeToolTip": "OOP\\Models\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:52:10.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "OOP\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Services\\UserService.cs",
+              "RelativeToolTip": "OOP\\Services\\UserService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAiwGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:40:09.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Tasks.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Tasks.cs",
+              "RelativeDocumentMoniker": "OOP\\Forms\\Tasks.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Forms\\Tasks.cs",
+              "RelativeToolTip": "OOP\\Forms\\Tasks.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:57:08.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MemberItem.cs",
+              "DocumentMoniker": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\MemberItem.cs",
+              "RelativeDocumentMoniker": "OOP\\Usercontrols\\MemberItem.cs",
+              "ToolTip": "C:\\Users\\GODxDEMON\\Downloads\\FLowHub_OOP-main\\OOP\\OOP\\Usercontrols\\MemberItem.cs",
+              "RelativeToolTip": "OOP\\Usercontrols\\MemberItem.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADgvxIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:46:48.127Z"
             }
           ]
         }

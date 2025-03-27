@@ -19,9 +19,9 @@ namespace OOP.Models
         public List<Task> Tasks { get; set; } = new List<Task>();
         public List<User> Friends { get; set; } = new List<User>();
         public List<User> allUsers = new List<User>();
-        public static User LoggedInUser { get; private set; } // Đây là người dùng đã đăng nhập, ví dụ "admin"
+        public static User LoggedInUser { get; set; } // Đây là người dùng đã đăng nhập, ví dụ "admin"
 
-        public User(int id, string username, RoleType role,string password, string email)
+        public User(int id, string username, RoleType role, string password, string email)
         {
             ID = id;
             Username = username;
@@ -32,7 +32,7 @@ namespace OOP.Models
         public static void Login(string username, RoleType role)
         {
             // Tạo một đối tượng User và gán cho LoggedInUser
-            LoggedInUser = new User(1, username,RoleType.Member, "123", "OOP@.com"); // Ví dụ, ID = 1, bạn có thể thay bằng cách tạo ID tự động
+            LoggedInUser = new User(1, username, RoleType.Member, "123", "OOP@.com"); // Ví dụ, ID = 1, bạn có thể thay bằng cách tạo ID tự động
         }
 
         // Phương thức để lấy thông tin người dùng đăng nhập

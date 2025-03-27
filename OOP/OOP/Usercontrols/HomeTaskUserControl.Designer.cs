@@ -39,6 +39,7 @@
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.taskContent);
             this.panel9.Controls.Add(this.taskDeadline);
@@ -53,14 +54,13 @@
             // 
             this.taskContent.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.taskContent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.taskContent.Location = new System.Drawing.Point(56, 0);
+            this.taskContent.Location = new System.Drawing.Point(43, 2);
             this.taskContent.Name = "taskContent";
             this.taskContent.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.taskContent.Size = new System.Drawing.Size(273, 40);
             this.taskContent.TabIndex = 3;
             this.taskContent.Text = "Check bài nhóm";
             this.taskContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.taskContent.Click += new System.EventHandler(this.label5_Click);
             // 
             // taskDeadline
             // 
@@ -92,11 +92,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel9);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "HomeTaskUserControl";
-            this.Size = new System.Drawing.Size(391, 56);
+            this.Size = new System.Drawing.Size(392, 56);
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkBox)).EndInit();
             this.ResumeLayout(false);

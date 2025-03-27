@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,22 +28,6 @@ namespace OOP
         {
 
         }
-        public byte[] GetAvatarBytes()
-        {
-            return _avatarBytes;
-        }
-
-        private void btnSkip_Click_1(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void btnSave_Click_1(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
@@ -56,6 +41,22 @@ namespace OOP
                     pbAvatar.Image = Image.FromStream(ms);
                 }
             }
+        }
+
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+        public byte[] GetAvatarBytes()
+        {
+            return _avatarBytes;
         }
     }
 }

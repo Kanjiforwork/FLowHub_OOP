@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
+using OOP.Models;
+using OOP.Services;
+using OOP.Usercontrols;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Task = OOP.Models.Task;
 
 namespace OOP.Usercontrols
 {
@@ -29,8 +28,8 @@ namespace OOP.Usercontrols
         private void UpdateUI()
         {
             taskContent.Text = task.taskName;
-            taskDeadline.Text = $"{task.dealine:dd/MM/yyyy}";
-            taskProject.Text = task.projectName;
+            taskDeadline.Text = $"{task.deadline:dd/MM/yyyy}";
+            taskProject.Text = task.ProjectName;
             UpdateButtonState();
         }
 
@@ -55,15 +54,21 @@ namespace OOP.Usercontrols
         {
             if (task.status == "Finished")
             {
-                task.status = "UnFinished"; // Cập nhật trạng thái Task gốc
-                UpdateButtonState();
-                OnTaskFinished?.Invoke(this, task);
+                task.status = "UnFinished"; // Cập nhật trạng thái Meeting gốc
             }
             else
             {
-                task.status = "Finished"; // Cập nhật trạng thái Task gốc
-                UpdateButtonState();
-                OnTaskFinished?.Invoke(this, task);
+                task.status = "Finished"; // Cập nhật trạng thái Meeting gốc
+            }
+
+            UpdateButtonState();
+            OnTaskFinished?.Invoke(this, task);
+            TaskManager.GetInstance().UpdateTask(task);
+
+            // Chỉ gửi thông báo nếu trạng thái thực sự thay đổi thành "Finished"
+            if (task.status == "Finished")
+            {
+                NotificationManager.Instance.SendTaskUpdateNotification(User.GetLoggedInUserName(), task.taskName, task.status);
             }
         }
     }

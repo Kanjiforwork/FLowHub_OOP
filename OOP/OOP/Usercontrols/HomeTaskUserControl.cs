@@ -8,18 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using OOP.Models;
+using OOP.Services;
+using Task = OOP.Models.Task;
+
 namespace OOP.Usercontrols
 {
     public partial class HomeTaskUserControl : UserControl
     {
-        private Task task;  // Tham chiếu đến Task gốc
-        public event EventHandler<Task> OnTaskCompleted;
+        private AbaseTask task;  // Tham chiếu đến Task gốc
+        public event EventHandler<AbaseTask> OnTaskCompleted;  // Fix kiểu event
 
         public Panel TaskPanel // Thuộc tính công khai để truy cập Panel
         {
             get { return panel9; } // panelContainer là tên Panel bên trong TaskControl
         }
-        public HomeTaskUserControl(Task task)
+
+        public HomeTaskUserControl(AbaseTask task)
         {
             InitializeComponent();
             this.task = task;
@@ -29,7 +34,7 @@ namespace OOP.Usercontrols
         private void UpdateUI()
         {
             taskContent.Text = task.taskName;
-            taskDeadline.Text = $"{task.dealine:dd/MM}";
+            taskDeadline.Text = $"{task.deadline:dd/MM}";  // Fix typo từ dealine -> deadline
             UpdateButtonState();
         }
 
@@ -45,27 +50,21 @@ namespace OOP.Usercontrols
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox_Click_1(object sender, EventArgs e)
         {
             if (task.status == "Finished")
             {
                 task.status = "Unfinished"; // Cập nhật trạng thái Task gốc
-                UpdateButtonState();
-                OnTaskCompleted?.Invoke(this, task);
+                TaskManager.GetInstance().UpdateTask(task);
             }
             else
             {
                 task.status = "Finished"; // Cập nhật trạng thái Task gốc
-                UpdateButtonState();
-                OnTaskCompleted?.Invoke(this, task);
+                TaskManager.GetInstance().UpdateTask(task);
             }
 
-            
+            UpdateButtonState();
+            OnTaskCompleted?.Invoke(this, task); // Đúng kiểu event
         }
     }
 }

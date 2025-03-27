@@ -37,28 +37,28 @@ namespace OOP
             this.TopPanel = new System.Windows.Forms.Panel();
             this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnHam = new System.Windows.Forms.PictureBox();
             this.WelcomeName = new System.Windows.Forms.Label();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new ReaLTaiizor.Controls.Panel();
-            this.panel5 = new ReaLTaiizor.Controls.Panel();
-            this.panel6 = new ReaLTaiizor.Controls.Panel();
-            this.menu = new ReaLTaiizor.Controls.Panel();
-            this.panel7 = new ReaLTaiizor.Controls.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHome = new ReaLTaiizor.Controls.Button();
+            this.panel5 = new ReaLTaiizor.Controls.Panel();
             this.btnTask = new ReaLTaiizor.Controls.Button();
+            this.panel6 = new ReaLTaiizor.Controls.Panel();
             this.btnNoti = new ReaLTaiizor.Controls.Button();
+            this.menu = new ReaLTaiizor.Controls.Panel();
             this.btnProject = new ReaLTaiizor.Controls.Button();
-            this.btnUser = new ReaLTaiizor.Controls.Button();
-            this.btnHam = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new ReaLTaiizor.Controls.Panel();
+            this.btnExit = new ReaLTaiizor.Controls.Button();
             this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.menu.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -92,7 +92,7 @@ namespace OOP
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(884, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(861, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -112,6 +112,17 @@ namespace OOP
             this.label3.Size = new System.Drawing.Size(114, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "FlowHub";
+            // 
+            // btnHam
+            // 
+            this.btnHam.Image = global::OOP.Properties.Resources.image__8_;
+            this.btnHam.Location = new System.Drawing.Point(21, 16);
+            this.btnHam.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnHam.Name = "btnHam";
+            this.btnHam.Size = new System.Drawing.Size(38, 30);
+            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHam.TabIndex = 1;
+            this.btnHam.TabStop = false;
             // 
             // WelcomeName
             // 
@@ -135,7 +146,7 @@ namespace OOP
             this.sidebar.Controls.Add(this.panel5);
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.menu);
-            this.sidebar.Controls.Add(this.panel7);
+            this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 61);
             this.sidebar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -157,76 +168,6 @@ namespace OOP
             this.panel4.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.panel4.TabIndex = 4;
             this.panel4.Text = "Dashboard";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.panel5.Controls.Add(this.btnTask);
-            this.panel5.EdgeColor = System.Drawing.Color.Transparent;
-            this.panel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel5.Location = new System.Drawing.Point(2, 66);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
-            this.panel5.Size = new System.Drawing.Size(273, 57);
-            this.panel5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel5.TabIndex = 4;
-            this.panel5.Text = "Dashboard";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.panel6.Controls.Add(this.btnNoti);
-            this.panel6.EdgeColor = System.Drawing.Color.Transparent;
-            this.panel6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel6.Location = new System.Drawing.Point(2, 129);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
-            this.panel6.Size = new System.Drawing.Size(273, 57);
-            this.panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel6.TabIndex = 5;
-            this.panel6.Text = "Dashboard";
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.menu.Controls.Add(this.btnProject);
-            this.menu.EdgeColor = System.Drawing.Color.Transparent;
-            this.menu.ForeColor = System.Drawing.Color.Transparent;
-            this.menu.Location = new System.Drawing.Point(0, 189);
-            this.menu.Margin = new System.Windows.Forms.Padding(0);
-            this.menu.Name = "menu";
-            this.menu.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
-            this.menu.Size = new System.Drawing.Size(273, 57);
-            this.menu.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.menu.TabIndex = 3;
-            this.menu.Text = "Dashboard";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.panel7.Controls.Add(this.btnUser);
-            this.panel7.EdgeColor = System.Drawing.Color.Transparent;
-            this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(2, 249);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
-            this.panel7.Size = new System.Drawing.Size(273, 57);
-            this.panel7.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.panel7.TabIndex = 6;
-            this.panel7.Text = "Dashboard";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(300, 72);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(40, 2, 2, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(690, 568);
-            this.flowLayoutPanel1.TabIndex = 15;
             // 
             // btnHome
             // 
@@ -252,6 +193,21 @@ namespace OOP
             this.btnHome.TextAlignment = System.Drawing.StringAlignment.Near;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
+            this.panel5.Controls.Add(this.btnTask);
+            this.panel5.EdgeColor = System.Drawing.Color.Transparent;
+            this.panel5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel5.Location = new System.Drawing.Point(2, 66);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
+            this.panel5.Size = new System.Drawing.Size(273, 57);
+            this.panel5.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel5.TabIndex = 4;
+            this.panel5.Text = "Dashboard";
+            // 
             // btnTask
             // 
             this.btnTask.BackColor = System.Drawing.Color.Transparent;
@@ -275,6 +231,21 @@ namespace OOP
             this.btnTask.Text = "              Task";
             this.btnTask.TextAlignment = System.Drawing.StringAlignment.Near;
             this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
+            this.panel6.Controls.Add(this.btnNoti);
+            this.panel6.EdgeColor = System.Drawing.Color.Transparent;
+            this.panel6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel6.Location = new System.Drawing.Point(2, 129);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
+            this.panel6.Size = new System.Drawing.Size(273, 57);
+            this.panel6.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel6.TabIndex = 5;
+            this.panel6.Text = "Dashboard";
             // 
             // btnNoti
             // 
@@ -300,6 +271,21 @@ namespace OOP
             this.btnNoti.TextAlignment = System.Drawing.StringAlignment.Near;
             this.btnNoti.Click += new System.EventHandler(this.btnNoti_Click);
             // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
+            this.menu.Controls.Add(this.btnProject);
+            this.menu.EdgeColor = System.Drawing.Color.Transparent;
+            this.menu.ForeColor = System.Drawing.Color.Transparent;
+            this.menu.Location = new System.Drawing.Point(0, 189);
+            this.menu.Margin = new System.Windows.Forms.Padding(0);
+            this.menu.Name = "menu";
+            this.menu.Padding = new System.Windows.Forms.Padding(14, 5, 5, 5);
+            this.menu.Size = new System.Drawing.Size(273, 57);
+            this.menu.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.menu.TabIndex = 3;
+            this.menu.Text = "Dashboard";
+            // 
             // btnProject
             // 
             this.btnProject.BackColor = System.Drawing.Color.Transparent;
@@ -324,39 +310,52 @@ namespace OOP
             this.btnProject.TextAlignment = System.Drawing.StringAlignment.Near;
             this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
             // 
-            // btnUser
+            // flowLayoutPanel1
             // 
-            this.btnUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUser.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.EnteredColor = System.Drawing.Color.Transparent;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnUser.Image = global::OOP.Properties.Resources.user;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.InactiveColor = System.Drawing.Color.Transparent;
-            this.btnUser.Location = new System.Drawing.Point(14, 5);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(93, 0, 0, 0);
-            this.btnUser.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.PressedColor = System.Drawing.Color.Transparent;
-            this.btnUser.Size = new System.Drawing.Size(254, 47);
-            this.btnUser.TabIndex = 2;
-            this.btnUser.Text = "              User";
-            this.btnUser.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(300, 72);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(40, 2, 2, 2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(690, 568);
+            this.flowLayoutPanel1.TabIndex = 15;
             // 
-            // btnHam
+            // panel2
             // 
-            this.btnHam.Image = global::OOP.Properties.Resources.image__8_;
-            this.btnHam.Location = new System.Drawing.Point(21, 16);
-            this.btnHam.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnHam.Name = "btnHam";
-            this.btnHam.Size = new System.Drawing.Size(38, 30);
-            this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHam.TabIndex = 1;
-            this.btnHam.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.EdgeColor = System.Drawing.Color.Transparent;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(3, 249);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(15, 5, 5, 5);
+            this.panel2.Size = new System.Drawing.Size(292, 54);
+            this.panel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            this.panel2.TabIndex = 7;
+            this.panel2.Text = "Dashboard";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExit.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.EnteredColor = System.Drawing.Color.Transparent;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnExit.Image = global::OOP.Properties.Resources.exit;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.InactiveColor = System.Drawing.Color.Transparent;
+            this.btnExit.Location = new System.Drawing.Point(15, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
+            this.btnExit.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.PressedColor = System.Drawing.Color.Transparent;
+            this.btnExit.Size = new System.Drawing.Size(272, 44);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "              Exit";
+            this.btnExit.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Inbox
             // 
@@ -371,17 +370,17 @@ namespace OOP
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.InfoText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Inbox";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
             this.sidebar.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.menu.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHam)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -402,8 +401,8 @@ namespace OOP
         private ReaLTaiizor.Controls.Button btnNoti;
         private ReaLTaiizor.Controls.Panel menu;
         private ReaLTaiizor.Controls.Button btnProject;
-        private ReaLTaiizor.Controls.Panel panel7;
-        private ReaLTaiizor.Controls.Button btnUser;
         private FlowLayoutPanel flowLayoutPanel1;
+        private ReaLTaiizor.Controls.Panel panel2;
+        private ReaLTaiizor.Controls.Button btnExit;
     }
 }

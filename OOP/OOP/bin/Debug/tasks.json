@@ -1,0 +1,11 @@
+[
+  {
+    "$type": "OOP.Models.Task, OOP",
+    "taskID": "9597",
+    "ProjectName": "1 - gg",
+    "taskName": "ađad",
+    "status": "Finished",
+    "deadline": "2025-03-27T17:46:52.1809235+07:00",
+    "AssignedTo": 1
+  }
+]

@@ -4,41 +4,79 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OOP.Models;
-
+using OOP;
+using Newtonsoft.Json;
+using System.IO;
+using System.Windows.Forms;
 namespace OOP.Services
 {
     internal class ProjectManager
     {
         public List<Project> Projects { get; set; }
 
-        public ProjectManager() 
+
+        public ProjectManager()
         {
             Projects = new List<Project>();
-        }
+            LoadProjectsFromFile();
 
-        public void AddProject(Project project)
+        }
+        public void SaveProjectsToFile()
         {
-            Projects.Add(project);
-
-            // Gửi thông báo đến tất cả user về dự án mới
-            NotificationManager.Instance.Notify(new ProjectAnnouncementNotification("System", $"Dự án '{project.projectName}' đã được tạo!"));
+            string json = JsonConvert.SerializeObject(Projects, Formatting.Indented);
+            File.WriteAllText("projects.json", json);
+            Console.WriteLine("Danh sách project đã được lưu vào file.");
         }
-        /* public void DeleteProject(string ProjectName)
-         {
-             Project project = Projects.Find(p => p.ProjectName == ProjectName);
-             if (project != null)
-             {
-                 Projects.Remove(project);
-             }
-             else
-             {
-                 //Raise exception
-             }
-         }
-         public Project FindProject(string ProjectName)
-         {
-             return Projects.Find(p => p.ProjectName == ProjectName);
-         }*/
+
+        public void LoadProjectsFromFile()
+        {
+            if (File.Exists("projects.json"))
+            {
+                string json = File.ReadAllText("projects.json");
+                Projects = JsonConvert.DeserializeObject<List<Project>>(json) ?? new List<Project>();
+                Console.WriteLine($"Đã load {Projects.Count} project từ file.");
+            }
+        }
+        public void AddProject()
+        {
+            Projects.Add(new Project());
+        }
+        public void DeleteProject(int projectID)
+        {
+            if (Projects == null || Projects.Count == 0)
+            {
+                throw new Exception("Danh sách project rỗng. Không thể xóa!");
+            }
+
+            Console.WriteLine($"Đang tìm project với ID: {projectID}");
+
+            Project projectToRemove = null;
+            foreach (Project project in Projects)
+            {
+                if (project.projectID == projectID)
+                {
+                    projectToRemove = project;
+                    break;
+                }
+            }
+
+            if (projectToRemove != null)
+            {
+                Projects.Remove(projectToRemove);
+                Console.WriteLine($"Project {projectID} đã bị xóa.");
+                SaveProjectsToFile();
+                LoadProjectsFromFile();
+            }
+            else
+            {
+                Console.WriteLine($"Lỗi: Không tìm thấy project {projectID}.");
+                throw new Exception($"Project với ID {projectID} không tồn tại.");
+            }
+        }
+        //public Project FindProject(string ProjectName)
+        //{
+        //    return Projects.Find(p => p.projectName == ProjectName);
+        //}
 
     }
 

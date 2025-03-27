@@ -38,7 +38,6 @@ namespace OOP
             this.label2 = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.WelcomeName = new System.Windows.Forms.Label();
-            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +82,7 @@ namespace OOP
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(74, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 25);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "UserName:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -95,7 +94,7 @@ namespace OOP
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(74, 166);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 25);
+            this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Role:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -105,7 +104,6 @@ namespace OOP
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.TopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TopPanel.Controls.Add(this.WelcomeName);
-            this.TopPanel.Controls.Add(this.nightControlBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.ForeColor = System.Drawing.SystemColors.Control;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
@@ -120,37 +118,13 @@ namespace OOP
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WelcomeName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.WelcomeName.Location = new System.Drawing.Point(123, 8);
+            this.WelcomeName.Location = new System.Drawing.Point(132, 8);
             this.WelcomeName.Name = "WelcomeName";
             this.WelcomeName.Size = new System.Drawing.Size(245, 51);
             this.WelcomeName.TabIndex = 19;
             this.WelcomeName.Text = "Add member";
             this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.WelcomeName.Click += new System.EventHandler(this.WelcomeName_Click);
-            // 
-            // nightControlBox1
-            // 
-            this.nightControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nightControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.nightControlBox1.CloseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.nightControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nightControlBox1.DefaultLocation = true;
-            this.nightControlBox1.DisableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.DisableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.EnableCloseColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMaximizeButton = true;
-            this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMinimizeButton = true;
-            this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(378, 0);
-            this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MinimizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Name = "nightControlBox1";
-            this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
-            this.nightControlBox1.TabIndex = 1;
             // 
             // Addmember
             // 
@@ -164,7 +138,7 @@ namespace OOP
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.TopPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Addmember";
             this.Text = "Addmembercs";
@@ -182,7 +156,6 @@ namespace OOP
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel TopPanel;
-        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private System.Windows.Forms.Label WelcomeName;
     }
 }

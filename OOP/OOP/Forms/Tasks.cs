@@ -1,26 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
+using OOP.Forms;
 using OOP.Models;
+using OOP.Services;
 using OOP.Usercontrols;
 
 namespace OOP
 {
-    public partial class Tasks : Form
+    public partial class Tasks : BaseForm
     {
+        TaskManager taskManager = TaskManager.GetInstance();
         public Tasks()
         {
             InitializeComponent();
             // Ví dụ: tạo danh sách Task mẫu
-            tasks.Add(new Task("1", "Quýnh VietAnh", "Pending", DateTime.Now.AddDays(3), "Project Alpha"));
-            tasks.Add(new Task("2", "Code Login", "In Progress", DateTime.Now.AddDays(5), "Project Beta"));
-            tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha"));
-
-            // Ví dụ: tạo danh sách project mẫu
-          /*  projects.Add(new Project("1", "Quýnh vietAnh"));
-            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
-            LoadTasks(tasks);
+            LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
 
             //Apply mouseEvent
             ApplyMouseEvents(taskContainer);
@@ -68,21 +65,41 @@ namespace OOP
             //Console.WriteLine(mnuList.Checked);
         }
         private List<Project> projects = new List<Project>();
-        private List<Task> tasks = new List<Task>();
+        private List<User> users = new List<User>();
+        private List<Milestone> milestone = new List<Milestone>();
+        private List<Meeting> meeting = new List<Meeting>();
 
-        private void LoadTasks(List<Task> tasks)
+        private void LoadTasks(List<AbaseTask> tasks)
         {
-            // Xóa các control cũ trong panel trước khi thêm mới
+            // Xóa các control cũ trước khi thêm mới
             taskContainer.Controls.Clear();
 
-            foreach (var task in tasks)
+            foreach (AbaseTask task in tasks)
             {
-                TasksFullUserControl taskItem = new TasksFullUserControl(task);
-                taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
-                taskContainer.Controls.Add(taskItem);
-                ApplyMouseEvents(taskItem.TaskPanel);
+                if (task is Task t)
+                {
+                    TasksFullUserControl taskItem = new TasksFullUserControl(t);
+                    taskItem.Dock = DockStyle.Top;
+                    taskContainer.Controls.Add(taskItem);
+                    ApplyMouseEvents(taskItem.TaskPanel);
+                }
+                else if (task is Meeting m)
+                {
+                    MeetingUserControl meetingItem = new MeetingUserControl(m);
+                    meetingItem.Dock = DockStyle.Top;
+                    taskContainer.Controls.Add(meetingItem);
+                    ApplyMouseEvents(meetingItem.TaskPanel);
+                }
+                else if (task is Milestone ms)
+                {
+                    MilestoneUserControl milestoneItem = new MilestoneUserControl(ms);
+                    milestoneItem.Dock = DockStyle.Top;
+                    taskContainer.Controls.Add(milestoneItem);
+                    ApplyMouseEvents(milestoneItem.TaskPanel);
+                }
             }
         }
+
 
         // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
         void ApplyMouseEvents(Panel panel)
@@ -120,33 +137,43 @@ namespace OOP
 
         private void btnAddTask_Click_1(object sender, EventArgs e)
         {
-            Addtask addTaskForm = new Addtask(projects);
+            Addtask addTaskForm = new Addtask(projects, taskManager.Tasks, users);
             if (addTaskForm.ShowDialog() == DialogResult.OK)
             {
-                tasks.Add(addTaskForm.NewTask); // Thêm task mới vào danh sách
-                LoadTasks(tasks);
+                taskManager.AddTask(addTaskForm.NewTask);
+                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
             }
         }
 
         private void ctmCloset_Click(object sender, EventArgs e)
         {
-            tasks.Sort();
-            tasks.Reverse();
-            LoadTasks(tasks);
-           // RenderTasks(tasks);
+            List<AbaseTask> taskslistother = new List<AbaseTask>();
+            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
+            {
+                    taskslistother.Add(task);
+            }
+            taskslistother.Sort();
+            taskslistother.Reverse();
+            LoadTasks(taskslistother);
+            // RenderTasks(tasks);
         }
 
         private void ctmFarest_Click(object sender, EventArgs e)
         {
-            tasks.Sort();
-             //RenderTasks(tasks);
-             LoadTasks(tasks);
+            List<AbaseTask> taskslistother = new List<AbaseTask>();
+            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
+            {
+                taskslistother.Add(task);
+            }
+            taskslistother.Sort();
+            //RenderTasks(tasks);
+            LoadTasks(taskslistother);
         }
 
         private void ctmFinished_Click(object sender, EventArgs e)
         {
-            List<Task> taskslistother = new List<Task>();
-            foreach (Task task in tasks)
+            List<AbaseTask> taskslistother = new List<AbaseTask>();
+            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
             {
                 if (task.status == "Finished")
                 {
@@ -158,8 +185,8 @@ namespace OOP
 
         private void ctnSection_Click(object sender, EventArgs e)
         {
-            List<Task> taskslistother = new List<Task>();
-            foreach (Task task in tasks)
+            List<AbaseTask> taskslistother = new List<AbaseTask>();
+            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
             {
                 if (task.status != "Finished")
                 {
@@ -197,6 +224,55 @@ namespace OOP
             Projects projects = new Projects();
             projects.Show();
             this.Hide();
+        }
+
+        private void lblAddoption_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(User.LoggedInUser.Username);
+            ctmsAddoption.Show(btnAddTask, new Point(20, btnMore.Height));
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Addtask addTaskForm = new Addtask(projects, taskManager.Tasks, users);
+            if (addTaskForm.ShowDialog() == DialogResult.OK)
+            {
+                taskManager.AddTask(addTaskForm.NewTask);
+                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+            }
+
+        }
+
+        private void milestoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMilestone addMilestone = new AddMilestone();
+            if (addMilestone.ShowDialog() == DialogResult.OK)
+            {
+                taskManager.AddTask(addMilestone.milestone); // Thêm task mới vào danh sách
+                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+            }
+
+        }
+
+        private void meetingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMeeting addMeeting = new AddMeeting(users);
+            if (addMeeting.ShowDialog() == DialogResult.OK)
+            {
+                taskManager.AddTask(addMeeting.newMeeting); // Thêm task mới vào danh sách
+                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ExitApplication(); // Gọi hàm chung để thoát
         }
     }
 }

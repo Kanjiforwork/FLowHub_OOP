@@ -77,10 +77,10 @@ namespace OOP
                 }
 
                 int newId = users.Count > 0 ? users[users.Count - 1].ID + 1 : 1;
-                User newUser = new User(newId, username, RoleType.Member,password, email);
+                User newUser = new User(newId, username, RoleType.Member, password, email);
                 users.Add(newUser);
                 UserService.SaveUsers(users);
-                NotificationManager.Instance.Notify(new AccountNotification("System", $"Tài khoản mới '{username}' đã được đăng ký!"));
+                NotificationManager.Instance.SendAccountNotification(username);
                 MessageBox.Show("Registration successful!");
                 this.Close();
 

@@ -63,7 +63,7 @@ namespace OOP.Services
         // ✅ Lưu danh sách task vào file
         public void SaveTasksToFile()
         {
-            var settings = new JsonSerializerSettings
+            JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Auto,
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
@@ -80,7 +80,7 @@ namespace OOP.Services
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                var settings = new JsonSerializerSettings
+                JsonSerializerSettings settings = new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.Auto,
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore
@@ -125,7 +125,7 @@ namespace OOP.Services
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var jsonObject = JObject.Load(reader);
+            JObject jsonObject = JObject.Load(reader);
             string type = jsonObject["Type"]?.ToString();
 
             AbaseTask task;
@@ -135,10 +135,10 @@ namespace OOP.Services
                     task = new Task("", "", "", DateTime.Now, "", 0);
                     break;
                 case "Meeting":
-                    task = new Meeting("", "", "", DateTime.Now, null,"", null, null, User.LoggedInUser.ID);
+                    task = new Meeting("", "", "", DateTime.Now, null, "", null, null, User.LoggedInUser.ID);
                     break;
                 case "Milestone":
-                    task = new Milestone("", "", "", DateTime.Now, null,null, 0);
+                    task = new Milestone("", "", "", DateTime.Now, null, null, 0);
                     break;
                 default:
                     throw new Exception("Unknown task type");
@@ -156,4 +156,3 @@ namespace OOP.Services
         }
     }
 }
-

@@ -4,7 +4,7 @@
     "taskID": "8554",
     "ProjectName": "",
     "taskName": "HIHIHI",
-    "status": "Unfinished",
+    "status": "Finished",
     "deadline": "2025-03-27T06:05:58.2778698+07:00",
     "AssignedTo": 1
   },
@@ -47,7 +47,7 @@
     "taskID": "8995",
     "ProjectName": null,
     "taskName": "Họp",
-    "status": "Incompleted",
+    "status": "Finished",
     "deadline": "2025-03-27T08:24:07.6494042+07:00",
     "AssignedTo": 1
   },
@@ -57,7 +57,7 @@
     "taskID": "4310",
     "ProjectName": null,
     "taskName": "Xong class",
-    "status": "UnFinished",
+    "status": "Finished",
     "deadline": "2025-04-20T08:25:04",
     "AssignedTo": 1
   },
@@ -81,7 +81,7 @@
     "taskID": "2967",
     "ProjectName": null,
     "taskName": "Quánh lộn",
-    "status": "UnFinished",
+    "status": "Finished",
     "deadline": "2025-03-27T08:39:16.544918+07:00",
     "AssignedTo": 1
   },

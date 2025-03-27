@@ -64,7 +64,7 @@ namespace OOP.Forms
         private void UpdateComboBox()
         {
             cbbSelectProject.Items.Clear();
-            foreach (var project in projectManager.Projects)
+            foreach (Project project in projectManager.Projects)
             {
                 Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
                 if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))

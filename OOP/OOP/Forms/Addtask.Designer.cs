@@ -225,7 +225,7 @@
             this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.txtbInputNameTask);
             this.Controls.Add(this.lbInputName);
-            this.Cursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Addtask";

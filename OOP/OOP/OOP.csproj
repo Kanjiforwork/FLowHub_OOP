@@ -165,11 +165,9 @@
     <Compile Include="Models\Done.cs" />
     <Compile Include="Models\FarNormalUrgent .cs" />
     <Compile Include="Models\FileAttachment.cs" />
-    <Compile Include="Models\Important.cs" />
     <Compile Include="Models\IUpdateStatus.cs" />
     <Compile Include="Models\NotDone.cs" />
     <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\NotImportant.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\User.cs" />
@@ -230,33 +228,43 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMembers.resx">
       <DependentUpon>AddMembers.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMilestone.resx">
       <DependentUpon>AddMilestone.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Addtask.resx">
       <DependentUpon>Addtask.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AvaterForm.resx">
       <DependentUpon>AvaterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inbox.resx">
       <DependentUpon>Inbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Projects.resx">
       <DependentUpon>Projects.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tasks.resx">
       <DependentUpon>Tasks.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -265,21 +273,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\HomeProjectUserControl.resx">
       <DependentUpon>HomeProjectUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\HomeTaskUserControl.resx">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\MeetingUserControl.resx">
       <DependentUpon>MeetingUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\MemberItem.resx">
+      <DependentUpon>MemberItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\MilestoneUserControl.resx">
       <DependentUpon>MilestoneUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\NotiUserControl.resx">
       <DependentUpon>NotiUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TasksFullUserControl.resx">
       <DependentUpon>TasksFullUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

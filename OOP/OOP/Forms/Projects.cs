@@ -4,11 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Newtonsoft.Json;
 
 using System.IO;
@@ -151,6 +147,7 @@ namespace OOP
             newProject.CreatedBy = createdBy; // Gán người tạo dự án
 
             newProject.AdminID = User.LoggedInUser.ID;
+            newProject.AdminName = User.LoggedInUser.Username;
 
             // Thêm vào danh sách dự án
             projects.Add(newProject);
@@ -363,9 +360,9 @@ namespace OOP
                     string role = userForm.SelectedRole.ToString();
                     string memberInfo = $"{newMember} \n({role})"; 
 
-                    selectedProject.Members.Add(memberInfo);
+                    selectedProject.members.Add(memberInfo);
 
-                    DisplayMembers(selectedProject.Members);
+                    DisplayMembers(selectedProject);
                     SaveProjectsToFile();
                 }
             }
@@ -375,7 +372,7 @@ namespace OOP
         private void UpdateComboBox()
         {
             comboBox1.Items.Clear();
-            foreach (var project in projectManager.Projects)
+            foreach (Project project in projectManager.Projects)
             {
                 Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
                 if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
@@ -445,7 +442,7 @@ namespace OOP
 
             comboBox1.Items.Clear();
 
-            foreach (var project in projects)
+            foreach (Project project in projects)
             {
                 comboBox1.Items.Add($"{project.projectID} - {project.projectName}");
             }
@@ -476,7 +473,7 @@ namespace OOP
                     {
                         description.Text = selectedProject.projectDescription;
                         // Hiển thị mô tả của project
-                        DisplayMembers(selectedProject.Members);
+                        DisplayMembers(selectedProject);
                     }
                 }
                 else
@@ -517,28 +514,21 @@ namespace OOP
                 }
             }
         }
-        private void DisplayMembers(List<string> members)
+        private void DisplayMembers(Project project)
         {
-            panel2.Controls.Clear(); // Xóa danh sách cũ để tránh trùng lặp
+            memberPanel.Controls.Clear(); // Xóa danh sách cũ để tránh trùng lặp
+            List<string> members = project.members;
+            MemberItem OwnerItem = new MemberItem(project.AdminName, true);
+            OwnerItem.Dock = DockStyle.Left; // Stack Project from top to bottom
+            memberPanel.Controls.Add(OwnerItem);
 
-            int xOffset = 0; // Vị trí ban đầu
-            for (int i = 0; i < members.Count; i++) // Duyệt từ trái sang phải
+            foreach (string member in members)
             {
-                string[] info = members[i].Split('('); // Giả sử dữ liệu là "UserName (Role)"
-                string name = info[0].Trim();
-                string role = info.Length > 1 ? info[1].Replace(")", "").Trim() : "Member";
-
-                MemberItem memberItem = new MemberItem(name, role);
-
-                memberItem.Margin = new Padding(5);
-                memberItem.Size = new Size(120, 50); // Cố định kích thước
-                memberItem.Location = new Point(xOffset, 0); // Đặt vị trí theo xOffset
-
-                panel2.Controls.Add(memberItem);
-
-                xOffset += memberItem.Width + memberItem.Margin.Left + memberItem.Margin.Right + 10; // Cộng dồn để thành viên tiếp theo nằm bên phải
+                    MemberItem memberItem = new MemberItem(member, false);
+                    memberItem.Dock = DockStyle.Left; // Stack Project from top to bottom
+                    memberPanel.Controls.Add(memberItem);
+                   // ApplyMouseEvents(projectItem.ProjectPanel);
             }
-            panel2.Width = Math.Max(panel2.Width, xOffset);
 
         }
         private void panel2_Paint_1(object sender, PaintEventArgs e)
@@ -581,6 +571,16 @@ namespace OOP
         private void btnExit_Click(object sender, EventArgs e)
         {
             ExitApplication(); // Gọi hàm chung để thoát
+        }
+
+        private void description_Enter(object sender, EventArgs e)
+        {
+            description.ForeColor = Color.Gray; // Giữ màu đúng khi nhập vào
+        }
+
+        private void description_TextChanged(object sender, EventArgs e)
+        {
+            description.ForeColor = Color.Gray; // Cập nhật màu khi nhập
         }
     }
 

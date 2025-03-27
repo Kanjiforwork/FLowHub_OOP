@@ -50,3 +50,4 @@ C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Forms.AddMilestone
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Forms.AddMeeting.resources
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Usercontrols.MeetingUserControl.resources
 C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Usercontrols.MilestoneUserControl.resources
+C:\Users\baole\Documents\GitHub\FLowHub\OOP\OOP\obj\Debug\OOP.Usercontrols.MemberItem.resources

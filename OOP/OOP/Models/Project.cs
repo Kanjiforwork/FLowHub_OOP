@@ -24,10 +24,11 @@ namespace OOP.Models
         public List<Task> tasks = new List<Task>();
         public List<string> members { get; set; } = new List<string>();
         public int AdminID { get; set; }
+        public string AdminName { get; set; }
         public string CreatedBy { get; set; }
         public Project() { }
         public RoleType UserRole { get; private set; }
-        public List<string> Members { get; set; } = new List<string>();
+    
 
 
         public Project(int projectID, string projectName, string projectDescription, RoleType role)
@@ -38,13 +39,14 @@ namespace OOP.Models
             this.UserRole = role;
 
         }
-        public Project(int projectID, string projectName, string projectDescription, RoleType role, string createdBy)
+        public Project(int projectID, string projectName, string projectDescription, RoleType role, int adminID, string adminName, string createdBy)
         {
             this.projectID = projectID;
             this.projectName = projectName;
             this.projectDescription = projectDescription;
             this.UserRole = role;
-            //this.AdminID = adminID;
+            this.AdminID = adminID;
+            this.AdminName = adminName;
             this.members = new List<string> { $"{createdBy} (Admin)" };
         }
         public Project(int id, string name, string description)

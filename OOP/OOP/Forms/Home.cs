@@ -11,7 +11,6 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using User = OOP.Models.User;
@@ -100,7 +99,7 @@ namespace OOP
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
 
-            foreach (var task in taskManager.GetTasksByUser(User.LoggedInUser))
+            foreach (AbaseTask task in taskManager.GetTasksByUser(User.LoggedInUser))
             {
                 HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
@@ -114,7 +113,7 @@ namespace OOP
           
             projectContainer.Controls.Clear();
 
-            foreach (var project in projectManager.Projects)
+            foreach (Project project in projectManager.Projects)
             {
                 if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
                 {

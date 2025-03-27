@@ -6,9 +6,9 @@
     "projectDescription": "What's this project about ",
     "members": [],
     "AdminID": 1,
+    "AdminName": null,
     "CreatedBy": "hi",
-    "UserRole": 0,
-    "Members": []
+    "UserRole": 0
   },
   {
     "tasks": [],
@@ -17,8 +17,22 @@
     "projectDescription": "What's this project about ",
     "members": [],
     "AdminID": 5,
+    "AdminName": null,
     "CreatedBy": "No",
-    "UserRole": 0,
-    "Members": []
+    "UserRole": 0
+  },
+  {
+    "tasks": [],
+    "projectID": 3,
+    "projectName": "HELLO WORLD",
+    "projectDescription": "hihihi",
+    "members": [
+      "Hihihi \n(Member)",
+      "He \n(Admin)"
+    ],
+    "AdminID": 5,
+    "AdminName": "No",
+    "CreatedBy": "No",
+    "UserRole": 0
   }
 ]

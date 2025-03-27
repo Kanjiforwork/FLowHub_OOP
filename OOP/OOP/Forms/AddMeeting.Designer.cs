@@ -81,7 +81,7 @@
             // 
             this.lblMeetingLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lblMeetingLocation.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMeetingLocation.Location = new System.Drawing.Point(84, 319);
+            this.lblMeetingLocation.Location = new System.Drawing.Point(84, 327);
             this.lblMeetingLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMeetingLocation.Name = "lblMeetingLocation";
             this.lblMeetingLocation.Size = new System.Drawing.Size(150, 35);

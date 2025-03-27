@@ -646,6 +646,22 @@ namespace OOP
         {
             description.ForeColor = Color.Gray; // Cập nhật màu khi nhập
         }
+
+
+        private void LoadTasks()
+        {
+
+            // Xóa các control cũ trong panel trước khi thêm mới
+            taskContainer.Controls.Clear();
+
+            foreach (AbaseTask task in taskManager.GetTasksByUser(User.LoggedInUser))
+            {
+                HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
+                taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
+                taskContainer.Controls.Add(taskItem);
+                ApplyMouseEvents(taskItem.TaskPanel);
+            }
+        }
     }
 
 }

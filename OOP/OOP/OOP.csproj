@@ -211,6 +211,12 @@
     <Compile Include="Usercontrols\MilestoneUserControl.Designer.cs">
       <DependentUpon>MilestoneUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usercontrols\ProjectTaskUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ProjectTaskUserControl.Designer.cs">
+      <DependentUpon>ProjectTaskUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usercontrols\TasksFullUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -293,6 +299,9 @@
     <EmbeddedResource Include="Usercontrols\NotiUserControl.resx">
       <DependentUpon>NotiUserControl.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\ProjectTaskUserControl.resx">
+      <DependentUpon>ProjectTaskUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TasksFullUserControl.resx">
       <DependentUpon>TasksFullUserControl.cs</DependentUpon>

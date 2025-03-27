@@ -21,6 +21,10 @@ namespace OOP.Usercontrols
             UpdateUI();
         }
 
+        public Panel ProjectPanel // Thuộc tính công khai để truy cập Panel
+        {
+            get { return panel12; } // panelContainer là tên Panel bên trong TaskControl
+        }
         private void UpdateUI()
         {
             projectName.Text = project.projectName;

@@ -108,17 +108,21 @@ namespace OOP
                 ApplyMouseEvents(taskItem.TaskPanel);
             }
         }
-        private List<Project> projects = new List<Project>();
+        private ProjectManager projectManager = new ProjectManager();
         private void Loadprojects()
         {
           
             projectContainer.Controls.Clear();
 
-            foreach (var project in projects)
+            foreach (var project in projectManager.Projects)
             {
-                HomeProjectUserControl projectItem = new HomeProjectUserControl(project);
-                projectItem.Dock = DockStyle.Top; // Stack Project from top to bottom
-                projectContainer.Controls.Add(projectItem);
+                if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
+                {
+                    HomeProjectUserControl projectItem = new HomeProjectUserControl(project);
+                    projectItem.Dock = DockStyle.Top; // Stack Project from top to bottom
+                    projectContainer.Controls.Add(projectItem);
+                    ApplyMouseEvents(projectItem.ProjectPanel);
+                }
             }
         }
 

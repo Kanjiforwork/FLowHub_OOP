@@ -135,10 +135,10 @@ namespace OOP.Services
                     task = new Task("", "", "", DateTime.Now, "", 0);
                     break;
                 case "Meeting":
-                    task = new Meeting("", "", "", DateTime.Now, "", null, User.LoggedInUser.ID);
+                    task = new Meeting("", "", "", DateTime.Now, null,"", null, null, User.LoggedInUser.ID);
                     break;
                 case "Milestone":
-                    task = new Milestone("", "", "", DateTime.Now, null, 0);
+                    task = new Milestone("", "", "", DateTime.Now, null,null, 0);
                     break;
                 default:
                     throw new Exception("Unknown task type");

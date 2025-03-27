@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using OOP.Models;
+using OOP.Services;
 namespace OOP.Forms
 {
     public partial class AddMilestone : Form
@@ -18,6 +19,7 @@ namespace OOP.Forms
         public AddMilestone()
         {
             InitializeComponent();
+            UpdateComboBox();
         }
 
         public AddMilestone(List<Milestone> list)
@@ -53,11 +55,24 @@ namespace OOP.Forms
 
             string taskName = txtbMilestoneName.Text;
             DateTime deadline = dtpMilestonedate.Value;
-            milestone = new Milestone(tasknewID, taskName, "UnFinished", deadline, null, User.LoggedInUser.ID);
+            string projectName = cbbSelectProject.Text;
+            milestone = new Milestone(tasknewID, taskName, "UnFinished", deadline, null, projectName,User.LoggedInUser.ID);
             DialogResult = DialogResult.OK;
             Close();
         }
-
+        private ProjectManager projectManager = new ProjectManager();
+        private void UpdateComboBox()
+        {
+            cbbSelectProject.Items.Clear();
+            foreach (var project in projectManager.Projects)
+            {
+                Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
+                if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
+                {
+                    cbbSelectProject.Items.Add($"{project.projectID} - {project.projectName}");
+                }
+            }
+        }
         private void btnMilestoneCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

@@ -34,6 +34,8 @@
             this.dtpMilestonedate = new System.Windows.Forms.DateTimePicker();
             this.btnMilestoneConfirm = new ReaLTaiizor.Controls.Button();
             this.btnMilestoneCancel = new ReaLTaiizor.Controls.Button();
+            this.cbbSelectProject = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMilestoneName
@@ -58,7 +60,7 @@
             // 
             this.lalMilestoneDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lalMilestoneDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lalMilestoneDate.Location = new System.Drawing.Point(68, 135);
+            this.lalMilestoneDate.Location = new System.Drawing.Point(68, 136);
             this.lalMilestoneDate.Name = "lalMilestoneDate";
             this.lalMilestoneDate.Size = new System.Drawing.Size(102, 29);
             this.lalMilestoneDate.TabIndex = 2;
@@ -84,7 +86,7 @@
             this.btnMilestoneConfirm.Image = null;
             this.btnMilestoneConfirm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMilestoneConfirm.InactiveColor = System.Drawing.Color.White;
-            this.btnMilestoneConfirm.Location = new System.Drawing.Point(123, 224);
+            this.btnMilestoneConfirm.Location = new System.Drawing.Point(107, 272);
             this.btnMilestoneConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMilestoneConfirm.Name = "btnMilestoneConfirm";
             this.btnMilestoneConfirm.PressedBorderColor = System.Drawing.Color.White;
@@ -106,7 +108,7 @@
             this.btnMilestoneCancel.Image = null;
             this.btnMilestoneCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMilestoneCancel.InactiveColor = System.Drawing.Color.White;
-            this.btnMilestoneCancel.Location = new System.Drawing.Point(386, 224);
+            this.btnMilestoneCancel.Location = new System.Drawing.Point(370, 272);
             this.btnMilestoneCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMilestoneCancel.Name = "btnMilestoneCancel";
             this.btnMilestoneCancel.PressedBorderColor = System.Drawing.Color.White;
@@ -117,12 +119,34 @@
             this.btnMilestoneCancel.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnMilestoneCancel.Click += new System.EventHandler(this.btnMilestoneCancel_Click);
             // 
+            // cbbSelectProject
+            // 
+            this.cbbSelectProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSelectProject.FormattingEnabled = true;
+            this.cbbSelectProject.Location = new System.Drawing.Point(204, 210);
+            this.cbbSelectProject.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.cbbSelectProject.Name = "cbbSelectProject";
+            this.cbbSelectProject.Size = new System.Drawing.Size(338, 28);
+            this.cbbSelectProject.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(68, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 29);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Project";
+            // 
             // AddMilestone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(622, 296);
+            this.ClientSize = new System.Drawing.Size(622, 359);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbbSelectProject);
             this.Controls.Add(this.btnMilestoneCancel);
             this.Controls.Add(this.btnMilestoneConfirm);
             this.Controls.Add(this.dtpMilestonedate);
@@ -146,5 +170,7 @@
         private System.Windows.Forms.DateTimePicker dtpMilestonedate;
         private ReaLTaiizor.Controls.Button btnMilestoneConfirm;
         private ReaLTaiizor.Controls.Button btnMilestoneCancel;
+        private System.Windows.Forms.ComboBox cbbSelectProject;
+        private System.Windows.Forms.Label label1;
     }
 }

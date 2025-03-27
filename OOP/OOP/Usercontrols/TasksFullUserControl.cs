@@ -1,6 +1,7 @@
 ﻿using System;
 
 using System.Windows.Forms;
+using OOP.Models;
 using OOP.Services;
 using OOP.Usercontrols;
 using Task = OOP.Models.Task;
@@ -49,16 +50,20 @@ namespace OOP.Usercontrols
 
         private void checkBox_Click(object sender, EventArgs e)
         {
+            Console.WriteLine(task.status);
             if (task.status == "Finished")
             {
-                task.status = "UnFinished"; // Cập nhật trạng thái Task gốc
+                task.SetUpdateStatus(new NotDone());
+                task.UpdateStatus();// Cập nhật trạng thái Task gốc
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
                 TaskManager.GetInstance().UpdateTask(task);
             }
             else
             {
-                task.status = "Finished"; // Cập nhật trạng thái Task gốc
+                task.SetUpdateStatus(new Done()); // Cập nhật trạng thái Task gốc
+                task.UpdateStatus();// Cập nhật trạng thái Task gốc
+
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
                 TaskManager.GetInstance().UpdateTask(task);

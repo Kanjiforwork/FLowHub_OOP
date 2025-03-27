@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.ApplicationServices;
 using OOP.Models;
+using OOP.Services;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using User = OOP.Models.User;
 
@@ -29,6 +30,7 @@ namespace OOP.Forms
             {
                 clbMeetingMembers.Items.Add(user.Username);
             }
+            UpdateComboBox();
         }
 
 
@@ -50,6 +52,8 @@ namespace OOP.Forms
             string tasknewID = (rnd.Next(1000, 9999)).ToString();
             List<string> ManageId = new List<string>();
             string location = txtbMeetingLocation.Text;
+            DateTime meetingTime = dtpMeetingTime.Value;
+            string hour = lblHour.Text;
             List<User> members = new List<User>();
 
             while (ManageId.Contains(tasknewID))
@@ -58,11 +62,24 @@ namespace OOP.Forms
             }
 
             string taskName = txtbMeetingName.Text;
-            string status = DateTime.Now.CompareTo(dtpMeetingTime.Value) < 0 ? "Completed" : "Incompleted";
-            DateTime deadline = dtpMeetingTime.Value;
-            newMeeting = new Meeting(tasknewID, taskName, status, deadline, location, members, User.LoggedInUser.ID);
+            string status = "Incompleted";
+            string projectName = cbbSelectProject.Text;
+            newMeeting = new Meeting(tasknewID, taskName, status, meetingTime, hour, location, members, projectName, User.LoggedInUser.ID);
             DialogResult = DialogResult.OK;
             Close();
+        }
+        private ProjectManager projectManager = new ProjectManager();
+        private void UpdateComboBox()
+        {
+            cbbSelectProject.Items.Clear();
+            foreach (var project in projectManager.Projects)
+            {
+                Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
+                if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
+                {
+                    cbbSelectProject.Items.Add($"{project.projectID} - {project.projectName}");
+                }
+            }
         }
     }
 }

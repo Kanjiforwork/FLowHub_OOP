@@ -26,6 +26,7 @@ namespace OOP.Usercontrols
         private void UpdateUI()
         {
             taskContent.Text = milestone.taskName;
+            taskProject.Text = milestone.ProjectName;
             taskDeadline.Text = $"{milestone.deadline:dd/MM/yyyy}";
             UpdateButtonState();
         }

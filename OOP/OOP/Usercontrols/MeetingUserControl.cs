@@ -32,8 +32,9 @@ namespace OOP.Usercontrols
         private void UpdateUI()
         {
             taskContent.Text = meeting.taskName;
-            //taskDeadline.Text = $"{meeting.dealine:dd/MM/yyyy}";
-            taskProject.Text = meeting.Location; // Dùng location thay vì project
+            taskProject.Text = meeting.ProjectName; // Dùng location thay vì project
+            location.Text = "Tại " +  meeting.Location;
+            hour.Text = "Giờ: " + meeting.Hour;
             UpdateButtonState();
         }
 
@@ -67,7 +68,13 @@ namespace OOP.Usercontrols
             }
         }
 
+
         private void taskContent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hour_Click(object sender, EventArgs e)
         {
 
         }

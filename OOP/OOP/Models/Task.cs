@@ -11,6 +11,8 @@ namespace OOP.Models
     {
         private IUpdateStatus updateStatus;
         public string taskID { get; set; }
+
+        public string ProjectName { get; set; }
         public string taskName { get; set; }
         public string status { get; set; }
         public DateTime deadline { get; set; }
@@ -30,12 +32,13 @@ namespace OOP.Models
             this.status = updateStatus.UpdateStatus(deadline);
         }
 
-        public AbaseTask(string taskID, string taskName, string status, DateTime deadline, int assignedTo)
+        public AbaseTask(string taskID, string taskName, string status, DateTime deadline, string ProjectName, int assignedTo)
         {
             this.taskID = taskID;
             this.taskName = taskName;
             this.status = status;
             this.deadline = deadline;
+          this.ProjectName = ProjectName;
             this.AssignedTo = assignedTo; // ✅ Now all tasks have AssignedTo
         }
 
@@ -55,12 +58,12 @@ namespace OOP.Models
 
     public class Task : AbaseTask
     {
-        public string ProjectName { get; set; }
+
 
         public Task(string taskID, string taskName, string status, DateTime deadline, string projectName, int assignedTo)
-            : base(taskID, taskName, status, deadline, assignedTo)
+            : base(taskID, taskName, status, deadline, projectName, assignedTo)
         {
-            this.ProjectName = projectName;
+           
         }
 
         public override void MarkAsCompleted()
@@ -81,14 +84,18 @@ namespace OOP.Models
 
     public class Meeting : AbaseTask
     {
+
         public string Location { get; set; }
         public List<User> Participants { get; set; }
 
-        public Meeting(string taskID, string taskName, string status, DateTime deadline, string location, List<User> participants, int assignedTo)
-            : base(taskID, taskName, status, deadline, assignedTo)
+        public string Hour { get; set; }
+
+        public Meeting(string taskID, string taskName, string status, DateTime deadline, string hour,  string location, List<User> participants, string projectName, int assignedTo)
+            : base(taskID, taskName, status, deadline, projectName, assignedTo)
         {
             Location = location;
             Participants = participants ?? new List<User>();
+            Hour = hour;
         }
 
         public override void MarkAsCompleted()
@@ -111,8 +118,8 @@ namespace OOP.Models
     {
         public string Description { get; set; }
 
-        public Milestone(string taskID, string taskName, string status, DateTime deadline, string description, int assignedTo)
-            : base(taskID, taskName, status, deadline, assignedTo)
+        public Milestone(string taskID, string taskName, string status, DateTime deadline, string description, string projectName, int assignedTo)
+            : base(taskID, taskName, status, deadline, projectName, assignedTo)
         {
             Description = description;
         }

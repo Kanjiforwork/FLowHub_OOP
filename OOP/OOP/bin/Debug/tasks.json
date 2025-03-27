@@ -1,0 +1,39 @@
+[
+  {
+    "$type": "OOP.Models.Task, OOP",
+    "ProjectName": "",
+    "taskID": "8554",
+    "taskName": "HIHIHI",
+    "status": "Hoàn thành",
+    "deadline": "2025-03-27T06:05:58.2778698+07:00",
+    "AssignedTo": 1
+  },
+  {
+    "$type": "OOP.Models.Task, OOP",
+    "ProjectName": "",
+    "taskID": "9677",
+    "taskName": "Hihihi",
+    "status": "Finished",
+    "deadline": "2025-03-27T06:10:13.8957875+07:00",
+    "AssignedTo": 2
+  },
+  {
+    "$type": "OOP.Models.Milestone, OOP",
+    "Description": null,
+    "taskID": "7690",
+    "taskName": "Hihi",
+    "status": "Finished",
+    "deadline": "2025-03-27T06:17:20.23629+07:00",
+    "AssignedTo": 2
+  },
+  {
+    "$type": "OOP.Models.Meeting, OOP",
+    "Location": "",
+    "Participants": [],
+    "taskID": "2342",
+    "taskName": "Hahaha",
+    "status": "Finished",
+    "deadline": "2025-03-27T06:17:28.2391692+07:00",
+    "AssignedTo": 2
+  }
+]

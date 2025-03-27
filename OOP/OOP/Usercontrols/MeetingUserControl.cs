@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOP.Models;
+using OOP.Services;
 
 namespace OOP.Usercontrols
 {
@@ -55,13 +56,20 @@ namespace OOP.Usercontrols
                 meeting.status = "UnFinished"; // Cập nhật trạng thái Meeting gốc
                 UpdateButtonState();
                 OnMeetingFinished?.Invoke(this, meeting);
+                TaskManager.GetInstance().UpdateTask(meeting);
             }
             else
             {
                 meeting.status = "Finished"; // Cập nhật trạng thái Meeting gốc
                 UpdateButtonState();
                 OnMeetingFinished?.Invoke(this, meeting);
+                TaskManager.GetInstance().UpdateTask(meeting);
             }
+        }
+
+        private void taskContent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -148,5 +148,27 @@ namespace OOP
        this.Hide();
    }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (ConfirmExit()) // Nếu người dùng chọn Yes, thoát chương trình
+            {
+                Application.Exit();
+            }
+        }
+
+        private void OnFormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!ConfirmExit())
+            {
+                e.Cancel = true; // Hủy đóng chương trình nếu chọn No
+            }
+        }
+
+        private bool ConfirmExit()
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
+                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return result == DialogResult.Yes;
+        }
     }
 }

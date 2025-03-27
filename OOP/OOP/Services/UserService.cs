@@ -14,7 +14,6 @@ namespace OOP
     public class UserService
     {
         private static readonly string filePath = "users.json";
-
         public static List<User> LoadUsers()
         {
             if (File.Exists(filePath))
@@ -56,5 +55,44 @@ namespace OOP
                 Console.WriteLine($"Error saving users: {ex.Message}");
             }
         }
+        public static void SaveCurrentUser()
+        {
+            try
+            {
+                if (User.LoggedInUser?.ID == null)
+                {
+                    Console.WriteLine("No user is logged in.");
+                    return;
+                }
+
+                List<User> users = LoadUsers(); // Load danh sách Users cũ
+
+                // Tìm user theo ID hoặc Username
+                User existingUser = users.FirstOrDefault(u => u.ID == User.LoggedInUser.ID || u.Username == User.LoggedInUser.Username);
+
+                if (existingUser != null)
+                {
+                    // Cập nhật thông tin user hiện tại
+                    existingUser.Username = User.LoggedInUser.Username;
+                    existingUser.Password = User.LoggedInUser.Password;
+                    existingUser.Email = User.LoggedInUser.Email;
+                    existingUser.Role = User.LoggedInUser.Role;
+                    existingUser.Avatar = User.LoggedInUser.Avatar;
+                }
+                else
+                {
+                    // Nếu chưa có, thêm mới
+                    users.Add(User.LoggedInUser);
+                }
+
+                SaveUsers(users); // Lưu danh sách sau khi cập nhật
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error saving current user: {ex.Message}");
+            }
+        }
+
+
     }
 }

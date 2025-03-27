@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOP.Models;
+using Task = OOP.Models.Task;
 
 namespace OOP
 {
@@ -15,12 +16,11 @@ namespace OOP
     {
         public Task NewTask { get; set; }
         List<Project> projects;
-        List<Task> tasks;
+        List<AbaseTask> tasks;
         List<User> users;
-        List<Milestone> milestone;
-        List<Meeting> meeting;
 
-        public Addtask(List<Project> projects, List<Task> tasks, List<User> users)
+
+        public Addtask(List<Project> projects, List<AbaseTask> tasks, List<User> users)
         {
             InitializeComponent();
             this.projects = projects;
@@ -77,16 +77,8 @@ namespace OOP
             string status = cbbStatus.Text;
             DateTime deadline = dtpNewTask.Value;
             string projectName = cbbSelectProject.Text;
-            User user = null;
-            foreach (User user1 in users)
-            {
-                if (user1.Username == cbbAssignedUser.Text)
-                {
-                    user = user1;
-                }
-            }
 
-            NewTask = new Task(tasknewID, taskName, status, deadline, projectName, user);
+            NewTask = new Task(tasknewID, taskName, status, deadline, projectName, User.LoggedInUser.ID);
             DialogResult = DialogResult.OK;
             Close();
 

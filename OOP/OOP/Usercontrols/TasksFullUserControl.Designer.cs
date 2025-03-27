@@ -34,6 +34,7 @@
             this.taskContent = new System.Windows.Forms.Label();
             this.checkBox = new System.Windows.Forms.PictureBox();
             this.taskDeadline = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkBox)).BeginInit();
             this.SuspendLayout();
@@ -41,6 +42,7 @@
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.taskProject);
             this.panel9.Controls.Add(this.taskContent);
             this.panel9.Controls.Add(this.checkBox);
@@ -67,10 +69,10 @@
             // 
             this.taskContent.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.taskContent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.taskContent.Location = new System.Drawing.Point(50, 5);
+            this.taskContent.Location = new System.Drawing.Point(95, 5);
             this.taskContent.Name = "taskContent";
             this.taskContent.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.taskContent.Size = new System.Drawing.Size(424, 32);
+            this.taskContent.Size = new System.Drawing.Size(379, 32);
             this.taskContent.TabIndex = 3;
             this.taskContent.Text = "Check bài nhóm";
             this.taskContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,6 +102,18 @@
             this.taskDeadline.Text = "29/03/2025";
             this.taskDeadline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(40, 2);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(49, 35);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Task: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // TasksFullUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -122,5 +136,6 @@
         private System.Windows.Forms.Label taskDeadline;
         private System.Windows.Forms.PictureBox checkBox;
         private System.Windows.Forms.Label taskProject;
+        private System.Windows.Forms.Label label1;
     }
 }

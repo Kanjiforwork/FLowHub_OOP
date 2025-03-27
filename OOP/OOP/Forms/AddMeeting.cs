@@ -8,8 +8,10 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using OOP.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using User = OOP.Models.User;
 
 namespace OOP.Forms
 {
@@ -19,11 +21,10 @@ namespace OOP.Forms
         public List<User> users { get; set; }
 
         public List<Meeting> meetings { get; set; }
-        public AddMeeting(List<User> users, List<Meeting> meetings)
+        public AddMeeting(List<User> users)
         {
             InitializeComponent();
             this.users = users;
-            this.meetings = meetings;
             foreach (User user in users)
             {
                 clbMeetingMembers.Items.Add(user.Username);
@@ -50,10 +51,6 @@ namespace OOP.Forms
             List<string> ManageId = new List<string>();
             string location = txtbMeetingLocation.Text;
             List<User> members = new List<User>();
-            foreach (Meeting task in meetings)
-            {
-                ManageId.Add(task.taskID);
-            }
 
             while (ManageId.Contains(tasknewID))
             {
@@ -63,19 +60,7 @@ namespace OOP.Forms
             string taskName = txtbMeetingName.Text;
             string status = DateTime.Now.CompareTo(dtpMeetingTime.Value) < 0 ? "Completed" : "Incompleted";
             DateTime deadline = dtpMeetingTime.Value;
-
-            foreach (User user in users)
-            {
-                foreach (var a in clbMeetingMembers.CheckedItems)
-                {
-                    if (user.Username == a)
-                    {
-                        members.Add(user);
-                    }
-                }
-            }
-
-            newMeeting = new Meeting(tasknewID, taskName, status, deadline, location, members);
+            newMeeting = new Meeting(tasknewID, taskName, status, deadline, location, members, User.LoggedInUser.ID);
             DialogResult = DialogResult.OK;
             Close();
         }

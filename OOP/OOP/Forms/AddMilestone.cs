@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
-
+using OOP.Models;
 namespace OOP.Forms
 {
     public partial class AddMilestone : Form
     {
-        public Milestone milestone;
+        public Milestone milestone {  get; set; }
         public List<Milestone> milestones = new List<Milestone>();
         public AddMilestone()
         {
@@ -52,13 +52,8 @@ namespace OOP.Forms
             }
 
             string taskName = txtbMilestoneName.Text;
-            string status = DateTime.Now.CompareTo(dtpMilestonedate) < 0 ? "Incompleted" : "Completed";
             DateTime deadline = dtpMilestonedate.Value;
-            string description = txtbMilestoneDescription.Text;
-
-
-
-            milestone = new Milestone(tasknewID, taskName, status, deadline, description);
+            milestone = new Milestone(tasknewID, taskName, "UnFinished", deadline, null, User.LoggedInUser.ID);
             DialogResult = DialogResult.OK;
             Close();
         }

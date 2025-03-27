@@ -60,7 +60,7 @@
             this.taskContent.TabIndex = 3;
             this.taskContent.Text = "Check bài nhóm";
             this.taskContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.taskContent.Click += new System.EventHandler(this.label5_Click);
+       
             // 
             // taskDeadline
             // 

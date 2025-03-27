@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using OOP.Models;
+using OOP.Services;
 using OOP.Usercontrols;
 using System;
 using System.Collections.Generic;
@@ -19,22 +20,8 @@ namespace OOP
 {
     public partial class Home : Form
     {
-      /*  public Home()
-        {
 
-            InitializeComponent();
-
-            //Mouse Hover
-            ApplyMouseEvents(TopPanel);
-            ApplyMouseEvents(projectPanel);
-            ApplyMouseEvents(taskPanel);
-
-            //Task
-            LoadTasks();
-            //Project
-            Loadprojects();
-        }*/
-        // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
+        TaskManager taskManager = TaskManager.GetInstance();
         void ApplyMouseEvents(Panel panel)
         {
             panel.MouseMove += (s, e) => Panel_MouseMove(panel);
@@ -109,16 +96,11 @@ namespace OOP
 
         private void LoadTasks()
         {
-            if (User.LoggedInUser == null || User.LoggedInUser.Tasks == null)
-            {
-                MessageBox.Show("Không có người dùng đăng nhập hoặc không có task nào.");
-                return;
-            }
 
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
 
-            foreach (var task in User.LoggedInUser.Tasks)
+            foreach (var task in taskManager.GetTasksByUser(User.LoggedInUser))
             {
                 HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
@@ -207,6 +189,27 @@ namespace OOP
             this.Hide();
         }
 
-       
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (ConfirmExit()) // Nếu người dùng chọn Yes, thoát chương trình
+            {
+                Application.Exit();
+            }
+        }
+
+        private void OnFormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!ConfirmExit())
+            {
+                e.Cancel = true; // Hủy đóng chương trình nếu chọn No
+            }
+        }
+
+        private bool ConfirmExit()
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation",
+                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return result == DialogResult.Yes;
+        }
     }
 }

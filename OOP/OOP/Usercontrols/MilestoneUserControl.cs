@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOP.Models;
+using OOP.Services;
 
 namespace OOP.Usercontrols
 {
@@ -47,12 +49,14 @@ namespace OOP.Usercontrols
                 milestone.status = "UnFinished"; // Cập nhật trạng thái Milestone gốc
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, milestone);
+                TaskManager.GetInstance().UpdateTask(milestone);
             }
             else
             {
                 milestone.status = "Finished"; // Cập nhật trạng thái Milestone gốc
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, milestone);
+                TaskManager.GetInstance().UpdateTask(milestone);
             }
         }
     }

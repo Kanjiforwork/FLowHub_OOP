@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
+using System.Windows.Forms;
+using OOP.Services;
+using OOP.Usercontrols;
+using Task = OOP.Models.Task;
 namespace OOP.Usercontrols
 {
     public partial class TasksFullUserControl : UserControl
@@ -29,8 +25,8 @@ namespace OOP.Usercontrols
         private void UpdateUI()
         {
             taskContent.Text = task.taskName;
-            taskDeadline.Text = $"{task.dealine:dd/MM/yyyy}";
-            taskProject.Text = task.projectName;
+            taskDeadline.Text = $"{task.deadline:dd/MM/yyyy}";
+            taskProject.Text = task.ProjectName;
             UpdateButtonState();
         }
 
@@ -58,12 +54,14 @@ namespace OOP.Usercontrols
                 task.status = "UnFinished"; // Cập nhật trạng thái Task gốc
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
+                TaskManager.GetInstance().UpdateTask(task);
             }
             else
             {
                 task.status = "Finished"; // Cập nhật trạng thái Task gốc
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
+                TaskManager.GetInstance().UpdateTask(task);
             }
         }
     }

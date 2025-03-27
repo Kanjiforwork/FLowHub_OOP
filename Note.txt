@@ -1,21 +1,3 @@
-- Notification.cs:
-Thêm interface IObserver
-Thêm NotificationManager
-Thêm phương thức Notify để thông báo mỗi khi Member hoàn thành task
-Thêm 3 lớp Notification cụ thể: TaskUpdate, ProjectAnnouncement và Account
-
-
-- Project.cs:
-+ AssignTask:
-Thêm điều kiện chỉ thành viên mới được gán task
-Thêm gửi thông báo khi assigntask
-
-
-- Projectmanager.cs:
-+ AddProject:
-Thêm phương thức thông báo khi tạo project mới.
-
-
-Register.cs:
-+ Dòng 83:
-Thêm thông báo khi tạo tài khoản mới.
+chia NotificationManager vào folder services
+thay đổi ở chỗ tạo project(dòng 163) và nút check task/milestone/meeting
+Usercontrol, Notification Paste hết vào là đc :))) 

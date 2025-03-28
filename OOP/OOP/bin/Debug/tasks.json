@@ -53,7 +53,7 @@
     "taskID": "6488",
     "ProjectName": "Sup",
     "taskName": "HiHIHI",
-    "status": "Unfinish",
+    "status": "Finished",
     "deadline": "2025-03-28T08:43:02.8249999+07:00",
     "AssignedTo": 2
   },
@@ -112,7 +112,7 @@
     "taskID": "3952",
     "ProjectName": "Mua Iphone 16 pro max",
     "taskName": "",
-    "status": "UnFinished",
+    "status": "Finished",
     "deadline": "2025-03-28T09:21:49.6443519+07:00",
     "AssignedTo": 0
   }

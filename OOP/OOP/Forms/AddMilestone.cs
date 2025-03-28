@@ -20,6 +20,7 @@ namespace OOP.Forms
         {
             InitializeComponent();
             UpdateComboBox();
+
         }
 
         public AddMilestone(List<Milestone> list)

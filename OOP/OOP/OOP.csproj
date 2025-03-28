@@ -161,7 +161,6 @@
     <Compile Include="Forms\Tasks.Designer.cs">
       <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Done.cs" />
     <Compile Include="Models\IUpdateStatus.cs" />
     <Compile Include="Models\NotDone.cs" />

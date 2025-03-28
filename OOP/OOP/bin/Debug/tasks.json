@@ -26,7 +26,7 @@
     "taskID": "2718",
     "ProjectName": "Nuôi mèo",
     "taskName": "Choose cat",
-    "status": "Unfinished",
+    "status": "Finished",
     "deadline": "2025-03-28T07:32:49.09956+07:00",
     "AssignedTo": 0
   },
@@ -44,7 +44,7 @@
     "taskID": "2321",
     "ProjectName": "Nuôi mèo",
     "taskName": "HiHIHI",
-    "status": "Unfinish",
+    "status": "Finished",
     "deadline": "2025-03-28T08:42:16.3263562+07:00",
     "AssignedTo": 0
   },

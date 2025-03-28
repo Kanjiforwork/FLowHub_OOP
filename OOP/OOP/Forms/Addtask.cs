@@ -62,7 +62,7 @@ namespace OOP
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
+            
             Random rnd = new Random();
             string tasknewID = (rnd.Next(1000, 9999)).ToString();
             List<string> ManageId = new List<string>();
@@ -196,6 +196,25 @@ namespace OOP
         private void cbbAssignedUser_Click(object sender, EventArgs e)
         {
           //  UpdateMember();
+        }
+
+        private void txtbInputNameTask_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtbInputNameTask.Text))
+            {
+                e.Cancel = true; // Chặn chuyển focus nếu input trống
+                errLoginTask.SetError(txtbInputNameTask, "Please enter task name!");
+            }
+            else
+            {
+                e.Cancel = false; // Cho phép focus rời khỏi control
+                errLoginTask.SetError(txtbInputNameTask, null);
+            }
+        }
+
+        private void btnConfirm_Validating(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

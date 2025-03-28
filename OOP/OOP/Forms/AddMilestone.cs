@@ -96,5 +96,19 @@ namespace OOP.Forms
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void txtbMilestoneName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtbMilestoneName.Text))
+            {
+                e.Cancel = true; // Chặn chuyển focus nếu input trống
+                errMilestoneName.SetError(txtbMilestoneName, "Please enter task name!");
+            }
+            else
+            {
+                e.Cancel = false; // Cho phép focus rời khỏi control
+                errMilestoneName.SetError(txtbMilestoneName, null);
+            }
+        }
     }
 }

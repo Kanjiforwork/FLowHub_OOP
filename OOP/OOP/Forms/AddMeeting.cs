@@ -90,5 +90,19 @@ namespace OOP.Forms
                 }
             }
         }
+
+        private void txtbMeetingName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtbMeetingName.Text))
+            {
+                e.Cancel = true; // Chặn chuyển focus nếu input trống
+                errMeetingName.SetError(txtbMeetingName, "Please enter task name!");
+            }
+            else
+            {
+                e.Cancel = false; // Cho phép focus rời khỏi control
+                errMeetingName.SetError(txtbMeetingName, null);
+            }
+        }
     }
 }

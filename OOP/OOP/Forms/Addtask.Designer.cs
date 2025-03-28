@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbInputName = new System.Windows.Forms.Label();
             this.txtbInputNameTask = new System.Windows.Forms.TextBox();
             this.lbDeadline = new System.Windows.Forms.Label();
@@ -40,7 +41,9 @@
             this.WelcomeName = new System.Windows.Forms.Label();
             this.cbbAssignedUser = new System.Windows.Forms.ComboBox();
             this.lblAssignUser = new System.Windows.Forms.Label();
+            this.errLoginTask = new System.Windows.Forms.ErrorProvider(this.components);
             this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errLoginTask)).BeginInit();
             this.SuspendLayout();
             // 
             // lbInputName
@@ -63,6 +66,7 @@
             this.txtbInputNameTask.Size = new System.Drawing.Size(433, 26);
             this.txtbInputNameTask.TabIndex = 1;
             this.txtbInputNameTask.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtbInputNameTask.Validating += new System.ComponentModel.CancelEventHandler(this.txtbInputNameTask_Validating);
             // 
             // lbDeadline
             // 
@@ -96,6 +100,7 @@
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = true;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnConfirm.Validating += new System.ComponentModel.CancelEventHandler(this.btnConfirm_Validating);
             // 
             // btnCancel
             // 
@@ -182,6 +187,10 @@
             this.lblAssignUser.Text = "Assign User";
             this.lblAssignUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // errLoginTask
+            // 
+            this.errLoginTask.ContainerControl = this;
+            // 
             // Addtask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -206,6 +215,7 @@
             this.Text = "Addtask";
             this.Load += new System.EventHandler(this.Addtask_Load);
             this.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errLoginTask)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +235,6 @@
         private System.Windows.Forms.Label WelcomeName;
         private System.Windows.Forms.ComboBox cbbAssignedUser;
         private System.Windows.Forms.Label lblAssignUser;
+        private System.Windows.Forms.ErrorProvider errLoginTask;
     }
 }

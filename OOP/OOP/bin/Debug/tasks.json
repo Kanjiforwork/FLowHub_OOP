@@ -145,5 +145,32 @@
     "status": "Incompleted",
     "deadline": "2025-03-28T13:15:24.4031839+07:00",
     "AssignedTo": 0
+  },
+  {
+    "$type": "OOP.Models.Task, OOP",
+    "taskID": "4562",
+    "ProjectName": "Nghiên cứu khoa học",
+    "taskName": "làm bài tập",
+    "status": "Unfinish",
+    "deadline": "2025-03-28T13:26:56.8190202+07:00",
+    "AssignedTo": 0
+  },
+  {
+    "$type": "OOP.Models.Task, OOP",
+    "taskID": "7627",
+    "ProjectName": "Thi Hackathon",
+    "taskName": "Coding ",
+    "status": "Unfinish",
+    "deadline": "2025-03-28T13:27:25.145199+07:00",
+    "AssignedTo": 2
+  },
+  {
+    "$type": "OOP.Models.Task, OOP",
+    "taskID": "6335",
+    "ProjectName": "Thi Hackathon",
+    "taskName": "Thuyết trình ",
+    "status": "Unfinish",
+    "deadline": "2025-03-28T13:27:46.2799374+07:00",
+    "AssignedTo": 2
   }
 ]

@@ -41,57 +41,16 @@
   },
   {
     "tasks": [],
-    "projectID": 4,
-    "projectName": "Sup",
-    "projectDescription": "What's this project about ",
-    "members": [
-      "No \n(Member)",
-      "hi \n(Member)",
-      "Bao (Member)"
-    ],
-    "AdminID": 2,
-    "AdminName": "Hi",
-    "CreatedBy": "Hi",
-    "UserRole": 0
-  },
-  {
-    "tasks": [],
-    "projectID": 5,
-    "projectName": "New Project",
-    "projectDescription": "What's this project about ",
-    "members": [
-      "Hi \n(Member)",
-      "No \n(Member)"
-    ],
-    "AdminID": 6,
-    "AdminName": "Bao",
-    "CreatedBy": "Bao",
-    "UserRole": 0
-  },
-  {
-    "tasks": [],
     "projectID": 6,
     "projectName": "Newest",
     "projectDescription": "What's this project about ",
     "members": [
-      "No (Member)"
+      "No (Member)",
+      "Hi (Member)"
     ],
     "AdminID": 6,
     "AdminName": "Bao",
     "CreatedBy": "Bao",
-    "UserRole": 0
-  },
-  {
-    "tasks": [],
-    "projectID": 7,
-    "projectName": "Are u there bro",
-    "projectDescription": "What's this project about ",
-    "members": [
-      "Bao (Member)"
-    ],
-    "AdminID": 2,
-    "AdminName": "Hi",
-    "CreatedBy": "Hi",
     "UserRole": 0
   },
   {
@@ -109,16 +68,24 @@
   },
   {
     "tasks": [],
-    "projectID": 9,
-    "projectName": "Mua Iphone 16 pro max",
+    "projectID": 6,
+    "projectName": "Nghiên cứu khoa học",
     "projectDescription": "What's this project about ",
-    "members": [
-      "Bao (Member)",
-      "Hi (Member)"
-    ],
-    "AdminID": 8,
-    "AdminName": "VietAnh",
-    "CreatedBy": "VietAnh",
+    "members": [],
+    "AdminID": 2,
+    "AdminName": "Hi",
+    "CreatedBy": "Hi",
+    "UserRole": 0
+  },
+  {
+    "tasks": [],
+    "projectID": 7,
+    "projectName": "Thi Hackathon",
+    "projectDescription": "What's this project about ",
+    "members": [],
+    "AdminID": 2,
+    "AdminName": "Hi",
+    "CreatedBy": "Hi",
     "UserRole": 0
   }
 ]

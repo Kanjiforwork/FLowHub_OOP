@@ -18,7 +18,7 @@ namespace OOP.Models
 
     public class Project
     {
-        public int projectID { get; set; }
+        private int projectID { get; set; }
         public string projectName { get; set; }
         public string projectDescription { get; set; }
         public List<Task> tasks = new List<Task>();

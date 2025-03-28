@@ -13,13 +13,42 @@ namespace OOP
     public partial class Tasks : BaseForm
     {
         TaskManager taskManager = TaskManager.GetInstance();
+        private ProjectManager projectManager = new ProjectManager();
+        public List<AbaseTask> GetUserTasks()
+        {
+            List<Project> userProjects = projectManager.FindProjectsByMember(User.LoggedInUser);
+            List<AbaseTask> userTasks = new List<AbaseTask>();
+
+            if (userProjects.Count == 0)
+            {
+                Console.WriteLine("User không thuộc bất kỳ project nào.");
+                return userTasks; // Trả về danh sách rỗng nếu user không có project
+            }
+
+            foreach (Project project in userProjects)
+            {
+                List<AbaseTask> projectTasks = taskManager.GetTasksByProject(project.projectName);
+
+                foreach (AbaseTask task in projectTasks)
+                {
+                    if (task.AssignedTo > 0 && task.AssignedTo == User.LoggedInUser.ID)
+                    {
+                        userTasks.Add(task);
+                    }
+                    else if (task.AssignedTo == 0) // Meeting, Milestone (không có assigned)
+                    {
+                        userTasks.Add(task);
+                    }
+                }
+            }
+
+            return userTasks;
+        }
         public Tasks()
         {
             InitializeComponent();
-            // Ví dụ: tạo danh sách Task mẫu
-            LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
-
-            //Apply mouseEvent
+            LoadTasks(GetUserTasks());
+            // Apply mouse events
             ApplyMouseEvents(taskContainer);
             ApplyMouseEvents(sidebar);
             ApplyMouseEvents(TopPanel);
@@ -66,8 +95,6 @@ namespace OOP
         }
         private List<Project> projects = new List<Project>();
         private List<User> users = new List<User>();
-        private List<Milestone> milestone = new List<Milestone>();
-        private List<Meeting> meeting = new List<Meeting>();
 
         private void LoadTasks(List<AbaseTask> tasks)
         {
@@ -101,34 +128,6 @@ namespace OOP
         }
 
 
-        // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
-        void ApplyMouseEvents(Panel panel)
-        {
-            panel.MouseMove += (s, e) => Panel_MouseMove(panel);
-            panel.MouseLeave += (s, e) => Panel_MouseLeave(panel);
-
-            foreach (Control child in panel.Controls)
-            {
-                child.MouseMove += (s, e) => Panel_MouseMove(panel); // Redirect child hover event to panel
-                child.MouseLeave += (s, e) => Panel_MouseLeave(panel); // Redirect child leave event to panel
-            }
-        }
-
-        // Change border style when hovering over the panel (but not its children directly)
-        private void Panel_MouseMove(Panel panel)
-        {
-            panel.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        // Reset border when leaving the **entire** panel
-        private void Panel_MouseLeave(Panel panel)
-        {
-            // Check if the mouse is still inside the panel
-            if (!panel.ClientRectangle.Contains(panel.PointToClient(Cursor.Position)))
-            {
-                panel.BorderStyle = BorderStyle.FixedSingle;
-            }
-        }
 
         private void btnMore_Click_1(object sender, EventArgs e)
         {
@@ -141,14 +140,14 @@ namespace OOP
             if (addTaskForm.ShowDialog() == DialogResult.OK)
             {
                 taskManager.AddTask(addTaskForm.NewTask);
-                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+                LoadTasks(GetUserTasks());
             }
         }
 
         private void ctmCloset_Click(object sender, EventArgs e)
         {
             List<AbaseTask> taskslistother = new List<AbaseTask>();
-            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
+            foreach (AbaseTask task in (GetUserTasks()))
             {
                     taskslistother.Add(task);
             }
@@ -161,7 +160,7 @@ namespace OOP
         private void ctmFarest_Click(object sender, EventArgs e)
         {
             List<AbaseTask> taskslistother = new List<AbaseTask>();
-            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
+            foreach (AbaseTask task in (GetUserTasks()))
             {
                 taskslistother.Add(task);
             }
@@ -173,7 +172,7 @@ namespace OOP
         private void ctmFinished_Click(object sender, EventArgs e)
         {
             List<AbaseTask> taskslistother = new List<AbaseTask>();
-            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
+            foreach (AbaseTask task in (GetUserTasks()))
             {
                 if (task.status == "Finished")
                 {
@@ -186,7 +185,7 @@ namespace OOP
         private void ctnSection_Click(object sender, EventArgs e)
         {
             List<AbaseTask> taskslistother = new List<AbaseTask>();
-            foreach (AbaseTask task in (taskManager.GetTasksByUser(User.LoggedInUser)))
+            foreach (AbaseTask task in (GetUserTasks()))
             {
                 if (task.status != "Finished")
                 {
@@ -244,7 +243,7 @@ namespace OOP
             if (addTaskForm.ShowDialog() == DialogResult.OK)
             {
                 taskManager.AddTask(addTaskForm.NewTask);
-                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+                LoadTasks(GetUserTasks());
             }
 
         }
@@ -255,7 +254,7 @@ namespace OOP
             if (addMilestone.ShowDialog() == DialogResult.OK)
             {
                 taskManager.AddTask(addMilestone.milestone); // Thêm task mới vào danh sách
-                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+                LoadTasks(GetUserTasks());
             }
 
         }
@@ -266,7 +265,7 @@ namespace OOP
             if (addMeeting.ShowDialog() == DialogResult.OK)
             {
                 taskManager.AddTask(addMeeting.newMeeting); // Thêm task mới vào danh sách
-                LoadTasks(taskManager.GetTasksByUser(User.LoggedInUser));
+                LoadTasks(GetUserTasks());
             }
         }
 

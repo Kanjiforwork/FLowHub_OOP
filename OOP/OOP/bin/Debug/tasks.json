@@ -1,312 +1,33 @@
 [
   {
     "$type": "OOP.Models.Task, OOP",
-    "taskID": "8554",
-    "ProjectName": "",
-    "taskName": "HIHIHI",
-    "status": "Finished",
-    "deadline": "2025-03-27T06:05:58.2778698+07:00",
-    "AssignedTo": 1
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "9677",
-    "ProjectName": "",
-    "taskName": "Hihihi",
+    "taskID": "9937",
+    "ProjectName": "Nuôi mèo",
+    "taskName": "Mua",
     "status": "Unfinished",
-    "deadline": "2025-03-27T06:10:13.8957875+07:00",
-    "AssignedTo": 2
+    "deadline": "2025-03-28T07:32:26.8314591+07:00",
+    "AssignedTo": 7
   },
   {
     "$type": "OOP.Models.Milestone, OOP",
     "Description": null,
-    "taskID": "7690",
-    "ProjectName": null,
-    "taskName": "Hihi",
-    "status": "UnFinished",
-    "deadline": "2025-03-27T06:17:20.23629+07:00",
-    "AssignedTo": 2
-  },
-  {
-    "$type": "OOP.Models.Meeting, OOP",
-    "Location": "",
-    "Participants": [],
-    "Hour": null,
-    "taskID": "2342",
-    "ProjectName": null,
-    "taskName": "Hahaha",
-    "status": "UnFinished",
-    "deadline": "2025-03-27T06:17:28.2391692+07:00",
-    "AssignedTo": 2
-  },
-  {
-    "$type": "OOP.Models.Meeting, OOP",
-    "Location": "UEH B",
-    "Participants": [],
-    "Hour": null,
-    "taskID": "8995",
-    "ProjectName": null,
-    "taskName": "Họp",
-    "status": "Finished",
-    "deadline": "2025-03-27T08:24:07.6494042+07:00",
-    "AssignedTo": 1
-  },
-  {
-    "$type": "OOP.Models.Milestone, OOP",
-    "Description": null,
-    "taskID": "4310",
-    "ProjectName": null,
-    "taskName": "Xong class",
-    "status": "Finished",
-    "deadline": "2025-04-20T08:25:04",
-    "AssignedTo": 1
-  },
-  {
-    "$type": "OOP.Models.Meeting, OOP",
-    "Location": "",
-    "Participants": [],
-    "Hour": "17.0",
-    "taskID": "9317",
-    "ProjectName": null,
-    "taskName": "Hopj",
-    "status": "Finished",
-    "deadline": "2025-03-11T08:36:50",
-    "AssignedTo": 1
-  },
-  {
-    "$type": "OOP.Models.Meeting, OOP",
-    "Location": "",
-    "Participants": [],
-    "Hour": "15:30",
-    "taskID": "2967",
-    "ProjectName": null,
-    "taskName": "Quánh lộn",
-    "status": "Finished",
-    "deadline": "2025-03-27T08:39:16.544918+07:00",
-    "AssignedTo": 1
-  },
-  {
-    "$type": "OOP.Models.Milestone, OOP",
-    "Description": null,
-    "taskID": "9608",
-    "ProjectName": "2 - SCUMS",
-    "taskName": "Hi",
-    "status": "Finished",
-    "deadline": "2025-03-27T09:01:48.3110918+07:00",
-    "AssignedTo": 5
-  },
-  {
-    "$type": "OOP.Models.Meeting, OOP",
-    "Location": "UEH ",
-    "Participants": [],
-    "Hour": "13:40",
-    "taskID": "6097",
-    "ProjectName": "2 - SCUMS",
-    "taskName": "Hello",
-    "status": "Finished",
-    "deadline": "2025-03-27T09:01:56.6874388+07:00",
-    "AssignedTo": 5
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "6568",
-    "ProjectName": "2 - SCUMS",
-    "taskName": "Hi",
-    "status": "Finished",
-    "deadline": "2025-03-27T09:04:38.5451491+07:00",
-    "AssignedTo": 5
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "9682",
-    "ProjectName": "4 - Sup",
-    "taskName": "w",
+    "taskID": "5042",
+    "ProjectName": "Nuôi mèo",
+    "taskName": "Cat babies",
     "status": "Unfinished",
-    "deadline": "2025-03-27T13:44:36.4718807+07:00",
-    "AssignedTo": 2
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "9840",
-    "ProjectName": "SCUMS",
-    "taskName": "Homework",
-    "status": "Chưa hoàn thành",
-    "deadline": "2025-03-27T14:11:27.7757412+07:00",
-    "AssignedTo": 5
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "5908",
-    "ProjectName": "HELLO WORLD",
-    "taskName": "",
-    "status": "Chưa hoàn thành",
-    "deadline": "2025-03-27T14:12:00.4195664+07:00",
-    "AssignedTo": 5
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "9811",
-    "ProjectName": "SCUMS",
-    "taskName": "ggg",
-    "status": "Finished",
-    "deadline": "2025-03-27T14:12:50.2037264+07:00",
-    "AssignedTo": 5
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "2008",
-    "ProjectName": "New Project",
-    "taskName": "Thêm Class",
-    "status": "Unfinished",
-    "deadline": "2025-03-27T14:16:22.0665275+07:00",
-    "AssignedTo": 6
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "8383",
-    "ProjectName": "New Project",
-    "taskName": "huhu",
-    "status": "Unfinished",
-    "deadline": "2025-03-27T14:17:18.1143545+07:00",
-    "AssignedTo": 6
-  },
-  {
-    "$type": "OOP.Models.Milestone, OOP",
-    "Description": null,
-    "taskID": "7848",
-    "ProjectName": "5 - New Project",
-    "taskName": "Xong báo cáo",
-    "status": "UnFinished",
-    "deadline": "2025-03-27T14:17:47.6383907+07:00",
-    "AssignedTo": 6
+    "deadline": "2025-03-28T07:32:35.1144701+07:00",
+    "AssignedTo": 0
   },
   {
     "$type": "OOP.Models.Meeting, OOP",
     "Location": "UEH",
     "Participants": [],
-    "Hour": "19:00",
-    "taskID": "4926",
-    "ProjectName": "5 - New Project",
-    "taskName": "họp",
-    "status": "Incompleted",
-    "deadline": "2025-03-08T14:18:06",
-    "AssignedTo": 6
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "1859",
-    "ProjectName": "Sup",
-    "taskName": "Labubu",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T14:59:29.9166503+07:00",
-    "AssignedTo": 2
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "6547",
-    "ProjectName": "HELLO WORLD",
-    "taskName": "Pass qua ",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:00:17.8803232+07:00",
+    "Hour": "17:30",
+    "taskID": "2718",
+    "ProjectName": "Nuôi mèo",
+    "taskName": "Choose cat",
+    "status": "Unfinished",
+    "deadline": "2025-03-28T07:32:49.09956+07:00",
     "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "1777",
-    "ProjectName": "SCUMS",
-    "taskName": "loo",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:01:32.2871457+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "7295",
-    "ProjectName": "New Project",
-    "taskName": "hu",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:05:45.5853541+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "5492",
-    "ProjectName": "New Project",
-    "taskName": "huhuhaha",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:08:40.5268846+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "9916",
-    "ProjectName": "New Project",
-    "taskName": "HUHUHU",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:12:16.1316718+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "9142",
-    "ProjectName": "New Project",
-    "taskName": "Bao",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:13:32.1194279+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "6416",
-    "ProjectName": "New Project",
-    "taskName": "hi",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:15:09.8638196+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "2982",
-    "ProjectName": "New Project",
-    "taskName": "Hi",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:16:38.817909+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "5137",
-    "ProjectName": "Sup",
-    "taskName": "Bao",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:19:52.1374871+07:00",
-    "AssignedTo": 2
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "8625",
-    "ProjectName": "New Project",
-    "taskName": "Bao",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:20:26.5735332+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "5221",
-    "ProjectName": "Newest",
-    "taskName": "no",
-    "status": "Unfinish",
-    "deadline": "2025-03-27T15:21:47.8481854+07:00",
-    "AssignedTo": 0
-  },
-  {
-    "$type": "OOP.Models.Task, OOP",
-    "taskID": "6711",
-    "ProjectName": "Newest",
-    "taskName": "Ba",
-    "status": "Finished",
-    "deadline": "2025-03-27T15:24:17.4383577+07:00",
-    "AssignedTo": 5
   }
 ]

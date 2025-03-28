@@ -80,7 +80,7 @@ namespace OOP
                 User newUser = new User(newId, username, RoleType.Member, password, email);
                 users.Add(newUser);
                 UserService.SaveUsers(users);
-                NotificationManager.Instance.Notify(new AccountNotification("System", $"Tài khoản mới '{username}' đã được đăng ký!"));
+                NotificationManager.Instance.SendAccountNotification(username);
                 MessageBox.Show("Registration successful!");
                 this.Close();
 

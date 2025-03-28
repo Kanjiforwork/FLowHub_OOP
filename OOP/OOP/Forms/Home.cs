@@ -12,7 +12,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using User = OOP.Models.User;
 
 namespace OOP
@@ -21,32 +20,35 @@ namespace OOP
     {
 
         TaskManager taskManager = TaskManager.GetInstance();
-        void ApplyMouseEvents(Panel panel)
+        public List<AbaseTask> GetUserTasks()
         {
-            panel.MouseMove += (s, e) => Panel_MouseMove(panel);
-            panel.MouseLeave += (s, e) => Panel_MouseLeave(panel);
+            List<Project> userProjects = projectManager.FindProjectsByMember(User.LoggedInUser);
+            List<AbaseTask> userTasks = new List<AbaseTask>();
 
-            foreach (Control child in panel.Controls)
+            if (userProjects.Count == 0)
             {
-                child.MouseMove += (s, e) => Panel_MouseMove(panel); // Redirect child hover event to panel
-                child.MouseLeave += (s, e) => Panel_MouseLeave(panel); // Redirect child leave event to panel
+                Console.WriteLine("User không thuộc bất kỳ project nào.");
+                return userTasks; // Trả về danh sách rỗng nếu user không có project
             }
-        }
 
-        // Change border style when hovering over the panel (but not its children directly)
-        private void Panel_MouseMove(Panel panel)
-        {
-            panel.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        // Reset border when leaving the **entire** panel
-        private void Panel_MouseLeave(Panel panel)
-        {
-            // Check if the mouse is still inside the panel
-            if (!panel.ClientRectangle.Contains(panel.PointToClient(Cursor.Position)))
+            foreach (Project project in userProjects)
             {
-                panel.BorderStyle = BorderStyle.FixedSingle;
+                List<AbaseTask> projectTasks = taskManager.GetTasksByProject(project.projectName);
+
+                foreach (AbaseTask task in projectTasks)
+                {
+                    if (task.AssignedTo > 0 && task.AssignedTo == User.LoggedInUser.ID)
+                    {
+                        userTasks.Add(task);
+                    }
+                    else if (task.AssignedTo == 0) // Meeting, Milestone (không có assigned)
+                    {
+                        userTasks.Add(task);
+                    }
+                }
             }
+
+            return userTasks;
         }
 
 
@@ -98,8 +100,9 @@ namespace OOP
 
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
+            
 
-            foreach (AbaseTask task in taskManager.GetTasksByUser(User.LoggedInUser))
+            foreach (AbaseTask task in GetUserTasks())
             {
                 HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom

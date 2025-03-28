@@ -40,7 +40,7 @@ namespace OOP.Usercontrols
             else
             {
                 checkBox.Image = Properties.Resources.checkUnfinished;
-            }
+            } 
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -67,6 +67,11 @@ namespace OOP.Usercontrols
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
                 TaskManager.GetInstance().UpdateTask(task);
+            }
+            // Chỉ gửi thông báo nếu trạng thái thực sự thay đổi thành "Finished"
+            if (task.status == "Finished")
+            {
+                NotificationManager.Instance.SendTaskUpdateNotification(User.GetLoggedInUserName(), task.taskName, task.status);
             }
         }
     }

@@ -84,6 +84,19 @@ namespace OOP.Services
             }
             return null; // Nếu không tìm thấy project, trả về null
         }
+        public List<Project> FindProjectsByMember(User user)
+        {
+            List<Project> userProjects = new List<Project>();
+
+            foreach (Project project in Projects)
+            {
+                if (project.AdminID == user.ID || project.members.Any(m => m.Split('(')[0].Trim() == user.Username))
+                {
+                    userProjects.Add(project);
+                }
+            }
+            return userProjects; // Trả về danh sách các project mà user thuộc về
+        }
 
 
     }

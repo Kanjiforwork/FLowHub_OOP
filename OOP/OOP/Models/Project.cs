@@ -78,7 +78,7 @@ namespace OOP.Models
             tasks.Add(task);
 
             // Gửi thông báo cho Member khi nhận task
-            NotificationManager.Instance.Notify(new TaskUpdateNotification(assignee.Username, "Bạn đã được giao một nhiệm vụ mới!"));
+          
         }
 
 

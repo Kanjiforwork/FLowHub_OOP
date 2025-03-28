@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,7 @@ namespace OOP.Usercontrols
         {
             taskContent.Text = meeting.taskName;
             taskProject.Text = meeting.ProjectName; // Dùng location thay vì project
-            location.Text = "Tại " +  meeting.Location;
+            location.Text = "Tại " + meeting.Location;
             hour.Text = "Giờ: " + meeting.Hour;
             UpdateButtonState();
         }
@@ -55,16 +56,20 @@ namespace OOP.Usercontrols
             if (meeting.status == "Finished")
             {
                 meeting.status = "UnFinished"; // Cập nhật trạng thái Meeting gốc
-                UpdateButtonState();
-                OnMeetingFinished?.Invoke(this, meeting);
-                TaskManager.GetInstance().UpdateTask(meeting);
             }
             else
             {
                 meeting.status = "Finished"; // Cập nhật trạng thái Meeting gốc
-                UpdateButtonState();
-                OnMeetingFinished?.Invoke(this, meeting);
-                TaskManager.GetInstance().UpdateTask(meeting);
+            }
+
+            UpdateButtonState();
+            OnMeetingFinished?.Invoke(this, meeting);
+            TaskManager.GetInstance().UpdateTask(meeting);
+
+            // Chỉ gửi thông báo nếu trạng thái thực sự thay đổi thành "Finished"
+            if (meeting.status == "Finished")
+            {
+                NotificationManager.Instance.SendTaskUpdateNotification(User.GetLoggedInUserName(), meeting.taskName, meeting.status);
             }
         }
 

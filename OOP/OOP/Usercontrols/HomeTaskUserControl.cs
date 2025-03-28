@@ -65,6 +65,11 @@ namespace OOP.Usercontrols
 
             UpdateButtonState();
             OnTaskCompleted?.Invoke(this, task); // Đúng kiểu event
+                                                 // Chỉ gửi thông báo nếu trạng thái thực sự thay đổi thành "Finished"
+            if (task.status == "Finished")
+            {
+                NotificationManager.Instance.SendTaskUpdateNotification(User.GetLoggedInUserName(), task.taskName, task.status);
+            }
         }
     }
 }

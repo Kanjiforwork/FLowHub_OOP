@@ -18,9 +18,6 @@ namespace OOP
 {
     public partial class Projects : BaseForm
     {
-        private Label lblProjectDescription;
-        List<Panel> projectPosts = new List<Panel>();
-        private Button btnBack;
         private int selectedProjectID = -1;
         List<Models.Project> projects = new List<Models.Project>();
 
@@ -433,18 +430,36 @@ namespace OOP
         }
 
         private ProjectManager projectManager = new ProjectManager();
-        private void UpdateComboBox()
+      private void UpdateComboBox()
         {
             comboBox1.Items.Clear();
+
+            if (User.LoggedInUser == null) return; // Kiểm tra user đăng nhập
+
             foreach (Project project in projectManager.Projects)
             {
+                if (project == null || project.members == null) continue; // Kiểm tra null tránh lỗi
+
                 Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
-                if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
+
+                bool isMember = false;
+                foreach (string member in project.members)
+                {
+                    string memberUsername = member.Split('(')[0].Trim(); // Lấy username trước dấu "(" và Trim()
+                    if (memberUsername == User.LoggedInUser.Username)
+                    {
+                        isMember = true;
+                        break;
+                    }
+                }
+
+                if (project.AdminID == User.LoggedInUser.ID || isMember)
                 {
                     comboBox1.Items.Add($"{project.projectID} - {project.projectName}");
                 }
             }
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (selectedProjectID == -1)
@@ -538,6 +553,7 @@ namespace OOP
                         description.Text = selectedProject.projectDescription;
                         // Hiển thị mô tả của project
                         DisplayMembers(selectedProject);
+                        LoadTasks(selectedProject);
                     }
                 }
                 else
@@ -591,7 +607,6 @@ namespace OOP
                 MemberItem memberItem = new MemberItem(member, false);
                 memberItem.Dock = DockStyle.Left; // Stack Project from top to bottom
                 memberPanel.Controls.Add(memberItem);
-                // ApplyMouseEvents(projectItem.ProjectPanel);
             }
 
         }
@@ -647,16 +662,15 @@ namespace OOP
             description.ForeColor = Color.Gray; // Cập nhật màu khi nhập
         }
 
-
-        private void LoadTasks()
+        TaskManager taskManager = TaskManager.GetInstance();
+        private void LoadTasks(Project project)
         {
-
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
 
-            foreach (AbaseTask task in taskManager.GetTasksByUser(User.LoggedInUser))
+            foreach (AbaseTask task in taskManager.GetTasksByProject(project.projectName))
             {
-                HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
+                ProjectTaskUserControl taskItem = new ProjectTaskUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
                 taskContainer.Controls.Add(taskItem);
                 ApplyMouseEvents(taskItem.TaskPanel);

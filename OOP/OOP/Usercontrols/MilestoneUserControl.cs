@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OOP.Models;
@@ -47,17 +48,21 @@ namespace OOP.Usercontrols
         {
             if (milestone.status == "Finished")
             {
-                milestone.status = "UnFinished"; // Cập nhật trạng thái Milestone gốc
-                UpdateButtonState();
-                OnTaskFinished?.Invoke(this, milestone);
-                TaskManager.GetInstance().UpdateTask(milestone);
+                milestone.status = "UnFinished"; // Cập nhật trạng thái Meeting gốc
             }
             else
             {
-                milestone.status = "Finished"; // Cập nhật trạng thái Milestone gốc
-                UpdateButtonState();
-                OnTaskFinished?.Invoke(this, milestone);
-                TaskManager.GetInstance().UpdateTask(milestone);
+                milestone.status = "Finished"; // Cập nhật trạng thái Meeting gốc
+            }
+
+            UpdateButtonState();
+            OnTaskFinished?.Invoke(this, milestone);
+            TaskManager.GetInstance().UpdateTask(milestone);
+
+            // Chỉ gửi thông báo nếu trạng thái thực sự thay đổi thành "Finished"
+            if (milestone.status == "Finished")
+            {
+                NotificationManager.Instance.SendTaskUpdateNotification(User.GetLoggedInUserName(), milestone.taskName, milestone.status);
             }
         }
     }

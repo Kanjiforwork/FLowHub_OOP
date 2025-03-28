@@ -178,6 +178,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\NotificationManager.cs" />
     <Compile Include="Services\Projectmanager.cs" />
     <Compile Include="Services\TaskManager.cs" />
     <Compile Include="Services\UserService.cs" />

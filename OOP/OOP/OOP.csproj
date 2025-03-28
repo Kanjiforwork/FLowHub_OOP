@@ -119,6 +119,12 @@
     <Compile Include="Forms\AvaterForm.Designer.cs">
       <DependentUpon>AvaterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inbox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,13 +162,9 @@
       <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Done.cs" />
-    <Compile Include="Models\FarNormalUrgent.cs" />
-    <Compile Include="Models\FileAttachment.cs" />
-    <Compile Include="Models\Important.cs" />
     <Compile Include="Models\IUpdateStatus.cs" />
     <Compile Include="Models\NotDone.cs" />
     <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\NotImportant.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\User.cs" />
@@ -173,8 +175,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Services\DataManager.cs" />
+    <Compile Include="Services\NotificationManager.cs" />
     <Compile Include="Services\Projectmanager.cs" />
+    <Compile Include="Services\TaskManager.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Usercontrols\HomeProjectUserControl.cs">
       <SubType>UserControl</SubType>
@@ -187,6 +190,30 @@
     </Compile>
     <Compile Include="Usercontrols\HomeTaskUserControl.Designer.cs">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\MeetingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MeetingUserControl.Designer.cs">
+      <DependentUpon>MeetingUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\MemberItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MemberItem.Designer.cs">
+      <DependentUpon>MemberItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\MilestoneUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\MilestoneUserControl.Designer.cs">
+      <DependentUpon>MilestoneUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usercontrols\ProjectTaskUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrols\ProjectTaskUserControl.Designer.cs">
+      <DependentUpon>ProjectTaskUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Usercontrols\TasksFullUserControl.cs">
       <SubType>UserControl</SubType>
@@ -205,33 +232,43 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMembers.resx">
       <DependentUpon>AddMembers.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddMilestone.resx">
       <DependentUpon>AddMilestone.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Addtask.resx">
       <DependentUpon>Addtask.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AvaterForm.resx">
       <DependentUpon>AvaterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inbox.resx">
       <DependentUpon>Inbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Projects.resx">
       <DependentUpon>Projects.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tasks.resx">
       <DependentUpon>Tasks.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -240,15 +277,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\HomeProjectUserControl.resx">
       <DependentUpon>HomeProjectUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\HomeTaskUserControl.resx">
       <DependentUpon>HomeTaskUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\MeetingUserControl.resx">
+      <DependentUpon>MeetingUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\MemberItem.resx">
+      <DependentUpon>MemberItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\MilestoneUserControl.resx">
+      <DependentUpon>MilestoneUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\NotiUserControl.resx">
       <DependentUpon>NotiUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrols\ProjectTaskUserControl.resx">
+      <DependentUpon>ProjectTaskUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrols\TasksFullUserControl.resx">
       <DependentUpon>TasksFullUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -291,6 +346,7 @@
     <Content Include="Resources\DefaultAvatar.png" />
     <Content Include="Resources\defaultProjectPic.png" />
     <None Include="Resources\Home %282%29.png" />
+    <None Include="Resources\exit.png" />
     <Content Include="Resources\home.png" />
     <None Include="Resources\image %288%29.png" />
     <None Include="Resources\image %281%29 %281%29.png" />

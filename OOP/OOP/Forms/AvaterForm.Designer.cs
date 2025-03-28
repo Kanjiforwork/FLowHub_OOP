@@ -31,25 +31,15 @@ namespace OOP
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.btnSkip = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.WelcomeName = new System.Windows.Forms.Label();
-            this.nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
             this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbAvatar
-            // 
-            this.pbAvatar.Location = new System.Drawing.Point(205, 83);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(190, 158);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvatar.TabIndex = 0;
-            this.pbAvatar.TabStop = false;
             // 
             // btnBrowse
             // 
@@ -59,6 +49,7 @@ namespace OOP
             this.btnBrowse.TabIndex = 1;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnSkip
             // 
@@ -68,6 +59,7 @@ namespace OOP
             this.btnSkip.TabIndex = 2;
             this.btnSkip.Text = "Skip";
             this.btnSkip.UseVisualStyleBackColor = true;
+            this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
             // 
             // btnSave
             // 
@@ -77,13 +69,13 @@ namespace OOP
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.TopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TopPanel.Controls.Add(this.WelcomeName);
-            this.TopPanel.Controls.Add(this.nightControlBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.ForeColor = System.Drawing.SystemColors.Control;
             this.TopPanel.Location = new System.Drawing.Point(0, 0);
@@ -105,29 +97,14 @@ namespace OOP
             this.WelcomeName.Text = "Avatar";
             this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // nightControlBox1
+            // pbAvatar
             // 
-            this.nightControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nightControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.nightControlBox1.CloseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.nightControlBox1.CloseHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nightControlBox1.DefaultLocation = true;
-            this.nightControlBox1.DisableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.DisableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.nightControlBox1.EnableCloseColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMaximizeButton = true;
-            this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.EnableMinimizeButton = true;
-            this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(438, 0);
-            this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nightControlBox1.MinimizeHoverForeColor = System.Drawing.Color.White;
-            this.nightControlBox1.Name = "nightControlBox1";
-            this.nightControlBox1.Size = new System.Drawing.Size(139, 31);
-            this.nightControlBox1.TabIndex = 1;
+            this.pbAvatar.Location = new System.Drawing.Point(205, 83);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(190, 158);
+            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAvatar.TabIndex = 0;
+            this.pbAvatar.TabStop = false;
             // 
             // AvatarForm
             // 
@@ -140,11 +117,11 @@ namespace OOP
             this.Controls.Add(this.btnSkip);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.pbAvatar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AvatarForm";
             this.Text = "AvatarForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,6 +134,5 @@ namespace OOP
         private Button btnSave;
         private Panel TopPanel;
         private Label WelcomeName;
-        private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
     }
 }

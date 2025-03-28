@@ -38,6 +38,7 @@ namespace OOP
             this.SendDate = new System.Windows.Forms.Label();
             this.Content = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +84,7 @@ namespace OOP
             this.Content.AutoSize = true;
             this.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.Content.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Content.Location = new System.Drawing.Point(14, 16);
+            this.Content.Location = new System.Drawing.Point(31, 14);
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(48, 20);
             this.Content.TabIndex = 4;
@@ -95,11 +96,22 @@ namespace OOP
             this.panel1.Controls.Add(this.Content);
             this.panel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(43, 93);
+            this.panel1.Location = new System.Drawing.Point(43, 112);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(502, 80);
+            this.panel1.Size = new System.Drawing.Size(502, 61);
             this.panel1.TabIndex = 5;
+            // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Title.Location = new System.Drawing.Point(201, 90);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(48, 20);
+            this.Title.TabIndex = 6;
+            this.Title.Text = "label1";
             // 
             // NotiUserControl
             // 
@@ -107,6 +119,7 @@ namespace OOP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.Title);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SendDate);
             this.Controls.Add(this.SenderName);
@@ -115,7 +128,6 @@ namespace OOP
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NotiUserControl";
             this.Size = new System.Drawing.Size(567, 183);
-            this.Load += new System.EventHandler(this.NotiUserControl_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -131,5 +143,6 @@ namespace OOP
         private Label SendDate;
         private Label Content;
         private Panel panel1;
+        private Label Title;
     }
 }

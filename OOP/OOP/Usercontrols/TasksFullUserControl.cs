@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
+using System.Windows.Forms;
+using OOP.Models;
+using OOP.Services;
+using OOP.Usercontrols;
+using Task = OOP.Models.Task;
 namespace OOP.Usercontrols
 {
     public partial class TasksFullUserControl : UserControl
@@ -28,22 +25,22 @@ namespace OOP.Usercontrols
 
         private void UpdateUI()
         {
-            taskContent.Text = task.taskName;
-            taskDeadline.Text = $"{task.dealine:dd/MM/yyyy}";
-            taskProject.Text = task.projectName;
+            taskContent.Text = task.TaskName;
+            taskDeadline.Text = $"{task.Deadline:dd/MM/yyyy}";
+            taskProject.Text = task.ProjectName;
             UpdateButtonState();
         }
 
         private void UpdateButtonState()
         {
-            if (task.status == "Finished")
+            if (task.Status == "Finished")
             {
                 checkBox.Image = Properties.Resources.check;
             }
             else
             {
                 checkBox.Image = Properties.Resources.checkUnfinished;
-            }
+            } 
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -53,17 +50,28 @@ namespace OOP.Usercontrols
 
         private void checkBox_Click(object sender, EventArgs e)
         {
-            if (task.status == "Finished")
+            Console.WriteLine(task.Status);
+            if (task.Status == "Finished")
             {
-                task.status = "UnFinished"; // Cập nhật trạng thái Task gốc
+                task.SetUpdateStatus(new NotDone());
+                task.UpdateStatus();// Cập nhật trạng thái Task gốc
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
+                TaskManager.GetInstance().UpdateTask(task);
             }
             else
             {
-                task.status = "Finished"; // Cập nhật trạng thái Task gốc
+                task.SetUpdateStatus(new Done()); // Cập nhật trạng thái Task gốc
+                task.UpdateStatus();// Cập nhật trạng thái Task gốc
+
                 UpdateButtonState();
                 OnTaskFinished?.Invoke(this, task);
+                TaskManager.GetInstance().UpdateTask(task);
+            }
+            // Chỉ gửi thông báo nếu trạng thái thực sự thay đổi thành "Finished"
+            if (task.Status == "Finished")
+            {
+                NotificationManager.Instance.SendTaskUpdateNotification(User.GetLoggedInUserName(), task.TaskName, task.Status);
             }
         }
     }

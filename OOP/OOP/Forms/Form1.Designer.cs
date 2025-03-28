@@ -44,7 +44,7 @@
             this.menu = new ReaLTaiizor.Controls.Panel();
             this.btnProject = new ReaLTaiizor.Controls.Button();
             this.panel2 = new ReaLTaiizor.Controls.Panel();
-            this.btnUser = new ReaLTaiizor.Controls.Button();
+            this.btnExit = new ReaLTaiizor.Controls.Button();
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,15 +60,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Completed = new System.Windows.Forms.Label();
-            this.Overdue = new System.Windows.Forms.Label();
-            this.UpComing = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.avatar = new System.Windows.Forms.PictureBox();
             this.Mytask = new System.Windows.Forms.Label();
             this.timeDetail = new System.Windows.Forms.Label();
             this.projectPanel = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.projectContainer = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -93,10 +88,8 @@
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.projectPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.projectContainer.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -134,7 +127,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(943, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(928, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -147,7 +140,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(68, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 31);
@@ -163,7 +156,6 @@
             this.btnHam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHam.TabIndex = 1;
             this.btnHam.TabStop = false;
-            this.btnHam.Click += new System.EventHandler(this.btnHam_Click);
             // 
             // WelcomeName
             // 
@@ -171,10 +163,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WelcomeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
             this.WelcomeName.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.WelcomeName.Location = new System.Drawing.Point(188, 8);
+            this.WelcomeName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.WelcomeName.Location = new System.Drawing.Point(188, 13);
             this.WelcomeName.Name = "WelcomeName";
-            this.WelcomeName.Size = new System.Drawing.Size(874, 41);
+            this.WelcomeName.Size = new System.Drawing.Size(802, 41);
             this.WelcomeName.TabIndex = 1;
             this.WelcomeName.Text = "Welcome back";
             this.WelcomeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,7 +338,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.panel2.Controls.Add(this.btnUser);
+            this.panel2.Controls.Add(this.btnExit);
             this.panel2.EdgeColor = System.Drawing.Color.Transparent;
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(3, 237);
@@ -357,27 +349,28 @@
             this.panel2.TabIndex = 6;
             this.panel2.Text = "Dashboard";
             // 
-            // btnUser
+            // btnExit
             // 
-            this.btnUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnUser.BorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnUser.EnteredBorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.EnteredColor = System.Drawing.Color.Transparent;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnUser.Image = global::OOP.Properties.Resources.user;
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.InactiveColor = System.Drawing.Color.Transparent;
-            this.btnUser.Location = new System.Drawing.Point(15, 5);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
-            this.btnUser.PressedBorderColor = System.Drawing.Color.Transparent;
-            this.btnUser.PressedColor = System.Drawing.Color.Transparent;
-            this.btnUser.Size = new System.Drawing.Size(272, 44);
-            this.btnUser.TabIndex = 2;
-            this.btnUser.Text = "              User";
-            this.btnUser.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExit.EnteredBorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.EnteredColor = System.Drawing.Color.Transparent;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnExit.Image = global::OOP.Properties.Resources.exit;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.InactiveColor = System.Drawing.Color.Transparent;
+            this.btnExit.Location = new System.Drawing.Point(15, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Padding = new System.Windows.Forms.Padding(100, 0, 0, 0);
+            this.btnExit.PressedBorderColor = System.Drawing.Color.Transparent;
+            this.btnExit.PressedColor = System.Drawing.Color.Transparent;
+            this.btnExit.Size = new System.Drawing.Size(272, 44);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "              Exit";
+            this.btnExit.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // sidebarTransition
             // 
@@ -398,11 +391,11 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1067, 611);
             this.panel6.TabIndex = 2;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(256, 130);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(734, 5);
@@ -415,17 +408,19 @@
             this.taskPanel.Controls.Add(this.panel8);
             this.taskPanel.Location = new System.Drawing.Point(251, 195);
             this.taskPanel.Name = "taskPanel";
-            this.taskPanel.Size = new System.Drawing.Size(373, 354);
+            this.taskPanel.Size = new System.Drawing.Size(394, 354);
             this.taskPanel.TabIndex = 2;
             // 
             // taskContainer
             // 
+            this.taskContainer.AutoScroll = true;
             this.taskContainer.Controls.Add(this.panel9);
             this.taskContainer.Controls.Add(this.panel7);
             this.taskContainer.Location = new System.Drawing.Point(-1, 96);
+            this.taskContainer.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.taskContainer.Name = "taskContainer";
             this.taskContainer.Padding = new System.Windows.Forms.Padding(12, 8, 0, 0);
-            this.taskContainer.Size = new System.Drawing.Size(372, 257);
+            this.taskContainer.Size = new System.Drawing.Size(390, 257);
             this.taskContainer.TabIndex = 3;
             // 
             // panel9
@@ -524,84 +519,37 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.pictureBox4);
-            this.panel8.Controls.Add(this.Completed);
-            this.panel8.Controls.Add(this.Overdue);
-            this.panel8.Controls.Add(this.UpComing);
-            this.panel8.Controls.Add(this.pictureBox1);
+            this.panel8.Controls.Add(this.avatar);
             this.panel8.Controls.Add(this.Mytask);
             this.panel8.Location = new System.Drawing.Point(-2, -2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(373, 100);
+            this.panel8.Size = new System.Drawing.Size(391, 100);
             this.panel8.TabIndex = 2;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(28, 95);
+            this.panel10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel10.Location = new System.Drawing.Point(25, 85);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(316, 3);
             this.panel10.TabIndex = 5;
             // 
-            // pictureBox4
+            // avatar
             // 
-            this.pictureBox4.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(325, 17);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // Completed
-            // 
-            this.Completed.AutoSize = true;
-            this.Completed.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Completed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Completed.Location = new System.Drawing.Point(245, 66);
-            this.Completed.Name = "Completed";
-            this.Completed.Size = new System.Drawing.Size(83, 20);
-            this.Completed.TabIndex = 4;
-            this.Completed.Text = "Completed";
-            // 
-            // Overdue
-            // 
-            this.Overdue.AutoSize = true;
-            this.Overdue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Overdue.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Overdue.Location = new System.Drawing.Point(171, 66);
-            this.Overdue.Name = "Overdue";
-            this.Overdue.Size = new System.Drawing.Size(68, 20);
-            this.Overdue.TabIndex = 3;
-            this.Overdue.Text = "Overdue";
-            // 
-            // UpComing
-            // 
-            this.UpComing.AutoSize = true;
-            this.UpComing.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.UpComing.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.UpComing.Location = new System.Drawing.Point(85, 66);
-            this.UpComing.Name = "UpComing";
-            this.UpComing.Size = new System.Drawing.Size(80, 20);
-            this.UpComing.TabIndex = 2;
-            this.UpComing.Text = "Upcoming";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OOP.Properties.Resources.images__3_;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.avatar.Image = global::OOP.Properties.Resources.images__3_;
+            this.avatar.Location = new System.Drawing.Point(16, 17);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(50, 50);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 0;
+            this.avatar.TabStop = false;
             // 
             // Mytask
             // 
             this.Mytask.AutoSize = true;
             this.Mytask.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Mytask.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Mytask.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Mytask.Location = new System.Drawing.Point(84, 26);
             this.Mytask.Name = "Mytask";
             this.Mytask.Size = new System.Drawing.Size(110, 31);
@@ -613,7 +561,7 @@
             this.timeDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.timeDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.timeDetail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.timeDetail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.timeDetail.Location = new System.Drawing.Point(234, 79);
             this.timeDetail.Name = "timeDetail";
             this.timeDetail.Size = new System.Drawing.Size(828, 32);
@@ -624,7 +572,6 @@
             // projectPanel
             // 
             this.projectPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.projectPanel.Controls.Add(this.pictureBox7);
             this.projectPanel.Controls.Add(this.label6);
             this.projectPanel.Controls.Add(this.projectContainer);
             this.projectPanel.Location = new System.Drawing.Point(670, 194);
@@ -632,22 +579,11 @@
             this.projectPanel.Size = new System.Drawing.Size(373, 354);
             this.projectPanel.TabIndex = 3;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.ErrorImage = global::OOP.Properties.Resources.check;
-            this.pictureBox7.InitialImage = null;
-            this.pictureBox7.Location = new System.Drawing.Point(322, 15);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(24, 24);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 31);
@@ -656,10 +592,12 @@
             // 
             // projectContainer
             // 
+            this.projectContainer.AutoScroll = true;
             this.projectContainer.Controls.Add(this.panel11);
             this.projectContainer.Controls.Add(this.panel12);
             this.projectContainer.Location = new System.Drawing.Point(0, 72);
             this.projectContainer.Name = "projectContainer";
+            this.projectContainer.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.projectContainer.Size = new System.Drawing.Size(372, 281);
             this.projectContainer.TabIndex = 5;
             // 
@@ -754,11 +692,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.projectPanel.ResumeLayout(false);
             this.projectPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.projectContainer.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -786,16 +722,12 @@
         private System.Windows.Forms.Timer sidebarTransition;
         private ReaLTaiizor.Controls.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label timeDetail;
         private System.Windows.Forms.Label WelcomeName;
         private System.Windows.Forms.Panel taskPanel;
         private System.Windows.Forms.Panel projectPanel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox avatar;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label Completed;
-        private System.Windows.Forms.Label Overdue;
-        private System.Windows.Forms.Label UpComing;
         private System.Windows.Forms.Label Mytask;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel taskContainer;
@@ -807,20 +739,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel projectContainer;
         private System.Windows.Forms.PictureBox btnHam;
         private ReaLTaiizor.Controls.Button btnNoti;
-        private ReaLTaiizor.Controls.Button btnUser;
+        private ReaLTaiizor.Controls.Button btnExit;
     }
 }
 

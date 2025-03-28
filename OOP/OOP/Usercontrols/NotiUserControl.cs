@@ -6,6 +6,7 @@ using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOP.Models;
 
 namespace OOP
 {
@@ -15,29 +16,21 @@ namespace OOP
         {
             InitializeComponent();
         }
-        public void SetNotificationData(Image avatar, string senderName, DateTime sendDate, string content)
+        public void SetNotificationData(Notification notification)
         {
-            Avatar.Image = avatar;
-            SenderName.Text = senderName;
-            SendDate.Text = sendDate.ToString();
-            Content.Text = content;
+            if (notification == null) return;
+            Avatar.Image = Properties.Resources.defaultProjectPic; // Dùng avatar mặc định
+            Title.Text = string.IsNullOrEmpty(notification.TieuDe) ? "Không xác định" : notification.TieuDe;
+            SenderName.Text = string.IsNullOrEmpty(notification.NguoiDung) ? "Không xác định" : notification.NguoiDung;
+            SendDate.Text = notification.ThoiGian.ToString("dd/MM/yyyy HH:mm");
+            Content.Text = string.IsNullOrEmpty(notification.NoiDung) ? "Không có nội dung" : notification.NoiDung;
         }
-        private void NotiUserControl_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Avatar_Click(object sender, EventArgs e)
         {
 
         }
 
         private void Content_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NotiUserControl_Load_1(object sender, EventArgs e)
         {
 
         }

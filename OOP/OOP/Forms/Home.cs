@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using OOP;
 using OOP.Models;
+using OOP.Services;
 using OOP.Usercontrols;
 using System;
 using System.Collections.Generic;
@@ -10,57 +12,44 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using User = OOP.Models.User;
 
 namespace OOP
 {
-    public partial class Home : Form
+    public partial class Home : BaseForm
     {
-        public Home()
+
+        TaskManager taskManager = TaskManager.GetInstance();
+        public List<AbaseTask> GetUserTasks()
         {
+            List<Project> userProjects = projectManager.FindProjectsByMember(User.LoggedInUser);
+            List<AbaseTask> userTasks = new List<AbaseTask>();
 
-            InitializeComponent();
-
-            //Mouse Hover
-            ApplyMouseEvents(TopPanel);
-            ApplyMouseEvents(projectPanel);
-            ApplyMouseEvents(taskPanel);
-            Console.WriteLine(this._user.Username);
-            //Task
-            LoadTasks();
-            //Project
-            Loadprojects();
-        }
-        // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
-        void ApplyMouseEvents(Panel panel)
-        {
-            panel.MouseMove += (s, e) => Panel_MouseMove(panel);
-            panel.MouseLeave += (s, e) => Panel_MouseLeave(panel);
-
-            foreach (Control child in panel.Controls)
+            if (userProjects.Count == 0)
             {
-                child.MouseMove += (s, e) => Panel_MouseMove(panel); // Redirect child hover event to panel
-                child.MouseLeave += (s, e) => Panel_MouseLeave(panel); // Redirect child leave event to panel
+                Console.WriteLine("User không thuộc bất kỳ project nào.");
+                return userTasks; // Trả về danh sách rỗng nếu user không có project
             }
-        }
 
-        // Change border style when hovering over the panel (but not its children directly)
-        private void Panel_MouseMove(Panel panel)
-        {
-            panel.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        // Reset border when leaving the **entire** panel
-        private void Panel_MouseLeave(Panel panel)
-        {
-            // Check if the mouse is still inside the panel
-            if (!panel.ClientRectangle.Contains(panel.PointToClient(Cursor.Position)))
+            foreach (Project project in userProjects)
             {
-                panel.BorderStyle = BorderStyle.FixedSingle;
+                List<AbaseTask> projectTasks = taskManager.GetTasksByProject(project.ProjectName);
+
+                foreach (AbaseTask task in projectTasks)
+                {
+                    if (task.AssignedTo > 0 && task.AssignedTo == User.LoggedInUser.ID)
+                    {
+                        userTasks.Add(task);
+                    }
+                    else if (task.AssignedTo == 0) // Meeting, Milestone (không có assigned)
+                    {
+                        userTasks.Add(task);
+                    }
+                }
             }
+
+            return userTasks;
         }
 
 
@@ -92,99 +81,110 @@ namespace OOP
         {
             // Cập nhật thời gian ban đầu và người dùng
             UpdateDateTime();
-            UpdateName();
 
             // Tạo và cấu hình Timer
             timer = new Timer();
             timer.Interval = 1000; // Cập nhật mỗi giây
-            timer.Tick += (s, ev) => UpdateDateTime();
+            timer.Tick += Timer_Tick;
             timer.Start();
+        }
+
+        // Phương thức xử lý sự kiện Timer.Tick
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            UpdateDateTime();
         }
         private void UpdateDateTime()
         {
             timeDetail.Text = DateTime.Now.ToString("dddd, 'ngày' dd 'tháng' M");
-        }
-        private void UpdateName()
-        {
-            WelcomeName.Text = "Welcome back, Kanji";
         }
         private void btnHam_Click(object sender, EventArgs e)
         {
             sidebarTransition.Start();
         }
 
-        private List<Task> tasks = new List<Task>();
         private void LoadTasks()
         {
-            // Ví dụ: tạo danh sách Task mẫu
-             User Bao = new User();
-            tasks.Add(new Task("1", "Quýnh VietAnh", "Pending", DateTime.Now.AddDays(3), "Project Alpha", Bao));
-            tasks.Add(new Task("2", "Code Login", "In Progress", DateTime.Now.AddDays(5), "Project Beta", Bao));
-            tasks.Add(new Task("3", "Fix Bug UI", "Completed", DateTime.Now.AddDays(-2), "Project Alpha", Bao));
-
 
             // Xóa các control cũ trong panel trước khi thêm mới
             taskContainer.Controls.Clear();
+            
 
-            foreach (var task in tasks)
+            foreach (AbaseTask task in GetUserTasks())
             {
-                HomeTaskUserControl  taskItem = new HomeTaskUserControl(task);
+                HomeTaskUserControl taskItem = new HomeTaskUserControl(task);
                 taskItem.Dock = DockStyle.Top; // Stack tasks from top to bottom
                 taskContainer.Controls.Add(taskItem);
                 ApplyMouseEvents(taskItem.TaskPanel);
             }
         }
-        private List<Project> projects = new List<Project>();
+        private ProjectManager projectManager = new ProjectManager();
         private void Loadprojects()
         {
-            // Ví dụ: tạo danh sách Project mẫu
-           /* projects.Add(new Project("1", "Quýnh vietAnh"));
-            projects.Add(new Project("1", "Quýnh ThoaiHao"));*/
-            // Xóa các control cũ trong panel trước khi thêm mới
+          
             projectContainer.Controls.Clear();
-
-            foreach (var project in projects)
+            foreach (Project project in projectManager.Projects)
             {
-                HomeProjectUserControl projectItem = new HomeProjectUserControl(project);
-                projectItem.Dock = DockStyle.Top; // Stack Project from top to bottom
-                projectContainer.Controls.Add(projectItem);
+                if (project == null || project.members == null) continue; // Kiểm tra null tránh lỗi
+
+                Console.WriteLine($"Project: {project.ProjectID} - {project.ProjectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
+
+                bool isMember = false;
+                foreach (string member in project.members)
+                {
+                    string memberUsername = member.Split('(')[0].Trim(); // Lấy username trước dấu "(" và Trim()
+                    if (memberUsername == User.LoggedInUser.Username)
+                    {
+                        isMember = true;
+                        break;
+                    }
+                }
+
+                if (project.AdminID == User.LoggedInUser.ID || isMember)
+                {
+                    HomeProjectUserControl projectItem = new HomeProjectUserControl(project);
+                    projectItem.Dock = DockStyle.Top; // Stack Project from top to bottom
+                    projectContainer.Controls.Add(projectItem);
+                    ApplyMouseEvents(projectItem.ProjectPanel);
+                }
             }
         }
+      
 
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private User _user;
-        public Home(User user)
-        {
+        public Home()
+{
             InitializeComponent();
             //Mouse Hover
             ApplyMouseEvents(TopPanel);
             ApplyMouseEvents(projectPanel);
             ApplyMouseEvents(taskPanel);
-
             //Task
             LoadTasks();
             //Project
             Loadprojects();
 
-            _user = user;
-           /* lblUsername.Text = _user.Username;
-            lblEmail.Text = _user.Email;*/
-            if (_user.Avatar != null && _user.Avatar.Length > 0)
-            {
-                using (MemoryStream ms = new MemoryStream(_user.Avatar))
+            if (User.LoggedInUser != null)
+            { 
+                WelcomeName.Text = $"Hey {User.LoggedInUser.Username}, sẵn sàng làm việc chưa? 🚀";
+                if (User.LoggedInUser.Avatar != null && User.LoggedInUser.Avatar.Length > 0)
                 {
-                    try
+                    using (MemoryStream ms = new MemoryStream(User.LoggedInUser.Avatar))
                     {
-                        //pbUserAvatar.Image = Image.FromStream(ms);
+                        try
+                        {
+                            avatar.Image = Image.FromStream(ms);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi hiển thị ảnh đại diện: {ex.Message}");
+                           avatar.Image = Properties.Resources.DefaultAvatar; // Ảnh mặc định nếu lỗi
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Lỗi hiển thị ảnh đại diện: {ex.Message}");
-                    }
+                }
+                else
+                {
+                    avatar.Image = Properties.Resources.DefaultAvatar; // Ảnh mặc định nếu không có ảnh
                 }
             }
         }
@@ -215,6 +215,11 @@ namespace OOP
             Projects projects = new Projects();
             projects.Show();
             this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ExitApplication(); // Gọi hàm chung để thoát
         }
     }
 }

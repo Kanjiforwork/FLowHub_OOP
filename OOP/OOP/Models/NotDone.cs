@@ -10,7 +10,7 @@ namespace OOP.Models
     {
         public string UpdateStatus(DateTime deadline)
         {
-            return "Not Done";
+            return "Unfinished";
         }
     }
 }

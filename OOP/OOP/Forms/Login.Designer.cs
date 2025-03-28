@@ -127,7 +127,7 @@ namespace OOP
             this.Logintext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Logintext.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logintext.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Logintext.ForeColor = System.Drawing.Color.Cornsilk;
             this.Logintext.Location = new System.Drawing.Point(127, -1);
             this.Logintext.Name = "Logintext";
             this.Logintext.Size = new System.Drawing.Size(617, 51);

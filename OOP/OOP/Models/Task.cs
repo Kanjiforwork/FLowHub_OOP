@@ -50,8 +50,7 @@ namespace OOP.Models
             return 0;
         }
 
-        public abstract void MarkAsCompleted();
-        public abstract void MarkAsInComleted();
+   
 
         public virtual void Message()
         {
@@ -72,14 +71,7 @@ namespace OOP.Models
            
         }
 
-        public override void MarkAsCompleted()
-        {
-            status = "Completed";
-        }
-        public override void MarkAsInComleted()
-        {
-            status = "InCompleted";
-        }
+    
         public override void UpdateStatus(string newStatus)
         {
             status = newStatus;
@@ -105,15 +97,7 @@ namespace OOP.Models
             Hour = hour;
         }
 
-        public override void MarkAsCompleted()
-        {
-            status = "Completed";
-        }
-        public override void MarkAsInComleted()
-        {
-            status = "InCompleted";
-        }
-
+      
         public override void UpdateStatus(string newStatus)
         {
             status = newStatus;
@@ -135,14 +119,7 @@ namespace OOP.Models
             Description = description;
         }
 
-        public override void MarkAsCompleted()
-        {
-            status = "Completed";
-        }
-        public override void MarkAsInComleted()
-        {
-            status = "InCompleted";
-        }
+      
         public override void UpdateStatus(string newStatus)
         {
             status = newStatus;

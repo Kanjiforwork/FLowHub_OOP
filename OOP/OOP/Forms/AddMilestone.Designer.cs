@@ -44,11 +44,11 @@ namespace OOP.Forms
             // 
             this.lblMilestoneName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lblMilestoneName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMilestoneName.Location = new System.Drawing.Point(60, 52);
+            this.lblMilestoneName.Location = new System.Drawing.Point(44, 52);
             this.lblMilestoneName.Name = "lblMilestoneName";
-            this.lblMilestoneName.Size = new System.Drawing.Size(91, 23);
+            this.lblMilestoneName.Size = new System.Drawing.Size(120, 23);
             this.lblMilestoneName.TabIndex = 0;
-            this.lblMilestoneName.Text = "Nhập dấu ấn";
+            this.lblMilestoneName.Text = "Nhập Milestone";
             // 
             // txtbMilestoneName
             // 
@@ -62,7 +62,7 @@ namespace OOP.Forms
             // 
             this.lalMilestoneDate.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lalMilestoneDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lalMilestoneDate.Location = new System.Drawing.Point(60, 109);
+            this.lalMilestoneDate.Location = new System.Drawing.Point(44, 107);
             this.lalMilestoneDate.Name = "lalMilestoneDate";
             this.lalMilestoneDate.Size = new System.Drawing.Size(91, 23);
             this.lalMilestoneDate.TabIndex = 2;
@@ -80,7 +80,6 @@ namespace OOP.Forms
             // btnMilestoneConfirm
             // 
             this.btnMilestoneConfirm.BackColor = System.Drawing.Color.White;
-            this.btnMilestoneConfirm.ForeColor = Color.Black;
             this.btnMilestoneConfirm.BorderColor = System.Drawing.Color.White;
             this.btnMilestoneConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMilestoneConfirm.EnteredBorderColor = System.Drawing.Color.White;
@@ -96,6 +95,7 @@ namespace OOP.Forms
             this.btnMilestoneConfirm.PressedColor = System.Drawing.Color.White;
             this.btnMilestoneConfirm.Size = new System.Drawing.Size(131, 30);
             this.btnMilestoneConfirm.TabIndex = 6;
+            this.btnMilestoneConfirm.ForeColor = Color.Black;
             this.btnMilestoneConfirm.Text = "OK";
             this.btnMilestoneConfirm.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnMilestoneConfirm.Click += new System.EventHandler(this.btnMilestoneConfirm_Click);
@@ -103,8 +103,8 @@ namespace OOP.Forms
             // btnMilestoneCancel
             // 
             this.btnMilestoneCancel.BackColor = System.Drawing.Color.White;
-            this.btnMilestoneCancel.BorderColor = System.Drawing.Color.White;
             this.btnMilestoneCancel.ForeColor = Color.Black;
+            this.btnMilestoneCancel.BorderColor = System.Drawing.Color.White;
             this.btnMilestoneCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMilestoneCancel.EnteredBorderColor = System.Drawing.Color.White;
             this.btnMilestoneCancel.EnteredColor = System.Drawing.Color.White;
@@ -137,7 +137,7 @@ namespace OOP.Forms
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(60, 167);
+            this.label1.Location = new System.Drawing.Point(44, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 13;

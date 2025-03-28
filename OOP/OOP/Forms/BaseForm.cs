@@ -63,29 +63,54 @@ public class BaseForm : Form
     // Attach MouseMove & MouseLeave only to the **Panel itself** but still track child elements
     protected void ApplyMouseEvents(Panel panel)
     {
-        panel.MouseMove += (s, e) => Panel_MouseMove(panel);
-        panel.MouseLeave += (s, e) => Panel_MouseLeave(panel);
+        panel.MouseMove += Panel_MouseMove;
+        panel.MouseLeave += Panel_MouseLeave;
 
         foreach (Control child in panel.Controls)
         {
-            child.MouseMove += (s, e) => Panel_MouseMove(panel); // Redirect child hover event to panel
-            child.MouseLeave += (s, e) => Panel_MouseLeave(panel); // Redirect child leave event to panel
+            child.MouseMove += Child_MouseMove;
+            child.MouseLeave += Child_MouseLeave;
         }
     }
 
-    // Change border style when hovering over the panel (but not its children directly)
-    private void Panel_MouseMove(Panel panel)
+    // Xử lý MouseMove cho panel
+    private void Panel_MouseMove(object sender, MouseEventArgs e)
     {
-        panel.BorderStyle = BorderStyle.Fixed3D;
+        Panel panel = sender as Panel;
+        if (panel != null)
+        {
+            panel.BorderStyle = BorderStyle.Fixed3D;
+        }
     }
 
-    // Reset border when leaving the **entire** panel
-    private void Panel_MouseLeave(Panel panel)
+    // Xử lý MouseLeave cho panel
+    private void Panel_MouseLeave(object sender, EventArgs e)
     {
-        // Check if the mouse is still inside the panel
-        if (!panel.ClientRectangle.Contains(panel.PointToClient(Cursor.Position)))
+        Panel panel = sender as Panel;
+        if (panel != null && !panel.ClientRectangle.Contains(panel.PointToClient(Cursor.Position)))
         {
             panel.BorderStyle = BorderStyle.FixedSingle;
         }
     }
+
+    // Xử lý MouseMove cho child, chuyển tiếp sự kiện về panel
+    private void Child_MouseMove(object sender, MouseEventArgs e)
+    {
+        Control child = sender as Control;
+        if (child != null && child.Parent is Panel panel)
+        {
+            Panel_MouseMove(panel, e);
+        }
+    }
+
+    // Xử lý MouseLeave cho child, chuyển tiếp sự kiện về panel
+    private void Child_MouseLeave(object sender, EventArgs e)
+    {
+        Control child = sender as Control;
+        if (child != null && child.Parent is Panel panel)
+        {
+            Panel_MouseLeave(panel, e);
+        }
+    }
+
 }

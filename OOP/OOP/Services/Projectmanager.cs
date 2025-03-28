@@ -37,10 +37,22 @@ namespace OOP.Services
                 Console.WriteLine($"Đã load {Projects.Count} project từ file.");
             }
         }
-        public void AddProject()
+        public void AddProject(Project newProject)
         {
-            Projects.Add(new Project());
+            foreach (Project project in Projects)
+            {
+                if (project.projectName == newProject.projectName)
+                {
+                    MessageBox.Show("Project với tên này đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Dừng lại, không thêm nữa
+                }
+            }
+
+            Projects.Add(newProject);
+            SaveProjectsToFile();
+            MessageBox.Show($"Project '{newProject.projectName}' đã được thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
         public void DeleteProject(int projectID)
         {
             if (Projects == null || Projects.Count == 0)
@@ -90,14 +102,36 @@ namespace OOP.Services
 
             foreach (Project project in Projects)
             {
-                if (project.AdminID == user.ID || project.members.Any(m => m.Split('(')[0].Trim() == user.Username))
+                bool isMember = false;
+
+                // Kiểm tra nếu user là Admin
+                if (project.AdminID == user.ID)
+                {
+                    isMember = true;
+                }
+                else
+                {
+                    // Kiểm tra nếu user có trong danh sách members
+                    foreach (string member in project.members)
+                    {
+                        string memberName = member.Split('(')[0].Trim();
+                        if (memberName == user.Username)
+                        {
+                            isMember = true;
+                            break; // Thoát vòng lặp khi tìm thấy
+                        }
+                    }
+                }
+
+                // Nếu user thuộc project, thêm vào danh sách
+                if (isMember)
                 {
                     userProjects.Add(project);
                 }
             }
-            return userProjects; // Trả về danh sách các project mà user thuộc về
-        }
 
+            return userProjects;
+        }
 
     }
 

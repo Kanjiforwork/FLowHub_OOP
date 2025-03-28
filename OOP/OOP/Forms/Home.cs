@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using OOP;
 using OOP.Models;
 using OOP.Services;
 using OOP.Usercontrols;
@@ -80,11 +81,18 @@ namespace OOP
         {
             // Cập nhật thời gian ban đầu và người dùng
             UpdateDateTime();
+
             // Tạo và cấu hình Timer
             timer = new Timer();
             timer.Interval = 1000; // Cập nhật mỗi giây
-            timer.Tick += (s, ev) => UpdateDateTime();
+            timer.Tick += Timer_Tick;
             timer.Start();
+        }
+
+        // Phương thức xử lý sự kiện Timer.Tick
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            UpdateDateTime();
         }
         private void UpdateDateTime()
         {
@@ -115,10 +123,24 @@ namespace OOP
         {
           
             projectContainer.Controls.Clear();
-
             foreach (Project project in projectManager.Projects)
             {
-                if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
+                if (project == null || project.members == null) continue; // Kiểm tra null tránh lỗi
+
+                Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
+
+                bool isMember = false;
+                foreach (string member in project.members)
+                {
+                    string memberUsername = member.Split('(')[0].Trim(); // Lấy username trước dấu "(" và Trim()
+                    if (memberUsername == User.LoggedInUser.Username)
+                    {
+                        isMember = true;
+                        break;
+                    }
+                }
+
+                if (project.AdminID == User.LoggedInUser.ID || isMember)
                 {
                     HomeProjectUserControl projectItem = new HomeProjectUserControl(project);
                     projectItem.Dock = DockStyle.Top; // Stack Project from top to bottom
@@ -127,10 +149,11 @@ namespace OOP
                 }
             }
         }
+      
 
 
         public Home()
-        {
+{
             InitializeComponent();
             //Mouse Hover
             ApplyMouseEvents(TopPanel);

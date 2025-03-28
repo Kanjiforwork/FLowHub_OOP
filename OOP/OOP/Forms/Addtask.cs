@@ -149,10 +149,27 @@ namespace OOP
         private void UpdateComboBox()
         {
             cbbSelectProject.Items.Clear();
+
+            if (User.LoggedInUser == null) return; // Kiểm tra user đăng nhập
+
             foreach (Project project in projectManager.Projects)
             {
+                if (project == null || project.members == null) continue; // Kiểm tra null tránh lỗi
+
                 Console.WriteLine($"Project: {project.projectID} - {project.projectName}, AdminID: {project.AdminID}, Members: {string.Join(", ", project.members)}");
-                if (project.AdminID == User.LoggedInUser.ID || project.members.Contains(User.LoggedInUser.Username))
+
+                bool isMember = false;
+                foreach (string member in project.members)
+                {
+                    string memberUsername = member.Split('(')[0].Trim(); // Lấy username trước dấu "(" và Trim()
+                    if (memberUsername == User.LoggedInUser.Username)
+                    {
+                        isMember = true;
+                        break;
+                    }
+                }
+
+                if (project.AdminID == User.LoggedInUser.ID || isMember)
                 {
                     cbbSelectProject.Items.Add($"{project.projectName}");
                 }

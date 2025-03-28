@@ -41,19 +41,17 @@
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.projectPic);
             this.panel12.Controls.Add(this.projectName);
-            this.panel12.Location = new System.Drawing.Point(3, 15);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel12.Location = new System.Drawing.Point(3, 12);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(382, 68);
+            this.panel12.Size = new System.Drawing.Size(323, 55);
             this.panel12.TabIndex = 7;
             // 
             // projectPic
             // 
             this.projectPic.Image = ((System.Drawing.Image)(resources.GetObject("projectPic.Image")));
-            this.projectPic.Location = new System.Drawing.Point(17, 0);
-            this.projectPic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.projectPic.Location = new System.Drawing.Point(15, 0);
             this.projectPic.Name = "projectPic";
-            this.projectPic.Size = new System.Drawing.Size(56, 62);
+            this.projectPic.Size = new System.Drawing.Size(50, 50);
             this.projectPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.projectPic.TabIndex = 3;
             this.projectPic.TabStop = false;
@@ -61,22 +59,23 @@
             // projectName
             // 
             this.projectName.AutoSize = true;
-            this.projectName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.projectName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.projectName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.projectName.Location = new System.Drawing.Point(91, 10);
+            this.projectName.Location = new System.Drawing.Point(82, 12);
             this.projectName.Name = "projectName";
-            this.projectName.Size = new System.Drawing.Size(76, 38);
+            this.projectName.Size = new System.Drawing.Size(52, 25);
             this.projectName.TabIndex = 4;
             this.projectName.Text = "OOP";
             // 
             // HomeProjectUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panel12);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomeProjectUserControl";
-            this.Size = new System.Drawing.Size(392, 96);
+            this.Size = new System.Drawing.Size(326, 77);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.projectPic)).EndInit();

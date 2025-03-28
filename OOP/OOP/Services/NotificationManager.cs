@@ -149,7 +149,7 @@ public class NotificationManager
     {
         if (status == "Finished")
         {
-            Notification notification = new Notification("CẬP NHẬT TRẠNG THÁI", "Hệ thống", DateTime.Now, $"Task '{taskName}' của bạn đã hoàn thành!");
+            Notification notification = new Notification("CẬP NHẬT TRẠNG THÁI", "Hệ thống", DateTime.Now, $"'{taskName}' của bạn đã hoàn thành!");
             Notify(notification);
             AddNotification(username, notification);
         }

@@ -68,7 +68,15 @@ namespace OOP
                 List<User> users = LoadUsers(); // Load danh sách Users cũ
 
                 // Tìm user theo ID hoặc Username
-                User existingUser = users.FirstOrDefault(u => u.ID == User.LoggedInUser.ID || u.Username == User.LoggedInUser.Username);
+                User existingUser = null;
+                foreach (User u in users)
+                {
+                    if (u.ID == User.LoggedInUser.ID || u.Username == User.LoggedInUser.Username)
+                    {
+                        existingUser = u;
+                        break; // Dừng khi tìm thấy user
+                    }
+                }
 
                 if (existingUser != null)
                 {
@@ -92,6 +100,7 @@ namespace OOP
                 Console.WriteLine($"Error saving current user: {ex.Message}");
             }
         }
+
 
 
     }

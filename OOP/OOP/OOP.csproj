@@ -163,8 +163,6 @@
     </Compile>
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Done.cs" />
-    <Compile Include="Models\FarNormalUrgent .cs" />
-    <Compile Include="Models\FileAttachment.cs" />
     <Compile Include="Models\IUpdateStatus.cs" />
     <Compile Include="Models\NotDone.cs" />
     <Compile Include="Models\Notification.cs" />

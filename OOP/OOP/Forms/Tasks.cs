@@ -244,6 +244,7 @@ namespace OOP
             {
                 taskManager.AddTask(addTaskForm.NewTask);
                 LoadTasks(GetUserTasks());
+                addTaskForm.NewTask.Message();
             }
 
         }
@@ -255,6 +256,7 @@ namespace OOP
             {
                 taskManager.AddTask(addMilestone.milestone); // Thêm task mới vào danh sách
                 LoadTasks(GetUserTasks());
+                addMilestone.milestone.Message();
             }
 
         }
@@ -266,6 +268,7 @@ namespace OOP
             {
                 taskManager.AddTask(addMeeting.newMeeting); // Thêm task mới vào danh sách
                 LoadTasks(GetUserTasks());
+                addMeeting.newMeeting.Message();
             }
         }
 

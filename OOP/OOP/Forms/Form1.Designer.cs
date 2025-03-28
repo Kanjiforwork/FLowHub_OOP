@@ -127,7 +127,7 @@
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(943, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(928, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -408,17 +408,19 @@
             this.taskPanel.Controls.Add(this.panel8);
             this.taskPanel.Location = new System.Drawing.Point(251, 195);
             this.taskPanel.Name = "taskPanel";
-            this.taskPanel.Size = new System.Drawing.Size(373, 354);
+            this.taskPanel.Size = new System.Drawing.Size(394, 354);
             this.taskPanel.TabIndex = 2;
             // 
             // taskContainer
             // 
+            this.taskContainer.AutoScroll = true;
             this.taskContainer.Controls.Add(this.panel9);
             this.taskContainer.Controls.Add(this.panel7);
             this.taskContainer.Location = new System.Drawing.Point(-1, 96);
+            this.taskContainer.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.taskContainer.Name = "taskContainer";
             this.taskContainer.Padding = new System.Windows.Forms.Padding(12, 8, 0, 0);
-            this.taskContainer.Size = new System.Drawing.Size(372, 257);
+            this.taskContainer.Size = new System.Drawing.Size(390, 257);
             this.taskContainer.TabIndex = 3;
             // 
             // panel9
@@ -521,7 +523,7 @@
             this.panel8.Controls.Add(this.Mytask);
             this.panel8.Location = new System.Drawing.Point(-2, -2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(373, 100);
+            this.panel8.Size = new System.Drawing.Size(391, 100);
             this.panel8.TabIndex = 2;
             // 
             // panel10
@@ -590,6 +592,7 @@
             // 
             // projectContainer
             // 
+            this.projectContainer.AutoScroll = true;
             this.projectContainer.Controls.Add(this.panel11);
             this.projectContainer.Controls.Add(this.panel12);
             this.projectContainer.Location = new System.Drawing.Point(0, 72);

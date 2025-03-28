@@ -4,6 +4,7 @@ using System.Data;
 using OOP.Models;
 using OOP.Services;
 using Newtonsoft.Json;
+using System.Windows.Forms;
 
 namespace OOP.Models
 {
@@ -51,6 +52,11 @@ namespace OOP.Models
 
         public abstract void MarkAsCompleted();
         public abstract void MarkAsInComleted();
+
+        public virtual void Message()
+        {
+            MessageBox.Show("");
+        }
         public abstract void UpdateStatus(string newStatus);
     }
 
@@ -74,11 +80,13 @@ namespace OOP.Models
         {
             status = "InCompleted";
         }
-
-
         public override void UpdateStatus(string newStatus)
         {
             status = newStatus;
+        }
+        public override void Message()
+        {
+            MessageBox.Show("Task đã được tạo");
         }
     }
 
@@ -87,7 +95,6 @@ namespace OOP.Models
 
         public string Location { get; set; }
         public List<User> Participants { get; set; }
-
         public string Hour { get; set; }
 
         public Meeting(string taskID, string taskName, string status, DateTime deadline, string hour,  string location, List<User> participants, string projectName, int assignedTo)
@@ -111,6 +118,10 @@ namespace OOP.Models
         {
             status = newStatus;
         }
+        public override void Message()
+        {
+            MessageBox.Show("Meeting đã được tạo");
+        }
     }
 
 
@@ -132,10 +143,13 @@ namespace OOP.Models
         {
             status = "InCompleted";
         }
-
         public override void UpdateStatus(string newStatus)
         {
             status = newStatus;
+        }
+        public override void Message()
+        {
+            MessageBox.Show("Milestone đã được tạo");
         }
     }
 

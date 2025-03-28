@@ -72,15 +72,36 @@ namespace OOP
                 TextBox textBox = new TextBox() { Left = 10, Top = 50, Width = 260 };
                 Button confirmation = new Button() { Text = "OK", Left = 100, Width = 100, Top = 80 };
 
-                confirmation.Click += (sender, e) => { prompt.Close(); };
+                // Gán sự kiện Click mà không dùng lambda
+                confirmation.Click += new EventHandler(Confirmation_Click);
+
                 prompt.Controls.Add(textLabel);
                 prompt.Controls.Add(textBox);
                 prompt.Controls.Add(confirmation);
                 prompt.AcceptButton = confirmation;
 
+                // Lưu textBox vào Tag để truy xuất khi cần
+                prompt.Tag = textBox;
+
                 prompt.ShowDialog();
+
                 return textBox.Text;
             }
+
+            // Xử lý sự kiện Click của button
+            private static void Confirmation_Click(object sender, EventArgs e)
+            {
+                Button btn = sender as Button;
+                if (btn != null)
+                {
+                    Form prompt = btn.FindForm();
+                    if (prompt != null)
+                    {
+                        prompt.Close();
+                    }
+                }
+            }
+
         }
         private void panel1_Click(object sender, EventArgs e)
         {
@@ -171,132 +192,7 @@ namespace OOP
         {
 
         }
-        //private void ShowProjectDetails(Project project)
-        //{
-        //    panel3.Controls.Clear(); // Xóa nội dung cũ trong panel3
 
-        //    // Tạo nút Overview (đặt trên cùng)
-        //    Button btnOverview = new Button();
-        //    btnOverview.Text = "Overview";
-        //    btnOverview.Size = new Size(100, 30);
-        //    btnOverview.Location = new Point(5, 10);
-        //    btnOverview.BackColor = Color.LightBlue;
-        //    btnOverview.Click += (s, e) =>
-        //    {
-        //        LoadOverviewPanel(project);
-        //    };
-        //    panel3.Controls.Add(btnOverview);
-
-        //    // Gọi Overview mặc định
-        //    LoadOverviewPanel(project);
-
-        //    // Hiển thị panel3 và ẩn panel2
-        //    panel3.Visible = true;
-        //    //panel2.Visible = false;
-        //}
-
-        // Hiển thị thông tin Overview của project
-        //private void LoadOverviewPanel(Project project)
-        //{
-        //    panel3.Controls.Clear(); // Xóa nội dung cũ
-
-        //    // Tạo nút Overview trên cùng
-        //    Button btnOverview = new Button();
-        //    btnOverview.Text = "Overview";
-        //    btnOverview.Size = new Size(100, 30);
-        //    btnOverview.Location = new Point(5, 10);
-        //    btnOverview.BackColor = Color.LightBlue;
-        //    panel3.Controls.Add(btnOverview);
-
-        //    // Label Project Description
-        //    Label lblProjectDesc = new Label();
-        //    lblProjectDesc.Text = "Project Description";
-        //    lblProjectDesc.Font = new Font("Arial", 12, FontStyle.Bold);
-        //    lblProjectDesc.Location = new Point(10, 50);
-        //    panel3.Controls.Add(lblProjectDesc);
-
-        //    // Hiển thị tên người tạo
-        //    Label lblCreator = new Label();
-        //    lblCreator.Text = $"Created by: {project.CreatedBy}"; // Hiển thị người tạo dự án
-        //    lblCreator.Font = new Font("Arial", 10, FontStyle.Regular);
-        //    lblCreator.Location = new Point(10, 110);
-        //    panel3.Controls.Add(lblCreator);
-
-        //    // TextBox nhập mô tả dự án
-        //    TextBox txtDescription = new TextBox();
-        //    txtDescription.Text = project.projectDescription;
-        //    txtDescription.Size = new Size(300, 30);
-        //    txtDescription.Location = new Point(10, 80);
-
-        //    // Xử lý sự kiện KeyDown (lưu khi nhấn Enter)
-        //    txtDescription.KeyDown += (s, e) =>
-        //    {
-        //        if (e.KeyCode == Keys.Enter)  // Kiểm tra nếu phím Enter được nhấn
-        //        {
-        //            project.projectDescription = txtDescription.Text; // Cập nhật mô tả vào đối tượng Project
-        //            SaveProjectsToFile(); // Lưu lại dự án vào file sau khi thay đổi
-        //            MessageBox.Show("Dữ liệu đã được lưu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);  // Hiển thị thông báo
-        //            e.Handled = true;  // Ngăn chặn việc nhấn Enter làm textBox mất focus
-        //        }
-        //    };
-
-        //    panel3.Controls.Add(txtDescription);
-
-        //    // Label Project Role
-        //    Label lblRole = new Label();
-        //    lblRole.Text = "Project Role";
-        //    lblRole.Font = new Font("Arial", 12, FontStyle.Bold);
-        //    lblRole.Location = new Point(10, 120);
-        //    panel3.Controls.Add(lblRole);
-
-        //    // ListBox hiển thị thành viên
-        //    ListBox listBoxMembers = new ListBox();
-        //    listBoxMembers.Size = new Size(200, 100);
-        //    listBoxMembers.Location = new Point(10, 150);
-        //    listBoxMembers.Items.Clear();
-
-        //    if (project.members == null)
-        //    {
-        //        project.members = new List<string>();
-        //    }
-        //    listBoxMembers.Items.AddRange(project.members.ToArray());
-        //    panel3.Controls.Add(listBoxMembers);
-
-        //    // Button thêm thành viên
-        //    Button btnAddMember = new Button();
-        //    btnAddMember.Text = "Add Member";
-        //    btnAddMember.Size = new Size(100, 30);
-        //    btnAddMember.Location = new Point(10, 260);
-        //    btnAddMember.Click += (s, e) =>
-        //    {
-        //        Addmember userForm = new Addmember(this);
-        //        if (userForm.ShowDialog() == DialogResult.OK)
-        //        {
-        //            string newMember = userForm.MemberName;
-        //            RoleType newRole = userForm.SelectedRole;
-        //            string memberInfo = $"{newMember} ({newRole})";
-
-        //            if (!string.IsNullOrWhiteSpace(newMember) && !project.members.Contains(memberInfo))
-        //            {
-        //                project.members.Add(memberInfo);
-        //                listBoxMembers.Items.Add(memberInfo);
-        //            }
-        //        }
-        //    };
-        //    panel3.Controls.Add(btnAddMember);
-
-        //    // Nút quay lại
-        //    Button btnBack = new Button();
-        //    btnBack.Text = "Back";
-        //    btnBack.Size = new Size(100, 30);
-        //    btnBack.Location = new Point(120, 260);
-        //    btnBack.Click += (s, e) =>
-        //    {
-        //        panel3.Visible = false;  // Ẩn panel3
-        //        //panel2.Visible = true;   // Hiển thị danh sách project
-        //    };
-        //    panel3.Controls.Add(btnBack);
-        //}
 
 
         private void button2_Click(object sender, EventArgs e)

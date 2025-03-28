@@ -80,7 +80,7 @@ namespace OOP.Forms
             // btnMilestoneConfirm
             // 
             this.btnMilestoneConfirm.BackColor = System.Drawing.Color.White;
-            this.btnMilestoneConfirm.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMilestoneConfirm.BorderColor = System.Drawing.Color.White;
             this.btnMilestoneConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMilestoneConfirm.EnteredBorderColor = System.Drawing.Color.White;
             this.btnMilestoneConfirm.EnteredColor = System.Drawing.Color.White;
@@ -102,7 +102,7 @@ namespace OOP.Forms
             // btnMilestoneCancel
             // 
             this.btnMilestoneCancel.BackColor = System.Drawing.Color.White;
-            this.btnMilestoneCancel.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMilestoneCancel.BorderColor = System.Drawing.Color.White;
             this.btnMilestoneCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMilestoneCancel.EnteredBorderColor = System.Drawing.Color.White;
             this.btnMilestoneCancel.EnteredColor = System.Drawing.Color.White;
